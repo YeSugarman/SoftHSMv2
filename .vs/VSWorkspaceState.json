@@ -1,0 +1,16 @@
+{
+  "OutputFoldersPerTargetSystem": {
+    "Local Machine": [
+      "out\\build\\x64-Debug",
+      "out\\install\\x64-Debug"
+    ]
+  },
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\bin",
+    "\\src\\bin\\Encrypt_Decrypt"
+  ],
+  "SelectedNode": "\\src\\bin\\CMakeLists.txt",
+  "PreviewInSolutionExplorer": false
+}
