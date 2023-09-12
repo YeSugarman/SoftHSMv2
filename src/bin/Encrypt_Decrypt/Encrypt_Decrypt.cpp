@@ -19,7 +19,8 @@ static const char* opt_input = NULL;
 static const char* opt_output = NULL;
 static const char* opt_iv = optarg;
 
-
+// Create an instance of SoftHSM
+SoftHSM* hsm = SoftHSM::i(); // Get the instance
 
 static CK_BYTE_PTR get_iv(const char* iv_input, size_t* iv_size)
 {
@@ -97,22 +98,22 @@ static void decrypt_data(CK_SESSION_HANDLE session,
 	rv = CKR_CANCEL;
 	if (r < (int)sizeof(in_buffer)) {
 		out_len = sizeof(out_buffer);
-		rv = C_DecryptInit(session, &mech, key);
+		rv = hsm->C_DecryptInit(session, &mech, key);
 		if (rv != CKR_OK)
 			printf("C_DecryptInit", rv);
 		/*if (getALWAYS_AUTHENTICATE(session, key))
 		login(session, CKU_CONTEXT_SPECIFIC);*/
-		rv = C_Decrypt(session, in_buffer, in_len, out_buffer, &out_len);
+		rv = hsm->C_Decrypt(session, in_buffer, in_len, out_buffer, &out_len);
 	}
 	if (rv != CKR_OK) {
-		rv = C_DecryptInit(session, &mech, key);
+		rv = hsm->C_DecryptInit(session, &mech, key);
 		if (rv != CKR_OK)
 			printf("C_DecryptInit", rv);
 		/*if (getALWAYS_AUTHENTICATE(session, key))
 		login(session, CKU_CONTEXT_SPECIFIC);*/
 		do {
 			out_len = sizeof(out_buffer);
-			rv = C_DecryptUpdate(session, in_buffer, in_len, out_buffer, &out_len);
+			rv = hsm->C_DecryptUpdate(session, in_buffer, in_len, out_buffer, &out_len);
 			if (rv != CKR_OK)
 				printf("C_DecryptUpdate", rv);
 			r = write(fd_out, out_buffer, out_len);
@@ -122,7 +123,7 @@ static void decrypt_data(CK_SESSION_HANDLE session,
 			in_len = r;
 		} while (r > 0);
 		out_len = sizeof(out_buffer);
-		rv = C_DecryptFinal(session, out_buffer, &out_len);
+		rv = hsm->C_DecryptFinal(session, out_buffer, &out_len);
 		if (rv != CKR_OK)
 			printf("C_DecryptFinal", rv);
 	}
@@ -212,17 +213,17 @@ static void encrypt_data(CK_SESSION_HANDLE session,
 	rv = CKR_CANCEL;
 	if (r < (int)sizeof(in_buffer)) {
 		out_len = sizeof(out_buffer);
-		rv = C_EncryptInit(session, &mech, key);
+		rv = hsm->C_EncryptInit(session, &mech, key);
 		if (rv != CKR_OK)
 			//p11_fatal("C_EncryptInit", rv);
 			printf("C_EncryptInit", rv);
 		//if (getALWAYS_AUTHENTICATE(session, key))
 		// login(session, CKU_CONTEXT_SPECIFIC);
 		out_len = sizeof(out_buffer);
-		rv = C_Encrypt(session, in_buffer, in_len, out_buffer, &out_len);
+		rv = hsm->C_Encrypt(session, in_buffer, in_len, out_buffer, &out_len);
 	}
 	if (rv != CKR_OK) {
-		rv = C_EncryptInit(session, &mech, key);
+		rv = hsm->C_EncryptInit(session, &mech, key);
 		if (rv != CKR_OK)
 			//p11_fatal("C_EncryptInit", rv);
 			printf("C_EncryptInit", rv);
@@ -230,7 +231,7 @@ static void encrypt_data(CK_SESSION_HANDLE session,
 		// login(session, CKU_CONTEXT_SPECIFIC);
 		do {
 			out_len = sizeof(out_buffer);
-			rv = C_EncryptUpdate(session, in_buffer, in_len, out_buffer, &out_len);
+			rv = hsm->C_EncryptUpdate(session, in_buffer, in_len, out_buffer, &out_len);
 			if (rv != CKR_OK)
 				//p11_fatal("C_EncryptUpdate", rv);
 				printf("C_EncryptUpdate", rv);
@@ -242,7 +243,7 @@ static void encrypt_data(CK_SESSION_HANDLE session,
 			in_len = r;
 		} while (r > 0);
 		out_len = sizeof(out_buffer);
-		rv = C_EncryptFinal(session, out_buffer, &out_len);
+		rv = hsm->C_EncryptFinal(session, out_buffer, &out_len);
 		if (rv != CKR_OK)
 			//p11_fatal("C_EncryptFinal", rv);
 			printf("C_EncryptFinal", rv);
@@ -262,8 +263,7 @@ static void encrypt_data(CK_SESSION_HANDLE session,
 }
 
 int main() {
-	// Create an instance of SoftHSM
-	SoftHSM* hsm = SoftHSM::i(); // Get the instance
+	
 
 	// Initialize the library
 	CK_RV rv = hsm->C_Initialize(nullptr);
@@ -274,7 +274,7 @@ int main() {
 
 	// You need to open a session first before generating the key pair
 	CK_SESSION_HANDLE session;
-	rv = hsm->C_OpenSession(1309083503, CKF_SERIAL_SESSION | CKF_RW_SESSION, nullptr, nullptr, &session);
+	rv = hsm->C_OpenSession(819892398, CKF_SERIAL_SESSION | CKF_RW_SESSION, nullptr, nullptr, &session);
 	if (rv != CKR_OK) {
 		std::cout << "Error opening a session" << std::endl;
 		hsm->C_Finalize(nullptr); // Clean up and finalize the library
@@ -298,7 +298,7 @@ int main() {
 		exit(1);
 	}
 
-	rv = hsm->C_Login(session, CKU_USER, (CK_UTF8CHAR*)"1234", 4);
+	rv = hsm->C_Login(session, CKU_USER, (CK_UTF8CHAR*)"123456789", 9);
 	if (rv != CKR_OK) {
 		std::cout << "Error logging in to the token" << std::endl;
 		hsm->C_CloseSession(session); // Close the session
@@ -320,12 +320,12 @@ int main() {
 
 	CK_OBJECT_HANDLE hSecretKey;
 
-	rv = C_GenerateKey(session, &mechanism, keyTemplate, n_attr, &hSecretKey);
+	rv = hsm->C_GenerateKey(session, &mechanism, keyTemplate, n_attr, &hSecretKey);
 	if (rv != CKR_OK) {
 		std::cout << "Error generating key" << std::endl;
 	}
-	/*encrypt_data(session, hSecretKey);
-	decrypt_data(session, hSecretKey);*/
+	encrypt_data(session, hSecretKey);
+	decrypt_data(session, hSecretKey);
 
 	// Close the session and finalize the library when done
 	hsm->C_Logout(session);

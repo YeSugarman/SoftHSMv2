@@ -142,7 +142,7 @@ if(WITH_BOTAN)
 endif()
 
 include_directories(${INCLUDE_DIRS})
-add_library(${PROJECT_NAME} OBJECT ${SOURCES})
+add_library(${PROJECT_NAME} OBJECT ${SOURCES} "XORSymmetricAlgorithm.cpp" "XORSymmetricAlgorithm.h")
 target_compile_options(${PROJECT_NAME} PRIVATE ${COMPILE_OPTIONS})
 
 # Versions before CMake 3.12 cannot use target_link_libraries on object

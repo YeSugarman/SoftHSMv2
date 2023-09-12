@@ -7,10 +7,8 @@
   },
   "ExpandedNodes": [
     "",
-    "\\src",
-    "\\src\\bin",
     "\\src\\bin\\Encrypt_Decrypt"
   ],
-  "SelectedNode": "\\src\\bin\\CMakeLists.txt",
+  "SelectedNode": "\\src",
   "PreviewInSolutionExplorer": false
 }

@@ -70,7 +70,7 @@
 #include "HandleManager.h"
 #include "P11Objects.h"
 #include "odd.h"
-
+#include  "XORSymmetricAlgorithm.h"
 #if defined(WITH_OPENSSL)
 #include "OSSLCryptoFactory.h"
 #else
@@ -2566,7 +2566,7 @@ static CK_RV SymEncrypt(Session* session, CK_BYTE_PTR pData, CK_ULONG ulDataLen,
 	ByteString encryptedData;
 
 	// Encrypt the data
-	if (!cipher->encryptUpdate(data, encryptedData))
+	if (!((XORSymmetricAlgorithm*)cipher)->XORSymmetricAlgorithm::encryptUpdate(data, encryptedData))
 	{
 		session->resetOp();
 		return CKR_GENERAL_ERROR;
@@ -2574,7 +2574,7 @@ static CK_RV SymEncrypt(Session* session, CK_BYTE_PTR pData, CK_ULONG ulDataLen,
 
 	// Finalize encryption
 	ByteString encryptedFinal;
-	if (!cipher->encryptFinal(encryptedFinal))
+	if (!((XORSymmetricAlgorithm*)cipher)->XORSymmetricAlgorithm::encryptFinal(encryptedFinal))
 	{
 		session->resetOp();
 		return CKR_GENERAL_ERROR;
