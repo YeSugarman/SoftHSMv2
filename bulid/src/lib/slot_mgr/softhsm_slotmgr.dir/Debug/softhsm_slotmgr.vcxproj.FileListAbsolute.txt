@@ -1,1 +1,0 @@
-C:\Projects\testing\SoftHSMv2\bulid\src\lib\slot_mgr\softhsm_slotmgr.dir\Debug\softhsm_slotmgr.lib

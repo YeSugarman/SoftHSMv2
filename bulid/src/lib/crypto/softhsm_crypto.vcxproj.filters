@@ -214,9 +214,15 @@
     <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\XORSymmetricAlgorithm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\XORCryptoFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\XORSymmetricAlgorithm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\XORCryptoFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

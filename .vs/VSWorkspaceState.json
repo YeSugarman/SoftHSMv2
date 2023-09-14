@@ -7,8 +7,10 @@
   },
   "ExpandedNodes": [
     "",
-    "\\src\\bin\\Encrypt_Decrypt"
+    "\\src",
+    "\\src\\lib",
+    "\\src\\lib\\crypto"
   ],
-  "SelectedNode": "\\src",
+  "SelectedNode": "\\src\\lib\\crypto\\XORCryptoFactory.cpp",
   "PreviewInSolutionExplorer": false
 }

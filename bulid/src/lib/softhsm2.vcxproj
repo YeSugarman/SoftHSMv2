@@ -405,6 +405,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLSHA512.obj" />
     <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLUtil.obj" />
     <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\XORSymmetricAlgorithm.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\XORCryptoFactory.obj" />
     <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\data_mgr\softhsm_datamgr.dir\$(Configuration)\ByteString.obj" />
     <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\data_mgr\softhsm_datamgr.dir\$(Configuration)\RFC4880.obj" />
     <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\data_mgr\softhsm_datamgr.dir\$(Configuration)\salloc.obj" />

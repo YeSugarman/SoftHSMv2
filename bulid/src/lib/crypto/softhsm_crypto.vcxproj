@@ -345,6 +345,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLUtil.cpp" />
     <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\XORSymmetricAlgorithm.cpp" />
     <ClInclude Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\XORSymmetricAlgorithm.h" />
+    <ClInclude Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\XORCryptoFactory.h" />
+    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\XORCryptoFactory.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\Projects\testing\SoftHSMv2\bulid\ZERO_CHECK.vcxproj">

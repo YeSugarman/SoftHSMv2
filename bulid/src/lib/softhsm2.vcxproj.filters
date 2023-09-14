@@ -255,6 +255,9 @@
     <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\XORSymmetricAlgorithm.obj">
       <Filter>Object Libraries</Filter>
     </Object>
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\XORCryptoFactory.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
     <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\data_mgr\softhsm_datamgr.dir\$(Configuration)\ByteString.obj">
       <Filter>Object Libraries</Filter>
     </Object>
