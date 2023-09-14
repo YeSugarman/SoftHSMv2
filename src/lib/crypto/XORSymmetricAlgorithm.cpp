@@ -15,19 +15,52 @@ bool XORSymmetricAlgorithm::unwrapKey(const SymmetricKey* key, const SymWrap::Ty
 
 size_t XORSymmetricAlgorithm::getBlockSize() const
 {
-	return size_t();
+	return 128 >> 3;// as OSSLAES
 }
 
 bool XORSymmetricAlgorithm::checkMaximumBytes(unsigned long bytes)
 {
-	return false;
+	return true;//Based on the assumption that it can always be deciphered
+}
+
+bool XORSymmetricAlgorithm::encryptInit(const SymmetricKey* key, const SymMode::Type mode, const ByteString& IV, bool padding, size_t counterBits, const ByteString& aad, size_t tagBytes)
+{
+	// Call the superclass initialiser
+	if (!SymmetricAlgorithm::encryptInit(key, mode, IV, padding, counterBits, aad, tagBytes))
+	{
+		return false;
+	}
+
+	// Check the IV
+	if (mode != SymMode::GCM && (IV.size() > 0) && (IV.size() != getBlockSize()))
+	{
+		ERROR_MSG("Invalid IV size (%d bytes, expected %d bytes)", IV.size(), getBlockSize());
+
+		ByteString dummy;
+		SymmetricAlgorithm::encryptFinal(dummy);
+
+		return false;
+	}
+
+	ByteString iv;
+
+	if (IV.size() > 0)
+	{
+		iv = IV;
+	}
+	else
+	{
+		iv.wipe(getBlockSize());
+	}
+
+	return true;
 }
 
 bool XORSymmetricAlgorithm::encryptUpdate(const ByteString& data, ByteString& encryptedData)
 {
 	if (!SymmetricAlgorithm::encryptUpdate(data, encryptedData))
 	{
-		clean();
+		//clean();
 		return false;
 	}
 
@@ -57,12 +90,45 @@ bool XORSymmetricAlgorithm::encryptUpdate(const ByteString& data, ByteString& en
 	return true;
 }
 
+bool XORSymmetricAlgorithm::decryptInit(const SymmetricKey* key, const SymMode::Type mode, const ByteString& IV, bool padding, size_t counterBits, const ByteString& aad, size_t tagBytes)
+{
+	// Call the superclass initialiser
+	if (!SymmetricAlgorithm::decryptInit(key, mode, IV, padding, counterBits, aad, tagBytes))
+	{
+		return false;
+	}
+
+	// Check the IV
+	if (mode != SymMode::GCM && (IV.size() > 0) && (IV.size() != getBlockSize()))
+	{
+		ERROR_MSG("Invalid IV size (%d bytes, expected %d bytes)", IV.size(), getBlockSize());
+
+		ByteString dummy;
+		SymmetricAlgorithm::decryptFinal(dummy);
+
+		return false;
+	}
+
+	ByteString iv;
+
+	if (IV.size() > 0)
+	{
+		iv = IV;
+	}
+	else
+	{
+		iv.wipe(getBlockSize());
+	}
+
+	return true;
+}
+
 bool XORSymmetricAlgorithm::decryptUpdate(const ByteString& encryptedData, ByteString& data)
 {
 
 	if (!SymmetricAlgorithm::decryptUpdate(encryptedData, data))
 	{
-		clean();
+		//clean();
 		return false;
 	}
 
@@ -72,24 +138,17 @@ bool XORSymmetricAlgorithm::decryptUpdate(const ByteString& encryptedData, ByteS
 	int outLen = data.size();
 
 	char xorKey = 'P';
-	int len = data.size();
-	for (int i = 0; i < len; i++)
+	int len = encryptedData.size();
+	int i = 0;
+	while(encryptedData.const_byte_str()[i] != '\0')
 	{
-		data[i] = encryptedData.const_byte_str()[i] ^ xorKey;
+		data[i] = encryptedData.const_byte_str()[i++] ^ xorKey;
 	}
 
 	// Resize the output block
 	currentBufferSize -= outLen;
 
 	return true;
-}
-
-void XORSymmetricAlgorithm::clean()
-{
-	/*BN_free(maximumBytes);
-	maximumBytes = NULL;
-	BN_free(counterBytes);
-	counterBytes = NULL;*/
 }
 
 XORSymmetricAlgorithm::XORSymmetricAlgorithm() :SymmetricAlgorithm()
