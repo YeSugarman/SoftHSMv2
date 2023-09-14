@@ -16,6 +16,8 @@ public:
 	virtual bool checkMaximumBytes(unsigned long bytes) override;
 
 	virtual bool encryptUpdate(const ByteString& data, ByteString& encryptedData);
+	virtual bool decryptUpdate(const ByteString& encryptedData, ByteString& data);
+
 	void clean();
 
 };

@@ -274,7 +274,7 @@ int main() {
 
 	// You need to open a session first before generating the key pair
 	CK_SESSION_HANDLE session;
-	rv = hsm->C_OpenSession(819892398, CKF_SERIAL_SESSION | CKF_RW_SESSION, nullptr, nullptr, &session);
+	rv = hsm->C_OpenSession(1219661753, CKF_SERIAL_SESSION | CKF_RW_SESSION, nullptr, nullptr, &session);
 	if (rv != CKR_OK) {
 		std::cout << "Error opening a session" << std::endl;
 		hsm->C_Finalize(nullptr); // Clean up and finalize the library

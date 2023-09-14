@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{02E5F70B-8E96-39D1-928E-B25BBFED8C4A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>softhsm2-static</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Projects\testing\SoftHSMv2\bulid\src\lib\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">softhsm2-static.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">softhsm2-static</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Projects\testing\SoftHSMv2\bulid\src\lib\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">softhsm2-static.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">softhsm2-static</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Projects\testing\SoftHSMv2\bulid\src\lib\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">softhsm2-static.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">softhsm2-static</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Projects\testing\SoftHSMv2\bulid\src\lib\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">softhsm2-static.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">softhsm2-static</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Projects\testing\SoftHSMv2\bulid;C:\Projects\testing\SoftHSMv2\src\lib\common;C:\Projects\testing\SoftHSMv2\src\lib\crypto;C:\Projects\testing\SoftHSMv2\src\lib\data_mgr;C:\Projects\testing\SoftHSMv2\src\lib\handle_mgr;C:\Projects\testing\SoftHSMv2\src\lib\object_store;C:\Projects\testing\SoftHSMv2\src\lib\pkcs11;C:\Projects\testing\SoftHSMv2\src\lib\session_mgr;C:\Projects\testing\SoftHSMv2\src\lib\slot_mgr;C:\Program Files\OpenSSL-Win64\include;C:\Projects\testing\SoftHSMv2\src\lib\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4456</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Projects\testing\SoftHSMv2\bulid;C:\Projects\testing\SoftHSMv2\src\lib\common;C:\Projects\testing\SoftHSMv2\src\lib\crypto;C:\Projects\testing\SoftHSMv2\src\lib\data_mgr;C:\Projects\testing\SoftHSMv2\src\lib\handle_mgr;C:\Projects\testing\SoftHSMv2\src\lib\object_store;C:\Projects\testing\SoftHSMv2\src\lib\pkcs11;C:\Projects\testing\SoftHSMv2\src\lib\session_mgr;C:\Projects\testing\SoftHSMv2\src\lib\slot_mgr;C:\Program Files\OpenSSL-Win64\include;C:\Projects\testing\SoftHSMv2\src\lib\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Projects\testing\SoftHSMv2\bulid;C:\Projects\testing\SoftHSMv2\src\lib\common;C:\Projects\testing\SoftHSMv2\src\lib\crypto;C:\Projects\testing\SoftHSMv2\src\lib\data_mgr;C:\Projects\testing\SoftHSMv2\src\lib\handle_mgr;C:\Projects\testing\SoftHSMv2\src\lib\object_store;C:\Projects\testing\SoftHSMv2\src\lib\pkcs11;C:\Projects\testing\SoftHSMv2\src\lib\session_mgr;C:\Projects\testing\SoftHSMv2\src\lib\slot_mgr;C:\Program Files\OpenSSL-Win64\include;C:\Projects\testing\SoftHSMv2\src\lib\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Projects\testing\SoftHSMv2\bulid;C:\Projects\testing\SoftHSMv2\src\lib\common;C:\Projects\testing\SoftHSMv2\src\lib\crypto;C:\Projects\testing\SoftHSMv2\src\lib\data_mgr;C:\Projects\testing\SoftHSMv2\src\lib\handle_mgr;C:\Projects\testing\SoftHSMv2\src\lib\object_store;C:\Projects\testing\SoftHSMv2\src\lib\pkcs11;C:\Projects\testing\SoftHSMv2\src\lib\session_mgr;C:\Projects\testing\SoftHSMv2\src\lib\slot_mgr;C:\Program Files\OpenSSL-Win64\include;C:\Projects\testing\SoftHSMv2\src\lib\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4996;4456</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Projects\testing\SoftHSMv2\bulid;C:\Projects\testing\SoftHSMv2\src\lib\common;C:\Projects\testing\SoftHSMv2\src\lib\crypto;C:\Projects\testing\SoftHSMv2\src\lib\data_mgr;C:\Projects\testing\SoftHSMv2\src\lib\handle_mgr;C:\Projects\testing\SoftHSMv2\src\lib\object_store;C:\Projects\testing\SoftHSMv2\src\lib\pkcs11;C:\Projects\testing\SoftHSMv2\src\lib\session_mgr;C:\Projects\testing\SoftHSMv2\src\lib\slot_mgr;C:\Program Files\OpenSSL-Win64\include;C:\Projects\testing\SoftHSMv2\src\lib\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Projects\testing\SoftHSMv2\bulid;C:\Projects\testing\SoftHSMv2\src\lib\common;C:\Projects\testing\SoftHSMv2\src\lib\crypto;C:\Projects\testing\SoftHSMv2\src\lib\data_mgr;C:\Projects\testing\SoftHSMv2\src\lib\handle_mgr;C:\Projects\testing\SoftHSMv2\src\lib\object_store;C:\Projects\testing\SoftHSMv2\src\lib\pkcs11;C:\Projects\testing\SoftHSMv2\src\lib\session_mgr;C:\Projects\testing\SoftHSMv2\src\lib\slot_mgr;C:\Program Files\OpenSSL-Win64\include;C:\Projects\testing\SoftHSMv2\src\lib\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Projects\testing\SoftHSMv2\bulid;C:\Projects\testing\SoftHSMv2\src\lib\common;C:\Projects\testing\SoftHSMv2\src\lib\crypto;C:\Projects\testing\SoftHSMv2\src\lib\data_mgr;C:\Projects\testing\SoftHSMv2\src\lib\handle_mgr;C:\Projects\testing\SoftHSMv2\src\lib\object_store;C:\Projects\testing\SoftHSMv2\src\lib\pkcs11;C:\Projects\testing\SoftHSMv2\src\lib\session_mgr;C:\Projects\testing\SoftHSMv2\src\lib\slot_mgr;C:\Program Files\OpenSSL-Win64\include;C:\Projects\testing\SoftHSMv2\src\lib\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4996;4456</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Projects\testing\SoftHSMv2\bulid;C:\Projects\testing\SoftHSMv2\src\lib\common;C:\Projects\testing\SoftHSMv2\src\lib\crypto;C:\Projects\testing\SoftHSMv2\src\lib\data_mgr;C:\Projects\testing\SoftHSMv2\src\lib\handle_mgr;C:\Projects\testing\SoftHSMv2\src\lib\object_store;C:\Projects\testing\SoftHSMv2\src\lib\pkcs11;C:\Projects\testing\SoftHSMv2\src\lib\session_mgr;C:\Projects\testing\SoftHSMv2\src\lib\slot_mgr;C:\Program Files\OpenSSL-Win64\include;C:\Projects\testing\SoftHSMv2\src\lib\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Projects\testing\SoftHSMv2\bulid;C:\Projects\testing\SoftHSMv2\src\lib\common;C:\Projects\testing\SoftHSMv2\src\lib\crypto;C:\Projects\testing\SoftHSMv2\src\lib\data_mgr;C:\Projects\testing\SoftHSMv2\src\lib\handle_mgr;C:\Projects\testing\SoftHSMv2\src\lib\object_store;C:\Projects\testing\SoftHSMv2\src\lib\pkcs11;C:\Projects\testing\SoftHSMv2\src\lib\session_mgr;C:\Projects\testing\SoftHSMv2\src\lib\slot_mgr;C:\Program Files\OpenSSL-Win64\include;C:\Projects\testing\SoftHSMv2\src\lib\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Projects\testing\SoftHSMv2\bulid;C:\Projects\testing\SoftHSMv2\src\lib\common;C:\Projects\testing\SoftHSMv2\src\lib\crypto;C:\Projects\testing\SoftHSMv2\src\lib\data_mgr;C:\Projects\testing\SoftHSMv2\src\lib\handle_mgr;C:\Projects\testing\SoftHSMv2\src\lib\object_store;C:\Projects\testing\SoftHSMv2\src\lib\pkcs11;C:\Projects\testing\SoftHSMv2\src\lib\session_mgr;C:\Projects\testing\SoftHSMv2\src\lib\slot_mgr;C:\Program Files\OpenSSL-Win64\include;C:\Projects\testing\SoftHSMv2\src\lib\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4456</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Projects\testing\SoftHSMv2\bulid;C:\Projects\testing\SoftHSMv2\src\lib\common;C:\Projects\testing\SoftHSMv2\src\lib\crypto;C:\Projects\testing\SoftHSMv2\src\lib\data_mgr;C:\Projects\testing\SoftHSMv2\src\lib\handle_mgr;C:\Projects\testing\SoftHSMv2\src\lib\object_store;C:\Projects\testing\SoftHSMv2\src\lib\pkcs11;C:\Projects\testing\SoftHSMv2\src\lib\session_mgr;C:\Projects\testing\SoftHSMv2\src\lib\slot_mgr;C:\Program Files\OpenSSL-Win64\include;C:\Projects\testing\SoftHSMv2\src\lib\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Projects\testing\SoftHSMv2\bulid;C:\Projects\testing\SoftHSMv2\src\lib\common;C:\Projects\testing\SoftHSMv2\src\lib\crypto;C:\Projects\testing\SoftHSMv2\src\lib\data_mgr;C:\Projects\testing\SoftHSMv2\src\lib\handle_mgr;C:\Projects\testing\SoftHSMv2\src\lib\object_store;C:\Projects\testing\SoftHSMv2\src\lib\pkcs11;C:\Projects\testing\SoftHSMv2\src\lib\session_mgr;C:\Projects\testing\SoftHSMv2\src\lib\slot_mgr;C:\Program Files\OpenSSL-Win64\include;C:\Projects\testing\SoftHSMv2\src\lib\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Projects\testing\SoftHSMv2\src\lib\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Projects/testing/SoftHSMv2/src/lib/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Projects/testing/SoftHSMv2 -BC:/Projects/testing/SoftHSMv2/bulid --check-stamp-file C:/Projects/testing/SoftHSMv2/bulid/src/lib/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.27\Modules\exportheader.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Projects\testing\SoftHSMv2\bulid\src\lib\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Projects/testing/SoftHSMv2/src/lib/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Projects/testing/SoftHSMv2 -BC:/Projects/testing/SoftHSMv2/bulid --check-stamp-file C:/Projects/testing/SoftHSMv2/bulid/src/lib/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.27\Modules\exportheader.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Projects\testing\SoftHSMv2\bulid\src\lib\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Projects/testing/SoftHSMv2/src/lib/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Projects/testing/SoftHSMv2 -BC:/Projects/testing/SoftHSMv2/bulid --check-stamp-file C:/Projects/testing/SoftHSMv2/bulid/src/lib/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.27\Modules\exportheader.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Projects\testing\SoftHSMv2\bulid\src\lib\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Projects/testing/SoftHSMv2/src/lib/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Projects/testing/SoftHSMv2 -BC:/Projects/testing/SoftHSMv2/bulid --check-stamp-file C:/Projects/testing/SoftHSMv2/bulid/src/lib/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.27\Modules\exportheader.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Projects\testing\SoftHSMv2\bulid\src\lib\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\access.cpp" />
+    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\main.cpp" />
+    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\P11Attributes.cpp" />
+    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\P11Objects.cpp" />
+    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\SoftHSM.cpp" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\common\softhsm_common.dir\$(Configuration)\Configuration.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\common\softhsm_common.dir\$(Configuration)\fatal.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\common\softhsm_common.dir\$(Configuration)\log.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\common\softhsm_common.dir\$(Configuration)\MutexFactory.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\common\softhsm_common.dir\$(Configuration)\osmutex.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\common\softhsm_common.dir\$(Configuration)\SimpleConfigLoader.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\common\softhsm_common.dir\$(Configuration)\syslog.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\AESKey.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\AsymmetricAlgorithm.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\AsymmetricKeyPair.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\CryptoFactory.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\DerUtil.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\DESKey.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\DHParameters.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\DHPrivateKey.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\DHPublicKey.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\DSAParameters.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\DSAPrivateKey.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\DSAPublicKey.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\ECParameters.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\ECPrivateKey.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\ECPublicKey.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\EDPrivateKey.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\EDPublicKey.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\GOSTPrivateKey.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\GOSTPublicKey.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\HashAlgorithm.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\MacAlgorithm.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\RSAParameters.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\RSAPrivateKey.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\RSAPublicKey.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\SymmetricAlgorithm.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\SymmetricKey.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLAES.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLCMAC.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLComp.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLCryptoFactory.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLDES.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLDH.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLDHKeyPair.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLDHPrivateKey.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLDHPublicKey.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLDSA.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLDSAKeyPair.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLDSAPrivateKey.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLDSAPublicKey.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLECDH.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLECDSA.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLECKeyPair.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLECPrivateKey.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLECPublicKey.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLEDDSA.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLEDKeyPair.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLEDPrivateKey.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLEDPublicKey.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLEVPCMacAlgorithm.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLEVPHashAlgorithm.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLEVPMacAlgorithm.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLEVPSymmetricAlgorithm.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLGOST.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLGOSTKeyPair.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLGOSTPrivateKey.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLGOSTPublicKey.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLGOSTR3411.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLHMAC.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLMD5.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLRNG.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLRSA.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLRSAKeyPair.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLRSAPrivateKey.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLRSAPublicKey.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLSHA1.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLSHA224.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLSHA256.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLSHA384.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLSHA512.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLUtil.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\XORSymmetricAlgorithm.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\data_mgr\softhsm_datamgr.dir\$(Configuration)\ByteString.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\data_mgr\softhsm_datamgr.dir\$(Configuration)\RFC4880.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\data_mgr\softhsm_datamgr.dir\$(Configuration)\salloc.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\data_mgr\softhsm_datamgr.dir\$(Configuration)\SecureDataManager.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\data_mgr\softhsm_datamgr.dir\$(Configuration)\SecureMemoryRegistry.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\handle_mgr\softhsm_handlemgr.dir\$(Configuration)\HandleManager.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\handle_mgr\softhsm_handlemgr.dir\$(Configuration)\Handle.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\Directory.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\File.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\FindOperation.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\Generation.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\ObjectFile.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\ObjectStore.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\ObjectStoreToken.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\OSAttribute.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\OSToken.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\SessionObject.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\SessionObjectStore.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\UUID.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\session_mgr\softhsm_sessionmgr.dir\$(Configuration)\SessionManager.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\session_mgr\softhsm_sessionmgr.dir\$(Configuration)\Session.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\slot_mgr\softhsm_slotmgr.dir\$(Configuration)\SlotManager.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\slot_mgr\softhsm_slotmgr.dir\$(Configuration)\Slot.obj" />
+    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\slot_mgr\softhsm_slotmgr.dir\$(Configuration)\Token.obj" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Projects\testing\SoftHSMv2\bulid\ZERO_CHECK.vcxproj">
+      <Project>{01C42170-16D1-33A1-B82D-4C3BDAFD7BB7}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\common\softhsm_common.vcxproj">
+      <Project>{87907F20-7D63-399D-92D8-7B8AE2DDAA2C}</Project>
+      <Name>softhsm_common</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.vcxproj">
+      <Project>{AB89C041-CC56-3324-8F87-A31B20A30813}</Project>
+      <Name>softhsm_crypto</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\data_mgr\softhsm_datamgr.vcxproj">
+      <Project>{D0269105-E5E2-361B-8173-3964F3EF441E}</Project>
+      <Name>softhsm_datamgr</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\handle_mgr\softhsm_handlemgr.vcxproj">
+      <Project>{78EA3704-5901-3711-BA90-70CFDD57DF1A}</Project>
+      <Name>softhsm_handlemgr</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.vcxproj">
+      <Project>{1914559B-F760-38DB-8745-9AA2612EC305}</Project>
+      <Name>softhsm_objectstore</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\session_mgr\softhsm_sessionmgr.vcxproj">
+      <Project>{8BA7F2BA-442B-3324-9604-78E3EF48333F}</Project>
+      <Name>softhsm_sessionmgr</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\slot_mgr\softhsm_slotmgr.vcxproj">
+      <Project>{60BD381E-40D3-3EC2-BDD7-027F1285C2DD}</Project>
+      <Name>softhsm_slotmgr</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

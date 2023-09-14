@@ -3304,7 +3304,7 @@ static CK_RV SymDecrypt(Session* session, CK_BYTE_PTR pEncryptedData, CK_ULONG u
 	ByteString data;
 
 	// Decrypt the data
-	if (!cipher->decryptUpdate(encryptedData,data))
+	if (!((XORSymmetricAlgorithm*)cipher)->XORSymmetricAlgorithm::decryptUpdate(encryptedData,data))
 	{
 		session->resetOp();
 		return CKR_GENERAL_ERROR;
@@ -3312,7 +3312,7 @@ static CK_RV SymDecrypt(Session* session, CK_BYTE_PTR pEncryptedData, CK_ULONG u
 
 	// Finalize decryption
 	ByteString dataFinal;
-	if (!cipher->decryptFinal(dataFinal))
+	if (!((XORSymmetricAlgorithm*)cipher)->XORSymmetricAlgorithm::decryptFinal(dataFinal))
 	{
 		session->resetOp();
 		return CKR_GENERAL_ERROR;

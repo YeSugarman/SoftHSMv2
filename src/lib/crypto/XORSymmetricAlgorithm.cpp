@@ -38,12 +38,6 @@ bool XORSymmetricAlgorithm::encryptUpdate(const ByteString& data, ByteString& en
 		return true;
 	}
 
-	// Count number of bytes written
-	/*if (maximumBytes)
-	{
-	BN_add_word(counterBytes, data.size());
-	}*/
-
 	// Prepare the output block
 	encryptedData.resize(data.size());
 
@@ -51,27 +45,40 @@ bool XORSymmetricAlgorithm::encryptUpdate(const ByteString& data, ByteString& en
 
 	char xorKey = 'P';
 	int len = data.size();
+
 	for (int i = 0; i < len; i++)
 	{
-		//data[i] ^ xorKey;
-		encryptedData[i] = 'a';
+		encryptedData[i] = data.const_byte_str()[i] ^ xorKey;
 	}
 
-	//if (!EVP_EncryptUpdate(pCurCTX, &encryptedData[0], &outLen, (unsigned char*)data.const_byte_str(), data.size()))
-	//{
-	// ERROR_MSG("EVP_EncryptUpdate failed: %s", ERR_error_string(ERR_get_error(), NULL));
+	// Resize the output block
+	currentBufferSize -= outLen;
 
-	// clean();
+	return true;
+}
 
-	// ByteString dummy;
-	// SymmetricAlgorithm::encryptFinal(dummy);
+bool XORSymmetricAlgorithm::decryptUpdate(const ByteString& encryptedData, ByteString& data)
+{
 
-	// return false;
-	//}
+	if (!SymmetricAlgorithm::decryptUpdate(encryptedData, data))
+	{
+		clean();
+		return false;
+	}
 
+	// Prepare the output block
+	data.resize(encryptedData.size());
+
+	int outLen = data.size();
+
+	char xorKey = 'P';
+	int len = data.size();
+	for (int i = 0; i < len; i++)
+	{
+		data[i] = encryptedData.const_byte_str()[i] ^ xorKey;
+	}
 
 	// Resize the output block
-	encryptedData.resize(outLen);
 	currentBufferSize -= outLen;
 
 	return true;
