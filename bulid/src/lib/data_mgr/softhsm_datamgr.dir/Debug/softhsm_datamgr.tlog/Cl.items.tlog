@@ -1,0 +1,5 @@
+C:\Projects\testing\SoftHSMv2\src\lib\data_mgr\ByteString.cpp;C:\Projects\testing\SoftHSMv2\bulid\src\lib\data_mgr\softhsm_datamgr.dir\Debug\ByteString.obj
+C:\Projects\testing\SoftHSMv2\src\lib\data_mgr\RFC4880.cpp;C:\Projects\testing\SoftHSMv2\bulid\src\lib\data_mgr\softhsm_datamgr.dir\Debug\RFC4880.obj
+C:\Projects\testing\SoftHSMv2\src\lib\data_mgr\salloc.cpp;C:\Projects\testing\SoftHSMv2\bulid\src\lib\data_mgr\softhsm_datamgr.dir\Debug\salloc.obj
+C:\Projects\testing\SoftHSMv2\src\lib\data_mgr\SecureDataManager.cpp;C:\Projects\testing\SoftHSMv2\bulid\src\lib\data_mgr\softhsm_datamgr.dir\Debug\SecureDataManager.obj
+C:\Projects\testing\SoftHSMv2\src\lib\data_mgr\SecureMemoryRegistry.cpp;C:\Projects\testing\SoftHSMv2\bulid\src\lib\data_mgr\softhsm_datamgr.dir\Debug\SecureMemoryRegistry.obj
