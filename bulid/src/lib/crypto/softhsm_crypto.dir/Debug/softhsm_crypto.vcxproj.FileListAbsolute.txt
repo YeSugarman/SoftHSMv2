@@ -1,0 +1,1 @@
+C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\Debug\softhsm_crypto.lib

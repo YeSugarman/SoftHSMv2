@@ -1,0 +1,7 @@
+C:\Projects\testing\SoftHSMv2\src\lib\common\Configuration.cpp;C:\Projects\testing\SoftHSMv2\bulid\src\lib\common\softhsm_common.dir\Debug\Configuration.obj
+C:\Projects\testing\SoftHSMv2\src\lib\common\fatal.cpp;C:\Projects\testing\SoftHSMv2\bulid\src\lib\common\softhsm_common.dir\Debug\fatal.obj
+C:\Projects\testing\SoftHSMv2\src\lib\common\log.cpp;C:\Projects\testing\SoftHSMv2\bulid\src\lib\common\softhsm_common.dir\Debug\log.obj
+C:\Projects\testing\SoftHSMv2\src\lib\common\MutexFactory.cpp;C:\Projects\testing\SoftHSMv2\bulid\src\lib\common\softhsm_common.dir\Debug\MutexFactory.obj
+C:\Projects\testing\SoftHSMv2\src\lib\common\osmutex.cpp;C:\Projects\testing\SoftHSMv2\bulid\src\lib\common\softhsm_common.dir\Debug\osmutex.obj
+C:\Projects\testing\SoftHSMv2\src\lib\common\SimpleConfigLoader.cpp;C:\Projects\testing\SoftHSMv2\bulid\src\lib\common\softhsm_common.dir\Debug\SimpleConfigLoader.obj
+C:\Projects\testing\SoftHSMv2\src\lib\win32\syslog.cpp;C:\Projects\testing\SoftHSMv2\bulid\src\lib\common\softhsm_common.dir\Debug\syslog.obj
