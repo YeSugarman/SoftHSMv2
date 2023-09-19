@@ -298,13 +298,13 @@ ENABLE_STATIC:BOOL=ON
 ENABLE_STRICT:BOOL=ON
 
 //Value Computed by CMake
-Encrypt_Decrypt_BINARY_DIR:STATIC=C:/Projects/testing/SoftHSMv2/bulid/src/bin/Encrypt_Decrypt
+Encrypt_Decrypt_BINARY_DIR:STATIC=C:/Projects/testing/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt
 
 //Value Computed by CMake
 Encrypt_Decrypt_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-Encrypt_Decrypt_SOURCE_DIR:STATIC=C:/Projects/testing/SoftHSMv2/src/bin/Encrypt_Decrypt
+Encrypt_Decrypt_SOURCE_DIR:STATIC=C:/Projects/testing/SoftHSMv2/src/CLI/Encrypt_Decrypt
 
 //Path to a library.
 LIB_EAY_DEBUG:FILEPATH=C:/Program Files/OpenSSL-Win64/lib/VC/libcrypto64MDd.lib
@@ -576,7 +576,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MT
 CMAKE_MT-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=16
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=17
 //Platform information initialized
 CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //noop for ranlib
