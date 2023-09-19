@@ -2363,8 +2363,8 @@ CK_RV SoftHSM::SymEncryptInit(CK_SESSION_HANDLE hSession, CK_MECHANISM_PTR pMech
 			return CKR_MECHANISM_INVALID;
 	}
 
-	//SymmetricAlgorithm* cipher = CryptoFactory::i()->getSymmetricAlgorithm(algo);
-	SymmetricAlgorithm* cipher = new XORSymmetricAlgorithm();
+	SymmetricAlgorithm* cipher = CryptoFactory::i()->getSymmetricAlgorithm(algo);
+	//SymmetricAlgorithm* cipher = new XORSymmetricAlgorithm();
 	
 	if (cipher == NULL) return CKR_MECHANISM_INVALID;
 
@@ -3095,8 +3095,8 @@ CK_RV SoftHSM::SymDecryptInit(CK_SESSION_HANDLE hSession, CK_MECHANISM_PTR pMech
 		default:
 			return CKR_MECHANISM_INVALID;
 	}
-	//SymmetricAlgorithm* cipher = CryptoFactory::i()->getSymmetricAlgorithm(algo);
-	SymmetricAlgorithm* cipher = new XORSymmetricAlgorithm();
+	SymmetricAlgorithm* cipher = CryptoFactory::i()->getSymmetricAlgorithm(algo);
+	//SymmetricAlgorithm* cipher = new XORSymmetricAlgorithm();
 	if (cipher == NULL) return CKR_MECHANISM_INVALID;
 
 	SymmetricKey* secretkey = new SymmetricKey();

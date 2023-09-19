@@ -8,12 +8,9 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\bin",
-    "\\src\\bin\\win32",
     "\\src\\CLI",
-    "\\src\\CLI\\Encrypt_Decrypt",
-    "\\src\\lib"
+    "\\src\\CLI\\Encrypt_Decrypt"
   ],
-  "SelectedNode": "\\src\\CLI\\Encrypt_Decrypt\\Encrypt_Decrypt.cpp",
+  "SelectedNode": "\\src\\CLI",
   "PreviewInSolutionExplorer": false
 }
