@@ -1,5 +1,4 @@
 //#pragma once
-////#include "Encrypt_Decrypt/main.cpp"
 //
 //#include <iostream>
 //#include "../../../src/lib/SoftHSM.h"
@@ -11,10 +10,7 @@
 //#define S_IRUSR 0400
 //#define S_IWUSR 0200
 //
-////// Create an instance of SoftHSM
-////SoftHSM* hsm = SoftHSM::i(); // Get the instance
-//
-//int gen_key(SoftHSM* hsm, CK_SLOT_ID slot, CK_SESSION_HANDLE session, CK_OBJECT_HANDLE* hSecretKey)
+//int gen_key(SoftHSM** hsm, CK_SLOT_ID slot, CK_SESSION_HANDLE session, CK_OBJECT_HANDLE* hSecretKey)
 //{
 //	CK_RV rv;
 //	CK_MECHANISM mechanism = { CKM_AES_KEY_GEN, NULL_PTR, 0 };
@@ -36,7 +32,7 @@
 //	FILL_ATTR(keyTemplate[n_attr], CKA_VALUE_LEN, &key_length, sizeof(key_length));
 //	n_attr++;
 //
-//	rv = hsm->C_GenerateKey(session, &mechanism, keyTemplate, n_attr, hSecretKey);
+//	rv = (*hsm)->C_GenerateKey(session, &mechanism, keyTemplate, n_attr, hSecretKey);
 //	if (rv != CKR_OK)
 //	{
 //		printf("C_GenerateKey failed", rv);
