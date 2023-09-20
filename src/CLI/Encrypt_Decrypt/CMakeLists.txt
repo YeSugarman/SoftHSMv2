@@ -1,6 +1,6 @@
 project(Encrypt_Decrypt)
 
-set(INCLUDE_DIRS ${PROJECT_SOURCE_DIR}/../../bin/common
+set(INCLUDE_DIRS 
                  ${PROJECT_SOURCE_DIR}/../../lib/common
                  ${PROJECT_SOURCE_DIR}/../../lib/crypto
                  ${PROJECT_SOURCE_DIR}/../../lib/data_mgr

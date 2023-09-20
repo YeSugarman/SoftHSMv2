@@ -1,5 +1,4 @@
 //#pragma once
-////#include "Encrypt_Decrypt/main.cpp"
 //
 //#include <iostream>
 //#include "../../../src/lib/SoftHSM.h"
@@ -10,9 +9,6 @@
 //#define FILL_ATTR(attr, typ, val, len) {(attr).type=(typ); (attr).pValue=(val); (attr).ulValueLen=len;}
 //#define S_IRUSR 0400
 //#define S_IWUSR 0200
-//
-////// Create an instance of SoftHSM
-////SoftHSM* hsm = SoftHSM::i(); // Get the instance
 //
 //CK_BYTE_PTR get_iv(size_t* iv_size)
 //{
@@ -28,7 +24,7 @@
 //	return iv;
 //}
 //
-//void encrypt_data(SoftHSM* hsm, CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, const char* opt_input, const char* opt_output)
+//void encrypt_data(SoftHSM** hsm, CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, const char* opt_input, const char* opt_output)
 //{
 //	unsigned char in_buffer[1024], out_buffer[1024];
 //
@@ -66,19 +62,19 @@
 //	rv = CKR_CANCEL;
 //	if (r < (int)sizeof(in_buffer)) {
 //		out_len = sizeof(out_buffer);
-//		rv = hsm->C_EncryptInit(session, &mech, key);
+//		rv = (*hsm)->C_EncryptInit(session, &mech, key);
 //		if (rv != CKR_OK)
 //			printf("C_EncryptInit failed \n", rv);
 //		out_len = sizeof(out_buffer);
-//		rv = hsm->C_Encrypt(session, in_buffer, in_len, out_buffer, &out_len);
+//		rv = (*hsm)->C_Encrypt(session, in_buffer, in_len, out_buffer, &out_len);
 //	}
 //	if (rv != CKR_OK) {
-//		rv = hsm->C_EncryptInit(session, &mech, key);
+//		rv = (*hsm)->C_EncryptInit(session, &mech, key);
 //		if (rv != CKR_OK)
 //			printf("C_EncryptInit failed \n", rv);
 //		do {
 //			out_len = sizeof(out_buffer);
-//			rv = hsm->C_EncryptUpdate(session, in_buffer, in_len, out_buffer, &out_len);
+//			rv = (*hsm)->C_EncryptUpdate(session, in_buffer, in_len, out_buffer, &out_len);
 //			if (rv != CKR_OK)
 //				printf("C_EncryptUpdate failed \n", rv);
 //			r = write(fd_out, out_buffer, out_len);
@@ -88,7 +84,7 @@
 //			in_len = r;
 //		} while (r > 0);
 //		out_len = sizeof(out_buffer);
-//		rv = hsm->C_EncryptFinal(session, out_buffer, &out_len);
+//		rv = (*hsm)->C_EncryptFinal(session, out_buffer, &out_len);
 //		if (rv != CKR_OK)
 //			printf("C_EncryptFinal failed \n", rv);
 //	}
@@ -107,7 +103,7 @@
 //	std::cout << "The encryption process was successful \n";
 //}
 //
-//static void decrypt_data(SoftHSM* hsm, CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, char* opt_input, char* opt_output)
+//static void decrypt_data(SoftHSM** hsm, CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, char* opt_input, char* opt_output)
 //{
 //
 //	unsigned char in_buffer[1024], out_buffer[1024];
@@ -149,18 +145,18 @@
 //	rv = CKR_CANCEL;
 //	if (r < (int)sizeof(in_buffer)) {
 //		out_len = sizeof(out_buffer);
-//		rv = hsm->C_DecryptInit(session, &mech, key);
+//		rv = (*hsm)->C_DecryptInit(session, &mech, key);
 //		if (rv != CKR_OK)
 //			printf("C_DecryptInit failed \n", rv);
-//		rv = hsm->C_Decrypt(session, in_buffer, in_len, out_buffer, &out_len);
+//		rv = (*hsm)->C_Decrypt(session, in_buffer, in_len, out_buffer, &out_len);
 //	}
 //	if (rv != CKR_OK) {
-//		rv = hsm->C_DecryptInit(session, &mech, key);
+//		rv = (*hsm)->C_DecryptInit(session, &mech, key);
 //		if (rv != CKR_OK)
 //			printf("C_DecryptInit failed \n", rv);
 //		do {
 //			out_len = sizeof(out_buffer);
-//			rv = hsm->C_DecryptUpdate(session, in_buffer, in_len, out_buffer, &out_len);
+//			rv = (*hsm)->C_DecryptUpdate(session, in_buffer, in_len, out_buffer, &out_len);
 //			if (rv != CKR_OK)
 //				printf("C_DecryptUpdate failed \n", rv);
 //			r = write(fd_out, out_buffer, out_len);
@@ -170,7 +166,7 @@
 //			in_len = r;
 //		} while (r > 0);
 //		out_len = sizeof(out_buffer);
-//		rv = hsm->C_DecryptFinal(session, out_buffer, &out_len);
+//		rv = (*hsm)->C_DecryptFinal(session, out_buffer, &out_len);
 //		if (rv != CKR_OK)
 //			printf("C_DecryptFinal failed \n", rv);
 //	}
@@ -190,7 +186,7 @@
 //
 //}
 //
-//void encryptionDecryptionShell(SoftHSM* hsm, int choose, CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, char* opt_input, char* opt_output)
+//void encryptionDecryptionShell(SoftHSM** hsm, int choose, CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, char* opt_input, char* opt_output)
 //{
 //	if (key == NULL)
 //	{
@@ -201,9 +197,9 @@
 //	opt_input = "C:\\input.txt";
 //	opt_output = "C:\\output.txt";
 //
-//	//std::cout << "Enter path input \n";
+//	std::cout << "Enter path input \n";
 //	//std::cin >> opt_input;
-//	//std::cout << "Enter path output \n";
+//	std::cout << "Enter path output \n";
 //	//std::cin >> opt_input;
 //
 //	if (choose == 2)
