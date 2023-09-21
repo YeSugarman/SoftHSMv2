@@ -4,7 +4,7 @@
 #include <corecrt_io.h>// Include the correct SoftHSM header
 #include <fcntl.h>
 #include <cstdlib>
-
+#include <vector>
 //#include "Encrypt_Decrypt/Encrypt_Decrypt.cpp"
 //#include "Encrypt_Decrypt/Generate_Key.cpp"
 //#include "Encrypt_Decrypt/Initialization_Finalization.cpp"
@@ -102,6 +102,8 @@ CK_BYTE_PTR get_iv(size_t* iv_size)
 
 void encrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, const char* opt_input, const char* opt_output)
 {
+	opt_input = "C:\\input.txt";
+	opt_output = "C:\\output.txt";
 	unsigned char in_buffer[1024], out_buffer[1024];
 
 	CK_MECHANISM mech;
@@ -140,19 +142,28 @@ void encrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, const char* o
 		out_len = sizeof(out_buffer);
 		rv = hsm->C_EncryptInit(session, &mech, key);
 		if (rv != CKR_OK)
+		{
 			printf("C_EncryptInit failed \n", rv);
+			return;
+		}
 		out_len = sizeof(out_buffer);
 		rv = hsm->C_Encrypt(session, in_buffer, in_len, out_buffer, &out_len);
 	}
 	if (rv != CKR_OK) {
 		rv = hsm->C_EncryptInit(session, &mech, key);
 		if (rv != CKR_OK)
+		{
 			printf("C_EncryptInit failed \n", rv);
+			return;
+		}
 		do {
 			out_len = sizeof(out_buffer);
 			rv = hsm->C_EncryptUpdate(session, in_buffer, in_len, out_buffer, &out_len);
 			if (rv != CKR_OK)
+			{
 				printf("C_EncryptUpdate failed \n", rv);
+				return;
+			}
 			r = write(fd_out, out_buffer, out_len);
 			if (r != (int)out_len)
 				printf("Cannot write to %s: %m", opt_output);
@@ -162,7 +173,10 @@ void encrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, const char* o
 		out_len = sizeof(out_buffer);
 		rv = hsm->C_EncryptFinal(session, out_buffer, &out_len);
 		if (rv != CKR_OK)
+		{
 			printf("C_EncryptFinal failed \n", rv);
+			return;
+		}
 	}
 	if (out_len) {
 		r = write(fd_out, out_buffer, out_len);
@@ -181,7 +195,8 @@ void encrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, const char* o
 
 static void decrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, char* opt_input, char* opt_output)
 {
-
+	opt_input = "C:\\output.txt";
+	opt_output = "C:\\result.txt";
 	unsigned char in_buffer[1024], out_buffer[1024];
 
 	CK_MECHANISM mech;
@@ -223,18 +238,27 @@ static void decrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, char* 
 		out_len = sizeof(out_buffer);
 		rv = hsm->C_DecryptInit(session, &mech, key);
 		if (rv != CKR_OK)
+		{
 			printf("C_DecryptInit failed \n", rv);
+			return;
+		}
 		rv = hsm->C_Decrypt(session, in_buffer, in_len, out_buffer, &out_len);
 	}
 	if (rv != CKR_OK) {
 		rv = hsm->C_DecryptInit(session, &mech, key);
 		if (rv != CKR_OK)
+		{
 			printf("C_DecryptInit failed \n", rv);
+			return;
+		}
 		do {
 			out_len = sizeof(out_buffer);
 			rv = hsm->C_DecryptUpdate(session, in_buffer, in_len, out_buffer, &out_len);
 			if (rv != CKR_OK)
+			{
 				printf("C_DecryptUpdate failed \n", rv);
+				return;
+			}
 			r = write(fd_out, out_buffer, out_len);
 			if (r != (int)out_len)
 				printf("Cannot write to %s: %m", opt_output);
@@ -244,7 +268,10 @@ static void decrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, char* 
 		out_len = sizeof(out_buffer);
 		rv = hsm->C_DecryptFinal(session, out_buffer, &out_len);
 		if (rv != CKR_OK)
+		{
 			printf("C_DecryptFinal failed \n", rv);
+			return;
+		}
 	}
 	if (out_len) {
 		r = write(fd_out, out_buffer, out_len);
@@ -262,16 +289,10 @@ static void decrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, char* 
 
 }
 
-void encryptionDecryptionShell(int choose, CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, char* opt_input, char* opt_output)
+void encryptionDecryptionShell(int choose, CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key)
 {
-	if (key == NULL)
-	{
-		std::cout << "There is no key, pleas generate key before encryption";
-		return;
-	}
-
-	opt_input = "C:\\input.txt";
-	opt_output = "C:\\output.txt";
+	char* opt_input = NULL;
+	char* opt_output = NULL;
 
 	std::cout << "Enter path input \n";
 	//std::cin >> opt_input;
@@ -283,15 +304,22 @@ void encryptionDecryptionShell(int choose, CK_SESSION_HANDLE session, CK_OBJECT_
 	else
 		decrypt_data(session, key, opt_input, opt_output);
 }
-
+CK_OBJECT_HANDLE findKey(std::vector<CK_OBJECT_HANDLE> secretKeys)
+{
+	int index;
+	do
+	{
+		std::cout << "enter your id key \n";
+		std::cin >> index;
+	} while (index >= secretKeys.size() + 2);
+	return secretKeys[index - 2];
+}
 
 int main()
 {
-	char* opt_input = NULL;
-	char* opt_output = NULL;
-	CK_OBJECT_HANDLE secretKey=NULL;
+	std::vector<CK_OBJECT_HANDLE> secretKeys;
 
-	long slotNumber = 1219661753;
+	long slotNumber = 819892398;
 	char* password = "123456789";
 	std::cout << "Enter the number of your slot and your password\n";
 	std::cout << " slot";
@@ -300,22 +328,22 @@ int main()
 	//std::cin >> password;
 
 	CK_SESSION_HANDLE session = Initialization(slotNumber,password);
-
+	CK_OBJECT_HANDLE secretKey = NULL;
 	int choose = 0;
 	std::cout << "Generate key press 1 \nEncrypt press 2 \nDecrypt press 3 \nExit press 0 \n";
 	std::cin >> choose;
-
 	while (choose)
 	{
 		switch (choose)
 		{
 		case 1:
-			gen_key( slotNumber, session, &secretKey);
+			gen_key( slotNumber, session,&secretKey);
 			std::cout << "Id key: " << secretKey << "\n";
+			secretKeys.push_back(secretKey);
 			break;
 		case 2:
 		case 3:
-			encryptionDecryptionShell(choose, session, secretKey, opt_input, opt_output);
+			encryptionDecryptionShell(choose, session, findKey(secretKeys));
 			break;
 		default:
 			std::cout << "The choose is not correct \n";
@@ -323,6 +351,7 @@ int main()
 		}
 		std::cout << "Generate key press 1 \n Encrypt press 2 \n Decrypt press 3 \n Exit press 0 \n";
 		std::cin >> choose;
+		
 	}
 	
 	Finalization(session);
