@@ -5,7 +5,11 @@
 #include <fcntl.h>
 #include <cstdlib>
 #include <vector>
-//#include "Encrypt_Decrypt/Encrypt_Decrypt.cpp"
+#ifdef __linux__ // Check if compiling on a Linux-based system (Raspberry Pi)
+
+#include <unistd.h> // Include Linux-specific headers
+
+#endif//#include "Encrypt_Decrypt/Encrypt_Decrypt.cpp"
 //#include "Encrypt_Decrypt/Generate_Key.cpp"
 //#include "Encrypt_Decrypt/Initialization_Finalization.cpp"
 
