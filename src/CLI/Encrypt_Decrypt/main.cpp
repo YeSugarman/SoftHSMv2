@@ -5,7 +5,7 @@
 #include <fcntl.h>
 #include <cstdlib>
 #include <vector>
-//#include "Encrypt_Decrypt/Encrypt_Decrypt.cpp"
+#include <cstdio>
 //#include "Encrypt_Decrypt/Generate_Key.cpp"
 //#include "Encrypt_Decrypt/Initialization_Finalization.cpp"
 
