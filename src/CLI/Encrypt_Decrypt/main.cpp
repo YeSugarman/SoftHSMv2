@@ -1,11 +1,13 @@
 
 #include <iostream>
 #include "../../../src/lib/SoftHSM.h"
-#include <corecrt_io.h>// Include the correct SoftHSM header
+//#include <corecrt_io.h>// Include the correct SoftHSM header
 #include <fcntl.h>
 #include <cstdlib>
 #include <vector>
 #include <cstdio>
+#include <File.h>
+
 //#include "Encrypt_Decrypt/Generate_Key.cpp"
 //#include "Encrypt_Decrypt/Initialization_Finalization.cpp"
 
@@ -100,7 +102,7 @@ CK_BYTE_PTR get_iv(size_t* iv_size)
 	return iv;
 }
 
-void encrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, const char* opt_input, const char* opt_output)
+void encrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key,const char* opt_input,const char* opt_output)
 {
 	opt_input = "C:\\input.txt";
 	opt_output = "C:\\output.txt";
@@ -115,23 +117,22 @@ void encrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, const char* o
 
 	CK_RV rv;
 	CK_ULONG in_len, out_len;
-	int fd_in, fd_out;
+	FILE* fd_in;
+	FILE* fd_out;
 	int r;
 
 	if (opt_input == NULL)
 		fd_in = 0;
-	else if ((fd_in = open(opt_input, O_RDONLY | O_BINARY)) < 0)
+	else if ((fd_in = fopen(opt_input,"rb")))
 		printf("Cannot open %s: %m", opt_input);
 
 	if (opt_output == NULL) {
-		fd_out = 1;
+		fd_out = 0;
 	}
-	else {
-		fd_out = open(opt_output, O_CREAT | O_TRUNC | O_WRONLY | O_BINARY, S_IRUSR | S_IWUSR);
-		if (fd_out < 0)
-			printf("failed to open %s: %m", opt_output);
-	}
-	r = read(fd_in, in_buffer, sizeof(in_buffer));
+	else if ((fd_out = fopen(opt_output, "wb")))
+		printf("failed to open %s: %m", opt_output);
+
+	r = fread(in_buffer,sizeof(char), sizeof(in_buffer)/sizeof(char), fd_in);// char???
 	in_len = r;
 
 	if (r < 0)
@@ -164,10 +165,10 @@ void encrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, const char* o
 				printf("C_EncryptUpdate failed \n", rv);
 				return;
 			}
-			r = write(fd_out, out_buffer, out_len);
+			r = fwrite(out_buffer,sizeof(char), out_len/sizeof(char), fd_out);
 			if (r != (int)out_len)
 				printf("Cannot write to %s: %m", opt_output);
-			r = read(fd_in, in_buffer, sizeof(in_buffer));
+			r = fread(in_buffer, sizeof(char), sizeof(in_buffer) / sizeof(char), fd_in);
 			in_len = r;
 		} while (r > 0);
 		out_len = sizeof(out_buffer);
@@ -179,14 +180,14 @@ void encrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, const char* o
 		}
 	}
 	if (out_len) {
-		r = write(fd_out, out_buffer, out_len);
+		r = fwrite(out_buffer, sizeof(char), out_len / sizeof(char), fd_out);
 		if (r != (int)out_len)
 			printf("Cannot write to %s: %m", opt_output);
 	}
 	if (fd_in != 0)
-		close(fd_in);
-	if (fd_out != 1)
-		close(fd_out);
+		fclose(fd_in);
+	if (fd_out != 0)
+		fclose(fd_out);
 
 	free(iv);
 
@@ -209,25 +210,23 @@ static void decrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, char* 
 	CK_RV rv;
 	CK_RSA_PKCS_OAEP_PARAMS oaep_params;
 	CK_ULONG in_len, out_len;
-	int fd_in, fd_out;
+	FILE* fd_in,* fd_out;
 	int r;
 
 
 	if (opt_input == NULL)
 		fd_in = 0;
-	else if ((fd_in = open(opt_input, O_RDONLY | O_BINARY)) < 0)
+	else if ((fd_in = fopen(opt_input, "rb")))
 		printf("Cannot open %s: %m", opt_input);
 
 	if (opt_output == NULL) {
-		fd_out = 1;
+		fd_out = 0;
 	}
-	else {
-		fd_out = open(opt_output, O_CREAT | O_TRUNC | O_WRONLY | O_BINARY, S_IRUSR | S_IWUSR);
-		if (fd_out < 0)
+	else if((fd_out = fopen(opt_output, "wb")))
 			printf("failed to open %s: %m", opt_output);
-	}
+	
 
-	r = read(fd_in, in_buffer, sizeof(in_buffer));
+	r = fread(in_buffer, sizeof(char), sizeof(in_buffer) / sizeof(char), fd_in);
 	in_len = r;
 
 	if (r < 0)
@@ -259,10 +258,10 @@ static void decrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, char* 
 				printf("C_DecryptUpdate failed \n", rv);
 				return;
 			}
-			r = write(fd_out, out_buffer, out_len);
+			r = fwrite(out_buffer, sizeof(char), out_len / sizeof(char), fd_out);
 			if (r != (int)out_len)
 				printf("Cannot write to %s: %m", opt_output);
-			r = read(fd_in, in_buffer, sizeof(in_buffer));
+			r = fread(in_buffer, sizeof(char), sizeof(in_buffer) / sizeof(char), fd_in);
 			in_len = r;
 		} while (r > 0);
 		out_len = sizeof(out_buffer);
@@ -274,14 +273,14 @@ static void decrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, char* 
 		}
 	}
 	if (out_len) {
-		r = write(fd_out, out_buffer, out_len);
+		r = fwrite(out_buffer, sizeof(char), out_len / sizeof(char), fd_out);
 		if (r != (int)out_len)
 			printf("Cannot write to %s: %m", opt_output);
 	}
 	if (fd_in != 0)
-		close(fd_in);
-	if (fd_out != 1)
-		close(fd_out);
+		fclose(fd_in);
+	if (fd_out != 0)
+		fclose(fd_out);
 
 	free(iv);
 
