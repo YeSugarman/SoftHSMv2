@@ -5,9 +5,10 @@
 #include <fcntl.h>
 #include <cstdlib>
 #include <vector>
-#include <cstdio>
-#include <File.h>
+#include <fstream>
+#include <filesystem>
 
+namespace fs = std::filesystem;
 //#include "Encrypt_Decrypt/Generate_Key.cpp"
 //#include "Encrypt_Decrypt/Initialization_Finalization.cpp"
 
@@ -106,6 +107,10 @@ void encrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key,const char* op
 {
 	opt_input = "C:\\input.txt";
 	opt_output = "C:\\output.txt";
+
+	std::ifstream file_input(opt_input);
+	std::ofstream file_output(opt_output);
+
 	unsigned char in_buffer[1024], out_buffer[1024];
 
 	CK_MECHANISM mech;
@@ -117,26 +122,20 @@ void encrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key,const char* op
 
 	CK_RV rv;
 	CK_ULONG in_len, out_len;
-	FILE* fd_in;
-	FILE* fd_out;
 	int r;
 
-	if (opt_input == NULL)
-		fd_in = 0;
-	else if ((fd_in = fopen(opt_input,"rb")))
-		printf("Cannot open %s: %m", opt_input);
-
-	if (opt_output == NULL) {
-		fd_out = 0;
+	std::string buffer;
+	if (file_input.is_open())
+	{
+		std::string line;
+		while (getline(file_input, line)) {
+			buffer += line;
+		}
+		std::copy(buffer.begin(), buffer.end(), in_buffer);
+		r = buffer.size();
+		in_len = r;
+		file_input.close();
 	}
-	else if ((fd_out = fopen(opt_output, "wb")))
-		printf("failed to open %s: %m", opt_output);
-
-	r = fread(in_buffer,sizeof(char), sizeof(in_buffer)/sizeof(char), fd_in);// char???
-	in_len = r;
-
-	if (r < 0)
-		printf("Cannot read from %s: %m", opt_input);
 
 	rv = CKR_CANCEL;
 	if (r < (int)sizeof(in_buffer)) {
@@ -165,11 +164,22 @@ void encrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key,const char* op
 				printf("C_EncryptUpdate failed \n", rv);
 				return;
 			}
-			r = fwrite(out_buffer,sizeof(char), out_len/sizeof(char), fd_out);
-			if (r != (int)out_len)
-				printf("Cannot write to %s: %m", opt_output);
-			r = fread(in_buffer, sizeof(char), sizeof(in_buffer) / sizeof(char), fd_in);
-			in_len = r;
+			if (file_output.is_open())
+			{
+				file_output << out_buffer << std::endl;
+				file_output.close();
+			}
+			if (file_input.is_open())
+			{
+				std::string line;
+				while (getline(file_input, line)) {
+					buffer += line;
+				}
+				std::copy(buffer.begin(), buffer.end(), in_buffer);
+				r = buffer.size();
+				in_len = r;
+				file_input.close();
+			}
 		} while (r > 0);
 		out_len = sizeof(out_buffer);
 		rv = hsm->C_EncryptFinal(session, out_buffer, &out_len);
@@ -180,15 +190,12 @@ void encrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key,const char* op
 		}
 	}
 	if (out_len) {
-		r = fwrite(out_buffer, sizeof(char), out_len / sizeof(char), fd_out);
-		if (r != (int)out_len)
-			printf("Cannot write to %s: %m", opt_output);
+		if (file_output.is_open())
+		{
+			file_output << out_buffer << std::endl;
+			file_output.close();
+		}
 	}
-	if (fd_in != 0)
-		fclose(fd_in);
-	if (fd_out != 0)
-		fclose(fd_out);
-
 	free(iv);
 
 	std::cout << "The encryption process was successful \n";
@@ -198,6 +205,10 @@ static void decrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, char* 
 {
 	opt_input = "C:\\output.txt";
 	opt_output = "C:\\result.txt";
+
+	std::ifstream file_input(opt_input);
+	std::ofstream file_output(opt_output);
+
 	unsigned char in_buffer[1024], out_buffer[1024];
 
 	CK_MECHANISM mech;
@@ -210,27 +221,19 @@ static void decrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, char* 
 	CK_RV rv;
 	CK_RSA_PKCS_OAEP_PARAMS oaep_params;
 	CK_ULONG in_len, out_len;
-	FILE* fd_in,* fd_out;
 	int r;
-
-
-	if (opt_input == NULL)
-		fd_in = 0;
-	else if ((fd_in = fopen(opt_input, "rb")))
-		printf("Cannot open %s: %m", opt_input);
-
-	if (opt_output == NULL) {
-		fd_out = 0;
+	std::string buffer;
+	if (file_input.is_open())
+	{
+		std::string line;
+		while (getline(file_input, line)) {
+			buffer += line;
+		}
+		std::copy(buffer.begin(), buffer.end(), in_buffer);
+		r = buffer.size();
+		in_len = r;
+		file_input.close();
 	}
-	else if((fd_out = fopen(opt_output, "wb")))
-			printf("failed to open %s: %m", opt_output);
-	
-
-	r = fread(in_buffer, sizeof(char), sizeof(in_buffer) / sizeof(char), fd_in);
-	in_len = r;
-
-	if (r < 0)
-		printf("Cannot read from %s: %m", opt_input);
 
 	rv = CKR_CANCEL;
 	if (r < (int)sizeof(in_buffer)) {
@@ -258,11 +261,23 @@ static void decrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, char* 
 				printf("C_DecryptUpdate failed \n", rv);
 				return;
 			}
-			r = fwrite(out_buffer, sizeof(char), out_len / sizeof(char), fd_out);
-			if (r != (int)out_len)
-				printf("Cannot write to %s: %m", opt_output);
-			r = fread(in_buffer, sizeof(char), sizeof(in_buffer) / sizeof(char), fd_in);
-			in_len = r;
+			if (file_output.is_open())
+			{
+				file_output << out_buffer << std::endl;
+				file_output.close();
+			}
+			if (file_input.is_open())
+			{
+				std::string line;
+				while (getline(file_input, line)) {
+					buffer += line;
+				}
+				std::copy(buffer.begin(), buffer.end(), in_buffer);
+				r = buffer.size();
+				in_len = r;
+				file_input.close();
+			}
+
 		} while (r > 0);
 		out_len = sizeof(out_buffer);
 		rv = hsm->C_DecryptFinal(session, out_buffer, &out_len);
@@ -273,15 +288,12 @@ static void decrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, char* 
 		}
 	}
 	if (out_len) {
-		r = fwrite(out_buffer, sizeof(char), out_len / sizeof(char), fd_out);
-		if (r != (int)out_len)
-			printf("Cannot write to %s: %m", opt_output);
+		if (file_output.is_open())
+		{
+			file_output << out_buffer << std::endl;
+			file_output.close();
+		}
 	}
-	if (fd_in != 0)
-		fclose(fd_in);
-	if (fd_out != 0)
-		fclose(fd_out);
-
 	free(iv);
 
 	std::cout << "The decryption process was successful \n";
