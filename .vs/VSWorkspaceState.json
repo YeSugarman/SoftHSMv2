@@ -8,11 +8,9 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\bin",
-    "\\src\\bin\\util",
     "\\src\\CLI",
     "\\src\\CLI\\Encrypt_Decrypt"
   ],
-  "SelectedNode": "\\src\\CLI\\Encrypt_Decrypt\\CMakeLists.txt",
+  "SelectedNode": "\\src\\CLI\\Encrypt_Decrypt\\Encrypt_Decrypt.h",
   "PreviewInSolutionExplorer": false
 }
