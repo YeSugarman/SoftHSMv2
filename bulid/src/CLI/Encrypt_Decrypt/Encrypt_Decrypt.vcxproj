@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{C01F90A3-5910-3558-8AF3-585E14BE3F74}</ProjectGuid>
+    <ProjectGuid>{3A05CD13-D9A8-36E2-B680-13FD698709BA}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -59,25 +59,25 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Projects\testing\SoftHSMv2\bulid\src\CLI\Encrypt_Decrypt\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Projects\SoftHSMv2\bulid\src\CLI\Encrypt_Decrypt\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Encrypt_Decrypt.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Encrypt_Decrypt</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Projects\testing\SoftHSMv2\bulid\src\CLI\Encrypt_Decrypt\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Projects\SoftHSMv2\bulid\src\CLI\Encrypt_Decrypt\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Encrypt_Decrypt.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Encrypt_Decrypt</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Projects\testing\SoftHSMv2\bulid\src\CLI\Encrypt_Decrypt\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Projects\SoftHSMv2\bulid\src\CLI\Encrypt_Decrypt\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Encrypt_Decrypt.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Encrypt_Decrypt</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Projects\testing\SoftHSMv2\bulid\src\CLI\Encrypt_Decrypt\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Projects\SoftHSMv2\bulid\src\CLI\Encrypt_Decrypt\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Encrypt_Decrypt.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Encrypt_Decrypt</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
@@ -86,7 +86,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Projects\testing\SoftHSMv2\bulid;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\common;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\crypto;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\data_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\object_store;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\pkcs11;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\session_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\slot_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\handle_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\CLI;C:\Program Files\OpenSSL-Win64\include;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\win32;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\bin\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\SoftHSMv2\bulid;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\common;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\crypto;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\data_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\object_store;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\pkcs11;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\session_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\slot_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\handle_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\CLI;C:\Program Files\OpenSSL-Win64\include;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\win32;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\bin\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -105,10 +105,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Projects\testing\SoftHSMv2\bulid;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\common;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\crypto;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\data_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\object_store;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\pkcs11;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\session_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\slot_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\handle_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\CLI;C:\Program Files\OpenSSL-Win64\include;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\win32;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\bin\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\SoftHSMv2\bulid;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\common;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\crypto;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\data_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\object_store;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\pkcs11;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\session_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\slot_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\handle_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\CLI;C:\Program Files\OpenSSL-Win64\include;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\win32;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\bin\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Projects\testing\SoftHSMv2\bulid;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\common;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\crypto;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\data_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\object_store;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\pkcs11;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\session_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\slot_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\handle_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\CLI;C:\Program Files\OpenSSL-Win64\include;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\win32;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\bin\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\SoftHSMv2\bulid;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\common;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\crypto;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\data_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\object_store;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\pkcs11;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\session_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\slot_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\handle_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\CLI;C:\Program Files\OpenSSL-Win64\include;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\win32;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\bin\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -121,8 +121,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Projects/testing/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt/Debug/Encrypt_Decrypt.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Projects/testing/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt/Debug/Encrypt_Decrypt.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Projects/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt/Debug/Encrypt_Decrypt.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Projects/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt/Debug/Encrypt_Decrypt.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -131,7 +131,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Projects\testing\SoftHSMv2\bulid;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\common;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\crypto;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\data_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\object_store;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\pkcs11;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\session_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\slot_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\handle_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\CLI;C:\Program Files\OpenSSL-Win64\include;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\win32;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\bin\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\SoftHSMv2\bulid;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\common;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\crypto;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\data_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\object_store;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\pkcs11;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\session_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\slot_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\handle_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\CLI;C:\Program Files\OpenSSL-Win64\include;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\win32;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\bin\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DisableSpecificWarnings>4996;4456</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -150,10 +150,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Projects\testing\SoftHSMv2\bulid;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\common;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\crypto;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\data_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\object_store;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\pkcs11;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\session_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\slot_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\handle_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\CLI;C:\Program Files\OpenSSL-Win64\include;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\win32;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\bin\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\SoftHSMv2\bulid;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\common;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\crypto;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\data_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\object_store;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\pkcs11;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\session_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\slot_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\handle_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\CLI;C:\Program Files\OpenSSL-Win64\include;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\win32;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\bin\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Projects\testing\SoftHSMv2\bulid;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\common;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\crypto;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\data_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\object_store;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\pkcs11;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\session_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\slot_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\handle_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\CLI;C:\Program Files\OpenSSL-Win64\include;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\win32;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\bin\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\SoftHSMv2\bulid;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\common;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\crypto;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\data_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\object_store;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\pkcs11;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\session_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\slot_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\handle_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\CLI;C:\Program Files\OpenSSL-Win64\include;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\win32;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\bin\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -166,8 +166,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Projects/testing/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt/Release/Encrypt_Decrypt.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Projects/testing/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt/Release/Encrypt_Decrypt.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Projects/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt/Release/Encrypt_Decrypt.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Projects/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt/Release/Encrypt_Decrypt.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -176,7 +176,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Projects\testing\SoftHSMv2\bulid;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\common;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\crypto;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\data_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\object_store;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\pkcs11;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\session_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\slot_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\handle_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\CLI;C:\Program Files\OpenSSL-Win64\include;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\win32;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\bin\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\SoftHSMv2\bulid;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\common;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\crypto;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\data_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\object_store;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\pkcs11;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\session_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\slot_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\handle_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\CLI;C:\Program Files\OpenSSL-Win64\include;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\win32;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\bin\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DisableSpecificWarnings>4996;4456</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -195,10 +195,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Projects\testing\SoftHSMv2\bulid;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\common;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\crypto;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\data_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\object_store;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\pkcs11;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\session_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\slot_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\handle_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\CLI;C:\Program Files\OpenSSL-Win64\include;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\win32;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\bin\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\SoftHSMv2\bulid;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\common;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\crypto;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\data_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\object_store;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\pkcs11;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\session_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\slot_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\handle_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\CLI;C:\Program Files\OpenSSL-Win64\include;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\win32;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\bin\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Projects\testing\SoftHSMv2\bulid;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\common;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\crypto;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\data_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\object_store;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\pkcs11;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\session_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\slot_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\handle_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\CLI;C:\Program Files\OpenSSL-Win64\include;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\win32;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\bin\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\SoftHSMv2\bulid;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\common;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\crypto;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\data_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\object_store;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\pkcs11;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\session_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\slot_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\handle_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\CLI;C:\Program Files\OpenSSL-Win64\include;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\win32;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\bin\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -211,8 +211,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Projects/testing/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt/MinSizeRel/Encrypt_Decrypt.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Projects/testing/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt/MinSizeRel/Encrypt_Decrypt.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Projects/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt/MinSizeRel/Encrypt_Decrypt.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Projects/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt/MinSizeRel/Encrypt_Decrypt.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -221,7 +221,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Projects\testing\SoftHSMv2\bulid;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\common;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\crypto;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\data_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\object_store;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\pkcs11;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\session_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\slot_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\handle_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\CLI;C:\Program Files\OpenSSL-Win64\include;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\win32;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\bin\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\SoftHSMv2\bulid;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\common;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\crypto;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\data_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\object_store;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\pkcs11;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\session_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\slot_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\handle_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\CLI;C:\Program Files\OpenSSL-Win64\include;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\win32;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\bin\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4996;4456</DisableSpecificWarnings>
@@ -239,10 +239,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Projects\testing\SoftHSMv2\bulid;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\common;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\crypto;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\data_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\object_store;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\pkcs11;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\session_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\slot_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\handle_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\CLI;C:\Program Files\OpenSSL-Win64\include;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\win32;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\bin\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\SoftHSMv2\bulid;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\common;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\crypto;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\data_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\object_store;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\pkcs11;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\session_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\slot_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\handle_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\CLI;C:\Program Files\OpenSSL-Win64\include;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\win32;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\bin\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Projects\testing\SoftHSMv2\bulid;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\common;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\crypto;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\data_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\object_store;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\pkcs11;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\session_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\slot_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\handle_mgr;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\CLI;C:\Program Files\OpenSSL-Win64\include;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\win32;C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\bin\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\SoftHSMv2\bulid;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\common;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\crypto;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\data_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\object_store;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\pkcs11;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\session_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\slot_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\handle_mgr;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\CLI;C:\Program Files\OpenSSL-Win64\include;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\lib\win32;C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\..\..\bin\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -255,8 +255,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Projects/testing/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt/RelWithDebInfo/Encrypt_Decrypt.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Projects/testing/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt/RelWithDebInfo/Encrypt_Decrypt.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Projects/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt/RelWithDebInfo/Encrypt_Decrypt.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Projects/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt/RelWithDebInfo/Encrypt_Decrypt.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -264,11 +264,11 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\CMakeLists.txt">
+    <CustomBuild Include="C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Projects/testing/SoftHSMv2/src/CLI/Encrypt_Decrypt/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Projects/SoftHSMv2/src/CLI/Encrypt_Decrypt/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Projects/testing/SoftHSMv2 -BC:/Projects/testing/SoftHSMv2/bulid --check-stamp-file C:/Projects/testing/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Projects/SoftHSMv2 -BC:/Projects/SoftHSMv2/bulid --check-stamp-file C:/Projects/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -277,11 +277,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Projects\testing\SoftHSMv2\bulid\src\CLI\Encrypt_Decrypt\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Projects\SoftHSMv2\bulid\src\CLI\Encrypt_Decrypt\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Projects/testing/SoftHSMv2/src/CLI/Encrypt_Decrypt/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Projects/SoftHSMv2/src/CLI/Encrypt_Decrypt/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Projects/testing/SoftHSMv2 -BC:/Projects/testing/SoftHSMv2/bulid --check-stamp-file C:/Projects/testing/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Projects/SoftHSMv2 -BC:/Projects/SoftHSMv2/bulid --check-stamp-file C:/Projects/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -290,11 +290,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Projects\testing\SoftHSMv2\bulid\src\CLI\Encrypt_Decrypt\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Projects\SoftHSMv2\bulid\src\CLI\Encrypt_Decrypt\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Projects/testing/SoftHSMv2/src/CLI/Encrypt_Decrypt/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Projects/SoftHSMv2/src/CLI/Encrypt_Decrypt/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Projects/testing/SoftHSMv2 -BC:/Projects/testing/SoftHSMv2/bulid --check-stamp-file C:/Projects/testing/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Projects/SoftHSMv2 -BC:/Projects/SoftHSMv2/bulid --check-stamp-file C:/Projects/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -303,11 +303,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Projects\testing\SoftHSMv2\bulid\src\CLI\Encrypt_Decrypt\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Projects\SoftHSMv2\bulid\src\CLI\Encrypt_Decrypt\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Projects/testing/SoftHSMv2/src/CLI/Encrypt_Decrypt/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Projects/SoftHSMv2/src/CLI/Encrypt_Decrypt/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Projects/testing/SoftHSMv2 -BC:/Projects/testing/SoftHSMv2/bulid --check-stamp-file C:/Projects/testing/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Projects/SoftHSMv2 -BC:/Projects/SoftHSMv2/bulid --check-stamp-file C:/Projects/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -316,65 +316,65 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Projects\testing\SoftHSMv2\bulid\src\CLI\Encrypt_Decrypt\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Projects\SoftHSMv2\bulid\src\CLI\Encrypt_Decrypt\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\main.cpp" />
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\Generate_Key.cpp" />
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\Encrypt_Decrypt.cpp" />
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\CLI\Encrypt_Decrypt\Initialization_Finalization.cpp" />
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\main.cpp" />
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\Generate_Key.cpp" />
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\Encrypt_Decrypt.cpp" />
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\CLI\Encrypt_Decrypt\Initialization_Finalization.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Projects\testing\SoftHSMv2\bulid\ZERO_CHECK.vcxproj">
-      <Project>{01C42170-16D1-33A1-B82D-4C3BDAFD7BB7}</Project>
+    <ProjectReference Include="C:\Projects\SoftHSMv2\bulid\ZERO_CHECK.vcxproj">
+      <Project>{0FE485ED-FFB6-3DB8-ACAC-2A2417067F45}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\softhsm2-static.vcxproj">
-      <Project>{02E5F70B-8E96-39D1-928E-B25BBFED8C4A}</Project>
+    <ProjectReference Include="C:\Projects\SoftHSMv2\bulid\src\lib\softhsm2-static.vcxproj">
+      <Project>{8B5DAF63-5E13-36DD-A759-37C6647D9DCC}</Project>
       <Name>softhsm2-static</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\common\softhsm_common.vcxproj">
-      <Project>{87907F20-7D63-399D-92D8-7B8AE2DDAA2C}</Project>
+    <ProjectReference Include="C:\Projects\SoftHSMv2\bulid\src\lib\common\softhsm_common.vcxproj">
+      <Project>{F323D878-91B8-3C64-A96B-BE5EABC736C4}</Project>
       <Name>softhsm_common</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.vcxproj">
-      <Project>{AB89C041-CC56-3324-8F87-A31B20A30813}</Project>
+    <ProjectReference Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.vcxproj">
+      <Project>{68E9C5C4-D981-335E-8621-1D75036318B4}</Project>
       <Name>softhsm_crypto</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\data_mgr\softhsm_datamgr.vcxproj">
-      <Project>{D0269105-E5E2-361B-8173-3964F3EF441E}</Project>
+    <ProjectReference Include="C:\Projects\SoftHSMv2\bulid\src\lib\data_mgr\softhsm_datamgr.vcxproj">
+      <Project>{0D73C065-B335-37FA-A884-8272441F18EF}</Project>
       <Name>softhsm_datamgr</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\handle_mgr\softhsm_handlemgr.vcxproj">
-      <Project>{78EA3704-5901-3711-BA90-70CFDD57DF1A}</Project>
+    <ProjectReference Include="C:\Projects\SoftHSMv2\bulid\src\lib\handle_mgr\softhsm_handlemgr.vcxproj">
+      <Project>{7A042396-8D2E-3772-B128-86938CEDF474}</Project>
       <Name>softhsm_handlemgr</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.vcxproj">
-      <Project>{1914559B-F760-38DB-8745-9AA2612EC305}</Project>
+    <ProjectReference Include="C:\Projects\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.vcxproj">
+      <Project>{25B2375B-2564-39E6-94A9-28EE08712642}</Project>
       <Name>softhsm_objectstore</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\session_mgr\softhsm_sessionmgr.vcxproj">
-      <Project>{8BA7F2BA-442B-3324-9604-78E3EF48333F}</Project>
+    <ProjectReference Include="C:\Projects\SoftHSMv2\bulid\src\lib\session_mgr\softhsm_sessionmgr.vcxproj">
+      <Project>{E37FD56F-1C67-396B-BE21-7F4C1835AFBC}</Project>
       <Name>softhsm_sessionmgr</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\slot_mgr\softhsm_slotmgr.vcxproj">
-      <Project>{60BD381E-40D3-3EC2-BDD7-027F1285C2DD}</Project>
+    <ProjectReference Include="C:\Projects\SoftHSMv2\bulid\src\lib\slot_mgr\softhsm_slotmgr.vcxproj">
+      <Project>{9872BC2D-2946-35B5-BAFE-09BDA50CA4E9}</Project>
       <Name>softhsm_slotmgr</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

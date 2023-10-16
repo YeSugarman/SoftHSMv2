@@ -1,13 +1,18 @@
 
-#include <iostream>
+
 #include "../../../src/lib/SoftHSM.h"
-#include <corecrt_io.h>// Include the correct SoftHSM header
+//#include <corecrt_io.h>// Include the correct SoftHSM header
 #include <fcntl.h>
 #include <cstdlib>
+#include <iostream>
+#include <vector>
+#include <fstream>
+#include <filesystem>
+#include <cstring>
 
-//#include "Encrypt_Decrypt/Encrypt_Decrypt.cpp"
-//#include "Encrypt_Decrypt/Generate_Key.cpp"
-//#include "Encrypt_Decrypt/Initialization_Finalization.cpp"
+
+namespace fs = std::filesystem;
+
 
 #define FILL_ATTR(attr, typ, val, len) {(attr).type=(typ); (attr).pValue=(val); (attr).ulValueLen=len;}
 #define S_IRUSR 0400
@@ -50,7 +55,7 @@ int gen_key(CK_SLOT_ID slot, CK_SESSION_HANDLE session, CK_OBJECT_HANDLE* hSecre
 	return 1;
 }
 
-CK_SESSION_HANDLE Initialization(long slotNumber, char* password)
+CK_SESSION_HANDLE InitSession(long slotNumber, char* password)
 {
 	// Initialize the library
 	CK_RV rv = hsm->C_Initialize(nullptr);
@@ -78,7 +83,7 @@ CK_SESSION_HANDLE Initialization(long slotNumber, char* password)
 	return session;
 }
 
-void Finalization(CK_SESSION_HANDLE session)
+void CloseSession(CK_SESSION_HANDLE session)
 {
 	// Close the session and finalize the library when done
 	hsm->C_Logout(session);
@@ -100,178 +105,158 @@ CK_BYTE_PTR get_iv(size_t* iv_size)
 	return iv;
 }
 
-void encrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, const char* opt_input, const char* opt_output)
-{
+void encrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, std::string& input_file, std::string& output_file) {
 	unsigned char in_buffer[1024], out_buffer[1024];
 
 	CK_MECHANISM mech;
+	CK_RV rv;
+	CK_ULONG in_len, out_len;
+
 	size_t iv_size = 16;
 	CK_BYTE_PTR iv = get_iv(&iv_size);
 	mech.mechanism = CKM_AES_CBC_PAD;
 	mech.pParameter = iv;
 	mech.ulParameterLen = iv_size;
+	
+	input_file = "C:\\input.txt";
+	output_file = "C:\\output.txt";
 
-	CK_RV rv;
-	CK_ULONG in_len, out_len;
-	int fd_in, fd_out;
-	int r;
-
-	if (opt_input == NULL)
-		fd_in = 0;
-	else if ((fd_in = open(opt_input, O_RDONLY | O_BINARY)) < 0)
-		printf("Cannot open %s: %m", opt_input);
-
-	if (opt_output == NULL) {
-		fd_out = 1;
-	}
-	else {
-		fd_out = open(opt_output, O_CREAT | O_TRUNC | O_WRONLY | O_BINARY, S_IRUSR | S_IWUSR);
-		if (fd_out < 0)
-			printf("failed to open %s: %m", opt_output);
-	}
-	r = read(fd_in, in_buffer, sizeof(in_buffer));
-	in_len = r;
-
-	if (r < 0)
-		printf("Cannot read from %s: %m", opt_input);
-
-	rv = CKR_CANCEL;
-	if (r < (int)sizeof(in_buffer)) {
-		out_len = sizeof(out_buffer);
-		rv = hsm->C_EncryptInit(session, &mech, key);
-		if (rv != CKR_OK)
-			printf("C_EncryptInit failed \n", rv);
-		out_len = sizeof(out_buffer);
-		rv = hsm->C_Encrypt(session, in_buffer, in_len, out_buffer, &out_len);
-	}
-	if (rv != CKR_OK) {
-		rv = hsm->C_EncryptInit(session, &mech, key);
-		if (rv != CKR_OK)
-			printf("C_EncryptInit failed \n", rv);
-		do {
-			out_len = sizeof(out_buffer);
-			rv = hsm->C_EncryptUpdate(session, in_buffer, in_len, out_buffer, &out_len);
-			if (rv != CKR_OK)
-				printf("C_EncryptUpdate failed \n", rv);
-			r = write(fd_out, out_buffer, out_len);
-			if (r != (int)out_len)
-				printf("Cannot write to %s: %m", opt_output);
-			r = read(fd_in, in_buffer, sizeof(in_buffer));
-			in_len = r;
-		} while (r > 0);
-		out_len = sizeof(out_buffer);
-		rv = hsm->C_EncryptFinal(session, out_buffer, &out_len);
-		if (rv != CKR_OK)
-			printf("C_EncryptFinal failed \n", rv);
-	}
-	if (out_len) {
-		r = write(fd_out, out_buffer, out_len);
-		if (r != (int)out_len)
-			printf("Cannot write to %s: %m", opt_output);
-	}
-	if (fd_in != 0)
-		close(fd_in);
-	if (fd_out != 1)
-		close(fd_out);
-
-	free(iv);
-
-	std::cout << "The encryption process was successful \n";
-}
-
-static void decrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, char* opt_input, char* opt_output)
-{
-
-	unsigned char in_buffer[1024], out_buffer[1024];
-
-	CK_MECHANISM mech;
-	size_t iv_size = 16;
-	CK_BYTE_PTR iv = get_iv(&iv_size);
-	mech.mechanism = CKM_AES_CBC_PAD;
-	mech.pParameter = iv;
-	mech.ulParameterLen = iv_size;
-
-	CK_RV rv;
-	CK_RSA_PKCS_OAEP_PARAMS oaep_params;
-	CK_ULONG in_len, out_len;
-	int fd_in, fd_out;
-	int r;
-
-
-	if (opt_input == NULL)
-		fd_in = 0;
-	else if ((fd_in = open(opt_input, O_RDONLY | O_BINARY)) < 0)
-		printf("Cannot open %s: %m", opt_input);
-
-	if (opt_output == NULL) {
-		fd_out = 1;
-	}
-	else {
-		fd_out = open(opt_output, O_CREAT | O_TRUNC | O_WRONLY | O_BINARY, S_IRUSR | S_IWUSR);
-		if (fd_out < 0)
-			printf("failed to open %s: %m", opt_output);
-	}
-
-	r = read(fd_in, in_buffer, sizeof(in_buffer));
-	in_len = r;
-
-	if (r < 0)
-		printf("Cannot read from %s: %m", opt_input);
-
-	rv = CKR_CANCEL;
-	if (r < (int)sizeof(in_buffer)) {
-		out_len = sizeof(out_buffer);
-		rv = hsm->C_DecryptInit(session, &mech, key);
-		if (rv != CKR_OK)
-			printf("C_DecryptInit failed \n", rv);
-		rv = hsm->C_Decrypt(session, in_buffer, in_len, out_buffer, &out_len);
-	}
-	if (rv != CKR_OK) {
-		rv = hsm->C_DecryptInit(session, &mech, key);
-		if (rv != CKR_OK)
-			printf("C_DecryptInit failed \n", rv);
-		do {
-			out_len = sizeof(out_buffer);
-			rv = hsm->C_DecryptUpdate(session, in_buffer, in_len, out_buffer, &out_len);
-			if (rv != CKR_OK)
-				printf("C_DecryptUpdate failed \n", rv);
-			r = write(fd_out, out_buffer, out_len);
-			if (r != (int)out_len)
-				printf("Cannot write to %s: %m", opt_output);
-			r = read(fd_in, in_buffer, sizeof(in_buffer));
-			in_len = r;
-		} while (r > 0);
-		out_len = sizeof(out_buffer);
-		rv = hsm->C_DecryptFinal(session, out_buffer, &out_len);
-		if (rv != CKR_OK)
-			printf("C_DecryptFinal failed \n", rv);
-	}
-	if (out_len) {
-		r = write(fd_out, out_buffer, out_len);
-		if (r != (int)out_len)
-			printf("Cannot write to %s: %m", opt_output);
-	}
-	if (fd_in != 0)
-		close(fd_in);
-	if (fd_out != 1)
-		close(fd_out);
-
-	free(iv);
-
-	std::cout << "The decryption process was successful \n";
-
-}
-
-void encryptionDecryptionShell(int choose, CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, char* opt_input, char* opt_output)
-{
-	if (key == NULL)
-	{
-		std::cout << "There is no key, pleas generate key before encryption";
+	std::ifstream in_stream(input_file, std::ios::binary);
+	if (!in_stream) {
+		std::cerr << "Cannot open input file: " << input_file << std::endl;
 		return;
 	}
 
-	opt_input = "C:\\input.txt";
-	opt_output = "C:\\output.txt";
+	std::ofstream out_stream(output_file, std::ios::binary);
+	if (!out_stream) {
+		std::cerr << "Cannot open output file: " << output_file << std::endl;
+		return;
+	}
+
+	int r;
+	in_stream.read(reinterpret_cast<char*>(in_buffer), sizeof(in_buffer));
+	in_len = in_stream.gcount();
+
+	rv = CKR_CANCEL;
+	if (in_len < sizeof(in_buffer)) {
+		out_len = sizeof(out_buffer);
+		rv = hsm->C_EncryptInit(session, &mech, key);
+		if (rv != CKR_OK) {
+			std::cerr << "C_EncryptInit failed" << std::endl;
+			return;
+		}
+
+		out_len = sizeof(out_buffer);
+		rv = hsm->C_Encrypt(session, in_buffer, in_len, out_buffer, &out_len);
+	}
+
+	if (rv != CKR_OK) {
+		rv = hsm->C_EncryptInit(session, &mech, key);
+		if (rv != CKR_OK) {
+			std::cerr << "C_EncryptInit failed" << std::endl;
+			return;
+		}
+
+		do {
+			out_len = sizeof(out_buffer);
+			rv = hsm->C_EncryptUpdate(session, in_buffer, in_len, out_buffer, &out_len);
+			if (rv != CKR_OK) {
+				std::cerr << "C_EncryptUpdate failed" << std::endl;
+				return;
+			}
+			out_stream.write(reinterpret_cast<char*>(out_buffer), out_len);
+			r = in_stream.readsome(reinterpret_cast<char*>(in_buffer), sizeof(in_buffer));
+			in_len = r;
+		} while (r > 0);
+
+		out_len = sizeof(out_buffer);
+		rv = hsm->C_EncryptFinal(session, out_buffer, &out_len);
+		if (rv != CKR_OK) {
+			std::cerr << "C_EncryptFinal failed" << std::endl;
+			return;
+		}
+	}
+
+	if (out_len) {
+		out_stream.write(reinterpret_cast<char*>(out_buffer), out_len);
+	}
+
+	in_stream.close();
+	out_stream.close();
+	std::cout << "The encryption process was successful" << std::endl;
+}
+void decrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, std::string& input_file, std::string& output_file) {
+	unsigned char in_buffer[1024], out_buffer[1024];
+
+	CK_MECHANISM mech;
+	size_t iv_size = 16;
+	CK_BYTE_PTR iv = get_iv(&iv_size);
+
+	mech.mechanism = CKM_AES_CBC_PAD;
+	mech.pParameter = iv;
+	mech.ulParameterLen = iv_size;
+	CK_RV rv;
+	CK_ULONG in_len, out_len;
+
+	input_file = "C:\\output.txt";
+	output_file = "C:\\result.txt";
+
+	std::ifstream file_input(input_file, std::ios::binary);
+	if (!file_input) {
+		std::cerr << "Cannot open input file: " << input_file << std::endl;
+		return;
+	}
+
+	std::ofstream file_output(output_file, std::ios::binary);
+	if (!file_output) {
+		std::cerr << "Cannot open output file: " << output_file << std::endl;
+		return;
+	}
+	// Initialize decryption
+	rv = hsm->C_DecryptInit(session, &mech, key);
+	if (rv != CKR_OK) {
+		std::cerr << "C_DecryptInit failed" << std::endl;
+		return;
+	}
+
+	do {
+		file_input.read(reinterpret_cast<char*>(in_buffer), sizeof(in_buffer));
+		in_len = file_input.gcount();
+
+		if (in_len <= 0) {
+			break;  // No more data to decrypt, exit the loop
+		}
+
+		rv = hsm->C_DecryptUpdate(session, in_buffer, in_len, out_buffer, &out_len);
+		if (rv != CKR_OK) {
+			std::cerr << "C_DecryptUpdate failed" << std::endl;
+			return;
+		}
+
+		file_output.write(reinterpret_cast<char*>(out_buffer), out_len);
+	} while (file_input);
+
+	// Finalize decryption
+	out_len = sizeof(out_buffer);
+	rv = hsm->C_DecryptFinal(session, out_buffer, &out_len);
+	if (rv != CKR_OK) {
+		std::cerr << "C_DecryptFinal failed" << std::endl;
+		return;
+	}
+
+	if (out_len) {
+		file_output.write(reinterpret_cast<char*>(out_buffer), out_len);
+	}
+
+	file_input.close();
+	file_output.close();
+
+	std::cout << "The decryption process was successful" << std::endl;
+}
+void encryptionDecryptionShell(int choose, CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key)
+{
+	std::string opt_input = NULL;
+	std::string opt_output = NULL;
 
 	std::cout << "Enter path input \n";
 	//std::cin >> opt_input;
@@ -283,15 +268,22 @@ void encryptionDecryptionShell(int choose, CK_SESSION_HANDLE session, CK_OBJECT_
 	else
 		decrypt_data(session, key, opt_input, opt_output);
 }
-
+CK_OBJECT_HANDLE findKey(std::vector<CK_OBJECT_HANDLE> secretKeys)
+{
+	int index;
+	do
+	{
+		std::cout << "enter your id key \n";
+		std::cin >> index;
+	} while (index >= secretKeys.size() + 2);
+	return secretKeys[index - 2];
+}
 
 int main()
 {
-	char* opt_input = NULL;
-	char* opt_output = NULL;
-	CK_OBJECT_HANDLE secretKey=NULL;
+	std::vector<CK_OBJECT_HANDLE> secretKeys;
 
-	long slotNumber = 1219661753;
+	long slotNumber = 819892398;
 	char* password = "123456789";
 	std::cout << "Enter the number of your slot and your password\n";
 	std::cout << " slot";
@@ -299,23 +291,23 @@ int main()
 	std::cout << "\n password \n";
 	//std::cin >> password;
 
-	CK_SESSION_HANDLE session = Initialization(slotNumber,password);
-
+	CK_SESSION_HANDLE session = InitSession(slotNumber,password);
+	CK_OBJECT_HANDLE secretKey = NULL;
 	int choose = 0;
 	std::cout << "Generate key press 1 \nEncrypt press 2 \nDecrypt press 3 \nExit press 0 \n";
 	std::cin >> choose;
-
 	while (choose)
 	{
 		switch (choose)
 		{
 		case 1:
-			gen_key( slotNumber, session, &secretKey);
+			gen_key( slotNumber, session,&secretKey);
 			std::cout << "Id key: " << secretKey << "\n";
+			secretKeys.push_back(secretKey);
 			break;
 		case 2:
 		case 3:
-			encryptionDecryptionShell(choose, session, secretKey, opt_input, opt_output);
+			encryptionDecryptionShell(choose, session, findKey(secretKeys));
 			break;
 		default:
 			std::cout << "The choose is not correct \n";
@@ -323,9 +315,10 @@ int main()
 		}
 		std::cout << "Generate key press 1 \n Encrypt press 2 \n Decrypt press 3 \n Exit press 0 \n";
 		std::cin >> choose;
+		
 	}
 	
-	Finalization(session);
+	CloseSession(session);
 
 	return 0;
 }

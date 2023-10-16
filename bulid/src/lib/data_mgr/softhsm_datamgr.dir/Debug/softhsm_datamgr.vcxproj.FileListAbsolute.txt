@@ -1,1 +1,0 @@
-C:\Projects\testing\SoftHSMv2\bulid\src\lib\data_mgr\softhsm_datamgr.dir\Debug\softhsm_datamgr.lib

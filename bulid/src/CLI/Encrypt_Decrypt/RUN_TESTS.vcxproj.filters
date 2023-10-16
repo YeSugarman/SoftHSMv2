@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\Projects\testing\SoftHSMv2\bulid\CMakeFiles\a9d43716768d47f22e18e462b366eb02\RUN_TESTS_force.rule">
+    <CustomBuild Include="C:\Projects\SoftHSMv2\bulid\CMakeFiles\11239621aaa696d08d66cdb6b2df884a\RUN_TESTS_force.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{FB960CCA-4E2D-3A40-A754-DBE3713C2ED6}</UniqueIdentifier>
+      <UniqueIdentifier>{3E79BC8A-DB9A-36CC-B246-457E4A200FC0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

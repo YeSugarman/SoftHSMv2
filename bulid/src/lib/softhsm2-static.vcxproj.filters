@@ -1,342 +1,342 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\access.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\access.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\main.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\P11Attributes.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\P11Attributes.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\P11Objects.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\P11Objects.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\SoftHSM.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\SoftHSM.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Projects\testing\SoftHSMv2\src\lib\CMakeLists.txt" />
+    <CustomBuild Include="C:\Projects\SoftHSMv2\src\lib\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\common\softhsm_common.dir\$(Configuration)\Configuration.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\common\softhsm_common.dir\$(Configuration)\Configuration.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\common\softhsm_common.dir\$(Configuration)\fatal.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\common\softhsm_common.dir\$(Configuration)\fatal.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\common\softhsm_common.dir\$(Configuration)\log.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\common\softhsm_common.dir\$(Configuration)\log.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\common\softhsm_common.dir\$(Configuration)\MutexFactory.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\common\softhsm_common.dir\$(Configuration)\MutexFactory.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\common\softhsm_common.dir\$(Configuration)\osmutex.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\common\softhsm_common.dir\$(Configuration)\osmutex.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\common\softhsm_common.dir\$(Configuration)\SimpleConfigLoader.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\common\softhsm_common.dir\$(Configuration)\SimpleConfigLoader.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\common\softhsm_common.dir\$(Configuration)\syslog.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\common\softhsm_common.dir\$(Configuration)\syslog.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\AESKey.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\AESKey.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\AsymmetricAlgorithm.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\AsymmetricAlgorithm.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\AsymmetricKeyPair.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\AsymmetricKeyPair.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\CryptoFactory.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\CryptoFactory.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\DerUtil.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\DerUtil.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\DESKey.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\DESKey.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\DHParameters.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\DHParameters.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\DHPrivateKey.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\DHPrivateKey.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\DHPublicKey.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\DHPublicKey.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\DSAParameters.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\DSAParameters.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\DSAPrivateKey.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\DSAPrivateKey.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\DSAPublicKey.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\DSAPublicKey.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\ECParameters.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\ECParameters.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\ECPrivateKey.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\ECPrivateKey.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\ECPublicKey.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\ECPublicKey.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\EDPrivateKey.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\EDPrivateKey.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\EDPublicKey.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\EDPublicKey.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\GOSTPrivateKey.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\GOSTPrivateKey.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\GOSTPublicKey.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\GOSTPublicKey.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\HashAlgorithm.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\HashAlgorithm.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\MacAlgorithm.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\MacAlgorithm.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\RSAParameters.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\RSAParameters.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\RSAPrivateKey.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\RSAPrivateKey.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\RSAPublicKey.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\RSAPublicKey.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\SymmetricAlgorithm.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\SymmetricAlgorithm.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\SymmetricKey.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\SymmetricKey.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLAES.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLAES.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLCMAC.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLCMAC.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLComp.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLComp.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLCryptoFactory.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLCryptoFactory.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLDES.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLDES.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLDH.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLDH.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLDHKeyPair.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLDHKeyPair.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLDHPrivateKey.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLDHPrivateKey.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLDHPublicKey.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLDHPublicKey.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLDSA.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLDSA.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLDSAKeyPair.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLDSAKeyPair.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLDSAPrivateKey.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLDSAPrivateKey.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLDSAPublicKey.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLDSAPublicKey.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLECDH.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLECDH.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLECDSA.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLECDSA.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLECKeyPair.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLECKeyPair.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLECPrivateKey.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLECPrivateKey.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLECPublicKey.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLECPublicKey.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLEDDSA.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLEDDSA.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLEDKeyPair.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLEDKeyPair.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLEDPrivateKey.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLEDPrivateKey.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLEDPublicKey.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLEDPublicKey.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLEVPCMacAlgorithm.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLEVPCMacAlgorithm.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLEVPHashAlgorithm.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLEVPHashAlgorithm.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLEVPMacAlgorithm.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLEVPMacAlgorithm.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLEVPSymmetricAlgorithm.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLEVPSymmetricAlgorithm.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLGOST.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLGOST.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLGOSTKeyPair.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLGOSTKeyPair.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLGOSTPrivateKey.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLGOSTPrivateKey.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLGOSTPublicKey.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLGOSTPublicKey.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLGOSTR3411.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLGOSTR3411.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLHMAC.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLHMAC.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLMD5.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLMD5.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLRNG.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLRNG.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLRSA.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLRSA.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLRSAKeyPair.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLRSAKeyPair.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLRSAPrivateKey.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLRSAPrivateKey.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLRSAPublicKey.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLRSAPublicKey.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLSHA1.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLSHA1.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLSHA224.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLSHA224.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLSHA256.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLSHA256.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLSHA384.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLSHA384.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLSHA512.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLSHA512.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLUtil.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\OSSLUtil.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\XORSymmetricAlgorithm.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\XORSymmetricAlgorithm.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\XORCryptoFactory.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\crypto\softhsm_crypto.dir\$(Configuration)\XORCryptoFactory.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\data_mgr\softhsm_datamgr.dir\$(Configuration)\ByteString.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\data_mgr\softhsm_datamgr.dir\$(Configuration)\ByteString.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\data_mgr\softhsm_datamgr.dir\$(Configuration)\RFC4880.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\data_mgr\softhsm_datamgr.dir\$(Configuration)\RFC4880.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\data_mgr\softhsm_datamgr.dir\$(Configuration)\salloc.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\data_mgr\softhsm_datamgr.dir\$(Configuration)\salloc.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\data_mgr\softhsm_datamgr.dir\$(Configuration)\SecureDataManager.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\data_mgr\softhsm_datamgr.dir\$(Configuration)\SecureDataManager.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\data_mgr\softhsm_datamgr.dir\$(Configuration)\SecureMemoryRegistry.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\data_mgr\softhsm_datamgr.dir\$(Configuration)\SecureMemoryRegistry.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\handle_mgr\softhsm_handlemgr.dir\$(Configuration)\HandleManager.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\handle_mgr\softhsm_handlemgr.dir\$(Configuration)\HandleManager.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\handle_mgr\softhsm_handlemgr.dir\$(Configuration)\Handle.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\handle_mgr\softhsm_handlemgr.dir\$(Configuration)\Handle.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\Directory.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\Directory.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\File.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\File.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\FindOperation.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\FindOperation.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\Generation.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\Generation.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\ObjectFile.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\ObjectFile.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\ObjectStore.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\ObjectStore.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\ObjectStoreToken.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\ObjectStoreToken.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\OSAttribute.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\OSAttribute.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\OSToken.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\OSToken.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\SessionObject.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\SessionObject.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\SessionObjectStore.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\SessionObjectStore.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\UUID.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\object_store\softhsm_objectstore.dir\$(Configuration)\UUID.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\session_mgr\softhsm_sessionmgr.dir\$(Configuration)\SessionManager.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\session_mgr\softhsm_sessionmgr.dir\$(Configuration)\SessionManager.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\session_mgr\softhsm_sessionmgr.dir\$(Configuration)\Session.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\session_mgr\softhsm_sessionmgr.dir\$(Configuration)\Session.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\slot_mgr\softhsm_slotmgr.dir\$(Configuration)\SlotManager.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\slot_mgr\softhsm_slotmgr.dir\$(Configuration)\SlotManager.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\slot_mgr\softhsm_slotmgr.dir\$(Configuration)\Slot.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\slot_mgr\softhsm_slotmgr.dir\$(Configuration)\Slot.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="C:\Projects\testing\SoftHSMv2\bulid\src\lib\slot_mgr\softhsm_slotmgr.dir\$(Configuration)\Token.obj">
+    <Object Include="C:\Projects\SoftHSMv2\bulid\src\lib\slot_mgr\softhsm_slotmgr.dir\$(Configuration)\Token.obj">
       <Filter>Object Libraries</Filter>
     </Object>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Object Libraries">
-      <UniqueIdentifier>{29F6B5EA-0135-31CE-8638-012EEB4F081C}</UniqueIdentifier>
+      <UniqueIdentifier>{FBB2E527-FA00-310A-9E01-A56FD8E7F41A}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{92D1C384-BB1A-31CE-A7F5-F7610C398B74}</UniqueIdentifier>
+      <UniqueIdentifier>{8A1793D5-C0E1-3EDD-8CEE-7F9AF198B222}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

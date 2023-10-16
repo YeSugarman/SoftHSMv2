@@ -1,4 +1,4 @@
-# Install script for directory: C:/Projects/testing/SoftHSMv2/src/bin/dump
+# Install script for directory: C:/Projects/SoftHSMv2/src/bin/dump
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,17 +34,17 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "C:/Projects/testing/SoftHSMv2/bulid/src/bin/dump/Debug/softhsm2-dump-file.exe")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "C:/Projects/SoftHSMv2/bulid/src/bin/dump/Debug/softhsm2-dump-file.exe")
   elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "C:/Projects/testing/SoftHSMv2/bulid/src/bin/dump/Release/softhsm2-dump-file.exe")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "C:/Projects/SoftHSMv2/bulid/src/bin/dump/Release/softhsm2-dump-file.exe")
   elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Mm][Ii][Nn][Ss][Ii][Zz][Ee][Rr][Ee][Ll])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "C:/Projects/testing/SoftHSMv2/bulid/src/bin/dump/MinSizeRel/softhsm2-dump-file.exe")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "C:/Projects/SoftHSMv2/bulid/src/bin/dump/MinSizeRel/softhsm2-dump-file.exe")
   elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "C:/Projects/testing/SoftHSMv2/bulid/src/bin/dump/RelWithDebInfo/softhsm2-dump-file.exe")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "C:/Projects/SoftHSMv2/bulid/src/bin/dump/RelWithDebInfo/softhsm2-dump-file.exe")
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/man/man1" TYPE FILE FILES "C:/Projects/testing/SoftHSMv2/src/bin/dump/softhsm2-dump-file.1")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/man/man1" TYPE FILE FILES "C:/Projects/SoftHSMv2/src/bin/dump/softhsm2-dump-file.1")
 endif()
 

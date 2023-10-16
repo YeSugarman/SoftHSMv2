@@ -1,4 +1,4 @@
-# Install script for directory: C:/Projects/testing/SoftHSMv2/src/bin
+# Install script for directory: C:/Projects/SoftHSMv2/src/bin
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,21 +34,21 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Projects/testing/SoftHSMv2/bulid/src/bin/dump/cmake_install.cmake")
+  include("C:/Projects/SoftHSMv2/bulid/src/bin/dump/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Projects/testing/SoftHSMv2/bulid/src/bin/keyconv/cmake_install.cmake")
+  include("C:/Projects/SoftHSMv2/bulid/src/bin/keyconv/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Projects/testing/SoftHSMv2/bulid/src/bin/migrate/cmake_install.cmake")
+  include("C:/Projects/SoftHSMv2/bulid/src/bin/migrate/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Projects/testing/SoftHSMv2/bulid/src/bin/util/cmake_install.cmake")
+  include("C:/Projects/SoftHSMv2/bulid/src/bin/util/cmake_install.cmake")
 endif()
 

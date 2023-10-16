@@ -1,240 +1,240 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\AESKey.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\AESKey.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\AsymmetricAlgorithm.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\AsymmetricAlgorithm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\AsymmetricKeyPair.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\AsymmetricKeyPair.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\CryptoFactory.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\CryptoFactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\DerUtil.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\DerUtil.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\DESKey.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\DESKey.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\DHParameters.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\DHParameters.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\DHPrivateKey.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\DHPrivateKey.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\DHPublicKey.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\DHPublicKey.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\DSAParameters.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\DSAParameters.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\DSAPrivateKey.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\DSAPrivateKey.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\DSAPublicKey.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\DSAPublicKey.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\ECParameters.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\ECParameters.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\ECPrivateKey.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\ECPrivateKey.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\ECPublicKey.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\ECPublicKey.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\EDPrivateKey.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\EDPrivateKey.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\EDPublicKey.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\EDPublicKey.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\GOSTPrivateKey.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\GOSTPrivateKey.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\GOSTPublicKey.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\GOSTPublicKey.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\HashAlgorithm.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\HashAlgorithm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\MacAlgorithm.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\MacAlgorithm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\RSAParameters.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\RSAParameters.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\RSAPrivateKey.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\RSAPrivateKey.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\RSAPublicKey.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\RSAPublicKey.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\SymmetricAlgorithm.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\SymmetricAlgorithm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\SymmetricKey.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\SymmetricKey.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLAES.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLAES.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLCMAC.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLCMAC.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLComp.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLComp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLCryptoFactory.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLCryptoFactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLDES.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLDES.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLDH.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLDH.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLDHKeyPair.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLDHKeyPair.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLDHPrivateKey.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLDHPrivateKey.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLDHPublicKey.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLDHPublicKey.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLDSA.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLDSA.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLDSAKeyPair.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLDSAKeyPair.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLDSAPrivateKey.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLDSAPrivateKey.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLDSAPublicKey.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLDSAPublicKey.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLECDH.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLECDH.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLECDSA.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLECDSA.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLECKeyPair.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLECKeyPair.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLECPrivateKey.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLECPrivateKey.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLECPublicKey.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLECPublicKey.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLEDDSA.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLEDDSA.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLEDKeyPair.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLEDKeyPair.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLEDPrivateKey.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLEDPrivateKey.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLEDPublicKey.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLEDPublicKey.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLEVPCMacAlgorithm.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLEVPCMacAlgorithm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLEVPHashAlgorithm.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLEVPHashAlgorithm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLEVPMacAlgorithm.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLEVPMacAlgorithm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLEVPSymmetricAlgorithm.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLEVPSymmetricAlgorithm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLGOST.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLGOST.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLGOSTKeyPair.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLGOSTKeyPair.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLGOSTPrivateKey.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLGOSTPrivateKey.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLGOSTPublicKey.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLGOSTPublicKey.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLGOSTR3411.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLGOSTR3411.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLHMAC.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLHMAC.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLMD5.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLMD5.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLRNG.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLRNG.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLRSA.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLRSA.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLRSAKeyPair.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLRSAKeyPair.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLRSAPrivateKey.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLRSAPrivateKey.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLRSAPublicKey.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLRSAPublicKey.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLSHA1.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLSHA1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLSHA224.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLSHA224.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLSHA256.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLSHA256.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLSHA384.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLSHA384.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLSHA512.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLSHA512.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLUtil.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLUtil.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\XORSymmetricAlgorithm.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\XORSymmetricAlgorithm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\XORCryptoFactory.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\XORCryptoFactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\XORSymmetricAlgorithm.h">
+    <ClInclude Include="C:\Projects\SoftHSMv2\src\lib\crypto\XORSymmetricAlgorithm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\XORCryptoFactory.h">
+    <ClInclude Include="C:\Projects\SoftHSMv2\src\lib\crypto\XORCryptoFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\CMakeLists.txt" />
+    <CustomBuild Include="C:\Projects\SoftHSMv2\src\lib\crypto\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{2F6EC420-0015-3952-8794-EE283BED4CF6}</UniqueIdentifier>
+      <UniqueIdentifier>{3443B6D9-88F6-386F-8906-CF0DF8CA7448}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{92D1C384-BB1A-31CE-A7F5-F7610C398B74}</UniqueIdentifier>
+      <UniqueIdentifier>{8A1793D5-C0E1-3EDD-8CEE-7F9AF198B222}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

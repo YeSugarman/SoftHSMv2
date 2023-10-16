@@ -1,34 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\bin\util\softhsm2-util.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\bin\util\softhsm2-util.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\bin\common\findslot.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\bin\common\findslot.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\bin\common\getpw.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\bin\common\getpw.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\bin\common\library.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\bin\common\library.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\bin\util\softhsm2-util-ossl.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\bin\util\softhsm2-util-ossl.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\lib\crypto\OSSLComp.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLComp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\testing\SoftHSMv2\src\bin\win32\getopt.cpp">
+    <ClCompile Include="C:\Projects\SoftHSMv2\src\bin\win32\getopt.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Projects\testing\SoftHSMv2\src\bin\util\CMakeLists.txt" />
+    <CustomBuild Include="C:\Projects\SoftHSMv2\src\bin\util\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{92D1C384-BB1A-31CE-A7F5-F7610C398B74}</UniqueIdentifier>
+      <UniqueIdentifier>{8A1793D5-C0E1-3EDD-8CEE-7F9AF198B222}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

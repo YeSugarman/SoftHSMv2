@@ -1,4 +1,4 @@
-# Install script for directory: C:/Projects/testing/SoftHSMv2/src/bin/migrate
+# Install script for directory: C:/Projects/SoftHSMv2/src/bin/migrate
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
