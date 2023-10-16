@@ -19,6 +19,7 @@ set(SOURCES main.cpp
 Generate_Key.cpp
 Encrypt_Decrypt.cpp
 Initialization_Finalization.cpp
+GlobalInstance.cpp
             )
 
 if(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
@@ -26,7 +27,7 @@ if(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
 endif()
 
 include_directories(${INCLUDE_DIRS})
-add_executable(${PROJECT_NAME} ${SOURCES} "main.cpp" "Generate_Key.cpp" "Encrypt_Decrypt.cpp" "Initialization_Finalization.cpp" "GlobalInstance.h" "Generate_Key.h" "Initialization_Finalization.h" "Encrypt_Decrypt.h")
+add_executable(${PROJECT_NAME} ${SOURCES} "main.cpp" "Generate_Key.cpp" "Encrypt_Decrypt.cpp" "Initialization_Finalization.cpp" "GlobalInstance.h" "Generate_Key.h" "Initialization_Finalization.h" "Encrypt_Decrypt.h" "GlobalInstance.cpp")
 target_link_libraries(${PROJECT_NAME} softhsm2-static ${CRYPTO_LIBS} ${SQLITE3_LIBS} ${CMAKE_DL_LIBS})
 target_compile_options(${PROJECT_NAME} PRIVATE ${COMPILE_OPTIONS})
 

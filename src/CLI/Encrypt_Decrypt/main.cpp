@@ -5,10 +5,6 @@
 #include "Encrypt_Decrypt.h"
 #include "Initialization_Finalization.h"
 
-
-
-
-
 int main()
 {
 	std::vector<CK_OBJECT_HANDLE> secretKeys;

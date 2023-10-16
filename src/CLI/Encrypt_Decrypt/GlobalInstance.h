@@ -15,6 +15,6 @@
 
 
 
-// Create an instance of SoftHSM
-SoftHSM* hsm = SoftHSM::i(); // Get the instance
+extern SoftHSM* hsm;
+
 

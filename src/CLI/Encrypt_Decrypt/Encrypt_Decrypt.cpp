@@ -168,8 +168,8 @@ void decrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, std::string& 
 }
 void encryptionDecryptionShell(int choose, CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key)
 {
-	std::string opt_input = NULL;
-	std::string opt_output = NULL;
+	std::string opt_input;
+	std::string opt_output;
 
 	std::cout << "Enter path input \n";
 	//std::cin >> opt_input;
