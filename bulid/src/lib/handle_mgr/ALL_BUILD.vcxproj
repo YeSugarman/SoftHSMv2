@@ -25,7 +25,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{F78FFF04-C8E8-3D40-9E67-6E75F99D2F77}</ProjectGuid>
+    <ProjectGuid>{B535C380-C0BA-3D02-86C2-4958119D56F2}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -69,7 +69,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Projects\SoftHSMv2\bulid;C:\Projects\SoftHSMv2\src\lib\handle_mgr;C:\Projects\SoftHSMv2\src\lib\handle_mgr\..\common;C:\Projects\SoftHSMv2\src\lib\handle_mgr\..\crypto;C:\Projects\SoftHSMv2\src\lib\handle_mgr\..\data_mgr;C:\Projects\SoftHSMv2\src\lib\handle_mgr\..\object_store;C:\Projects\SoftHSMv2\src\lib\handle_mgr\..\pkcs11;C:\Projects\SoftHSMv2\src\lib\handle_mgr\..\slot_mgr;C:\Projects\SoftHSMv2\src\lib\handle_mgr\..\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\Meira_Symm\SoftHSMv2\bulid;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\handle_mgr;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\handle_mgr\..\common;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\handle_mgr\..\crypto;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\handle_mgr\..\data_mgr;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\handle_mgr\..\object_store;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\handle_mgr\..\pkcs11;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\handle_mgr\..\slot_mgr;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\handle_mgr\..\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -79,7 +79,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Projects\SoftHSMv2\bulid;C:\Projects\SoftHSMv2\src\lib\handle_mgr;C:\Projects\SoftHSMv2\src\lib\handle_mgr\..\common;C:\Projects\SoftHSMv2\src\lib\handle_mgr\..\crypto;C:\Projects\SoftHSMv2\src\lib\handle_mgr\..\data_mgr;C:\Projects\SoftHSMv2\src\lib\handle_mgr\..\object_store;C:\Projects\SoftHSMv2\src\lib\handle_mgr\..\pkcs11;C:\Projects\SoftHSMv2\src\lib\handle_mgr\..\slot_mgr;C:\Projects\SoftHSMv2\src\lib\handle_mgr\..\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\Meira_Symm\SoftHSMv2\bulid;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\handle_mgr;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\handle_mgr\..\common;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\handle_mgr\..\crypto;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\handle_mgr\..\data_mgr;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\handle_mgr\..\object_store;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\handle_mgr\..\pkcs11;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\handle_mgr\..\slot_mgr;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\handle_mgr\..\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -89,7 +89,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Projects\SoftHSMv2\bulid;C:\Projects\SoftHSMv2\src\lib\handle_mgr;C:\Projects\SoftHSMv2\src\lib\handle_mgr\..\common;C:\Projects\SoftHSMv2\src\lib\handle_mgr\..\crypto;C:\Projects\SoftHSMv2\src\lib\handle_mgr\..\data_mgr;C:\Projects\SoftHSMv2\src\lib\handle_mgr\..\object_store;C:\Projects\SoftHSMv2\src\lib\handle_mgr\..\pkcs11;C:\Projects\SoftHSMv2\src\lib\handle_mgr\..\slot_mgr;C:\Projects\SoftHSMv2\src\lib\handle_mgr\..\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\Meira_Symm\SoftHSMv2\bulid;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\handle_mgr;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\handle_mgr\..\common;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\handle_mgr\..\crypto;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\handle_mgr\..\data_mgr;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\handle_mgr\..\object_store;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\handle_mgr\..\pkcs11;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\handle_mgr\..\slot_mgr;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\handle_mgr\..\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -99,7 +99,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Projects\SoftHSMv2\bulid;C:\Projects\SoftHSMv2\src\lib\handle_mgr;C:\Projects\SoftHSMv2\src\lib\handle_mgr\..\common;C:\Projects\SoftHSMv2\src\lib\handle_mgr\..\crypto;C:\Projects\SoftHSMv2\src\lib\handle_mgr\..\data_mgr;C:\Projects\SoftHSMv2\src\lib\handle_mgr\..\object_store;C:\Projects\SoftHSMv2\src\lib\handle_mgr\..\pkcs11;C:\Projects\SoftHSMv2\src\lib\handle_mgr\..\slot_mgr;C:\Projects\SoftHSMv2\src\lib\handle_mgr\..\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\Meira_Symm\SoftHSMv2\bulid;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\handle_mgr;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\handle_mgr\..\common;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\handle_mgr\..\crypto;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\handle_mgr\..\data_mgr;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\handle_mgr\..\object_store;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\handle_mgr\..\pkcs11;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\handle_mgr\..\slot_mgr;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\handle_mgr\..\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -108,11 +108,11 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Projects\SoftHSMv2\src\lib\handle_mgr\CMakeLists.txt">
+    <CustomBuild Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\handle_mgr\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Projects/SoftHSMv2/src/lib/handle_mgr/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Projects/Meira_Symm/SoftHSMv2/src/lib/handle_mgr/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Projects/SoftHSMv2 -BC:/Projects/SoftHSMv2/bulid --check-stamp-file C:/Projects/SoftHSMv2/bulid/src/lib/handle_mgr/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Projects/Meira_Symm/SoftHSMv2 -BC:/Projects/Meira_Symm/SoftHSMv2/bulid --check-stamp-file C:/Projects/Meira_Symm/SoftHSMv2/bulid/src/lib/handle_mgr/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -121,11 +121,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Projects\SoftHSMv2\bulid\src\lib\handle_mgr\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Projects\Meira_Symm\SoftHSMv2\bulid\src\lib\handle_mgr\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Projects/SoftHSMv2/src/lib/handle_mgr/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Projects/Meira_Symm/SoftHSMv2/src/lib/handle_mgr/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Projects/SoftHSMv2 -BC:/Projects/SoftHSMv2/bulid --check-stamp-file C:/Projects/SoftHSMv2/bulid/src/lib/handle_mgr/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Projects/Meira_Symm/SoftHSMv2 -BC:/Projects/Meira_Symm/SoftHSMv2/bulid --check-stamp-file C:/Projects/Meira_Symm/SoftHSMv2/bulid/src/lib/handle_mgr/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -134,11 +134,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Projects\SoftHSMv2\bulid\src\lib\handle_mgr\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Projects\Meira_Symm\SoftHSMv2\bulid\src\lib\handle_mgr\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Projects/SoftHSMv2/src/lib/handle_mgr/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Projects/Meira_Symm/SoftHSMv2/src/lib/handle_mgr/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Projects/SoftHSMv2 -BC:/Projects/SoftHSMv2/bulid --check-stamp-file C:/Projects/SoftHSMv2/bulid/src/lib/handle_mgr/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Projects/Meira_Symm/SoftHSMv2 -BC:/Projects/Meira_Symm/SoftHSMv2/bulid --check-stamp-file C:/Projects/Meira_Symm/SoftHSMv2/bulid/src/lib/handle_mgr/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -147,11 +147,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Projects\SoftHSMv2\bulid\src\lib\handle_mgr\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Projects\Meira_Symm\SoftHSMv2\bulid\src\lib\handle_mgr\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Projects/SoftHSMv2/src/lib/handle_mgr/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Projects/Meira_Symm/SoftHSMv2/src/lib/handle_mgr/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Projects/SoftHSMv2 -BC:/Projects/SoftHSMv2/bulid --check-stamp-file C:/Projects/SoftHSMv2/bulid/src/lib/handle_mgr/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Projects/Meira_Symm/SoftHSMv2 -BC:/Projects/Meira_Symm/SoftHSMv2/bulid --check-stamp-file C:/Projects/Meira_Symm/SoftHSMv2/bulid/src/lib/handle_mgr/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -160,21 +160,21 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Projects\SoftHSMv2\bulid\src\lib\handle_mgr\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Projects\Meira_Symm\SoftHSMv2\bulid\src\lib\handle_mgr\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Projects\SoftHSMv2\bulid\ZERO_CHECK.vcxproj">
-      <Project>{0FE485ED-FFB6-3DB8-ACAC-2A2417067F45}</Project>
+    <ProjectReference Include="C:\Projects\Meira_Symm\SoftHSMv2\bulid\ZERO_CHECK.vcxproj">
+      <Project>{9AF04B78-B244-3453-838E-CD1B17FCDF8B}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Projects\SoftHSMv2\bulid\src\lib\handle_mgr\softhsm_handlemgr.vcxproj">
-      <Project>{7A042396-8D2E-3772-B128-86938CEDF474}</Project>
+    <ProjectReference Include="C:\Projects\Meira_Symm\SoftHSMv2\bulid\src\lib\handle_mgr\softhsm_handlemgr.vcxproj">
+      <Project>{522C7AFC-4377-3538-A092-247799813665}</Project>
       <Name>softhsm_handlemgr</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

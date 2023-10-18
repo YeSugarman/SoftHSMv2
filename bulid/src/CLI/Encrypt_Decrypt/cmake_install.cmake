@@ -1,4 +1,4 @@
-# Install script for directory: C:/Projects/SoftHSMv2/src/CLI/Encrypt_Decrypt
+# Install script for directory: C:/Projects/Meira_Symm/SoftHSMv2/src/CLI/Encrypt_Decrypt
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,17 +34,17 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "C:/Projects/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt/Debug/Encrypt_Decrypt.exe")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "C:/Projects/Meira_Symm/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt/Debug/Encrypt_Decrypt.exe")
   elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "C:/Projects/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt/Release/Encrypt_Decrypt.exe")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "C:/Projects/Meira_Symm/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt/Release/Encrypt_Decrypt.exe")
   elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Mm][Ii][Nn][Ss][Ii][Zz][Ee][Rr][Ee][Ll])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "C:/Projects/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt/MinSizeRel/Encrypt_Decrypt.exe")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "C:/Projects/Meira_Symm/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt/MinSizeRel/Encrypt_Decrypt.exe")
   elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "C:/Projects/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt/RelWithDebInfo/Encrypt_Decrypt.exe")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "C:/Projects/Meira_Symm/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt/RelWithDebInfo/Encrypt_Decrypt.exe")
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/man/man1" TYPE FILE FILES "C:/Projects/SoftHSMv2/src/CLI/Encrypt_Decrypt/Encrypt_Decrypt.1")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/man/man1" TYPE FILE FILES "C:/Projects/Meira_Symm/SoftHSMv2/src/CLI/Encrypt_Decrypt/Encrypt_Decrypt.1")
 endif()
 

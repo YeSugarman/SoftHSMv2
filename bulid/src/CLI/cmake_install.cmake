@@ -1,4 +1,4 @@
-# Install script for directory: C:/Projects/SoftHSMv2/src/CLI
+# Install script for directory: C:/Projects/Meira_Symm/SoftHSMv2/src/CLI
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,6 +34,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Projects/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt/cmake_install.cmake")
+  include("C:/Projects/Meira_Symm/SoftHSMv2/bulid/src/CLI/Encrypt_Decrypt/cmake_install.cmake")
 endif()
 

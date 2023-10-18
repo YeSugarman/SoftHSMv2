@@ -1,45 +1,68 @@
-//#pragma once
-//
-//#include <iostream>
-//#include "../../../src/lib/SoftHSM.h"
-//#include <corecrt_io.h>// Include the correct SoftHSM header
-//#include <fcntl.h>
-//#include <cstdlib>
-//
-//#define FILL_ATTR(attr, typ, val, len) {(attr).type=(typ); (attr).pValue=(val); (attr).ulValueLen=len;}
-//#define S_IRUSR 0400
-//#define S_IWUSR 0200
-//
-//int gen_key(SoftHSM** hsm, CK_SLOT_ID slot, CK_SESSION_HANDLE session, CK_OBJECT_HANDLE* hSecretKey)
-//{
-//	CK_RV rv;
-//	CK_MECHANISM mechanism = { CKM_AES_KEY_GEN, NULL_PTR, 0 };
-//	CK_OBJECT_CLASS secret_key_class = CKO_SECRET_KEY;
-//	CK_BBOOL _true = TRUE;
-//	CK_ATTRIBUTE keyTemplate[20] = {
-//	{CKA_CLASS, &secret_key_class, sizeof(secret_key_class)},
-//	{CKA_TOKEN, &_true, sizeof(_true)},
-//	};
-//	int n_attr = 2;
-//	int key_length = 0;
-//	do
-//	{
-//		std::cout << "enter the length of the key: 32/ 16/ 24 \n";
-//		std::cin >> key_length;
-//	} while (key_length != 32 && key_length != 16 && key_length != 24);
-//
-//
-//	FILL_ATTR(keyTemplate[n_attr], CKA_VALUE_LEN, &key_length, sizeof(key_length));
-//	n_attr++;
-//
-//	rv = (*hsm)->C_GenerateKey(session, &mechanism, keyTemplate, n_attr, hSecretKey);
-//	if (rv != CKR_OK)
-//	{
-//		printf("C_GenerateKey failed", rv);
-//		exit(1);
-//	}
-//
-//	printf("Successfully created the key \n");
-//	//show_key(session, *hSecretKey);
-//	return 1;
-//}
+#pragma once
+#include "Generate_Key.h"
+
+
+void intToBytes(int value, unsigned char* bytes) {
+	for (int i = 0; i < sizeof(int); i++) {
+		bytes[i] = (value >> (8 * i)) & 0xFF;
+	}
+}
+
+int gen_key(CK_SLOT_ID slot, CK_SESSION_HANDLE session, CK_OBJECT_HANDLE* hSecretKey)
+{
+	static int count = 0; //give the key id
+	count++;
+
+	CK_RV rv;
+	int key_length = 0;
+	do
+	{
+		std::cout << "enter the length of the key: 32/ 16/ 24 \n";
+		std::cin >> key_length;
+	} while (key_length != 32 && key_length != 16 && key_length != 24);
+
+	//call NXP
+	uint8_t* arrRandom = new uint8_t[key_length]();
+	int status = GetRandom(arrRandom, key_length);
+	if (status != kStatus_SSS_Success)
+	{
+		std::cerr << "GetRandom failed";
+		exit(1);
+	}
+
+	//call MSP
+	uint8_t kekId = Get - Kek - By - Info(MAGIC, GET_KEK_BT_INFO, data_lenght, (userId, kekInfo from the token), crc);
+	uint8_t* arrEncrypted = Encrypt - data - key(MAGIC, ENCRYPT_DATA_KEY, data_lenght, (userId, kekId, key_length, arrRandom), crc);
+
+	//cast to byte
+	unsigned char* countBytes;
+	unsigned char* kekIdBytes;
+	intToBytes(count, countBytes);
+	intToBytes(kekId, kekIdBytes);
+
+	// Define a template for the object
+	CK_OBJECT_CLASS secret_key_class = CKO_SECRET_KEY;
+	CK_ATTRIBUTE templateKey[] = {
+		{CKA_CLASS, &secret_key_class, sizeof(secret_key_class)},
+		{CKA_ID, countBytes, sizeof(countBytes)},
+		{CKA_VALUE, arrEncrypted, key_length},
+		{CKA_LABEL, kekIdBytes, sizeof(kekIdBytes)}
+	};
+
+	// Create the object
+	rv = hsm->C_CreateObject(session, templateKey, sizeof(templateKey) / sizeof(CK_ATTRIBUTE), hSecretKey);
+
+	if (rv != CKR_OK) {
+		std::cerr << "Failed to create the object" << std::endl;
+		exit(1);
+	}
+
+	printf("Successfully created the key \n");
+
+	delete[] countBytes;
+	delete[] kekIdBytes;
+	delete[] arrRandom;
+
+	return count;
+}
+

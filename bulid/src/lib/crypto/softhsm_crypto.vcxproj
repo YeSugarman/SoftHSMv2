@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{68E9C5C4-D981-335E-8621-1D75036318B4}</ProjectGuid>
+    <ProjectGuid>{4A57F67E-21A7-379E-90E1-995370DB6A21}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -78,7 +78,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Projects\SoftHSMv2\bulid;C:\Projects\SoftHSMv2\src\lib\crypto;C:\Projects\SoftHSMv2\src\lib\crypto\..\common;C:\Projects\SoftHSMv2\src\lib\crypto\..\data_mgr;C:\Projects\SoftHSMv2\src\lib\crypto\..\pkcs11;C:\Program Files\OpenSSL-Win64\include;C:\Projects\SoftHSMv2\src\lib\crypto\..\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\Meira_Symm\SoftHSMv2\bulid;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\common;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\data_mgr;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\pkcs11;C:\Program Files\OpenSSL-Win64\include;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -97,10 +97,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Projects\SoftHSMv2\bulid;C:\Projects\SoftHSMv2\src\lib\crypto;C:\Projects\SoftHSMv2\src\lib\crypto\..\common;C:\Projects\SoftHSMv2\src\lib\crypto\..\data_mgr;C:\Projects\SoftHSMv2\src\lib\crypto\..\pkcs11;C:\Program Files\OpenSSL-Win64\include;C:\Projects\SoftHSMv2\src\lib\crypto\..\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\Meira_Symm\SoftHSMv2\bulid;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\common;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\data_mgr;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\pkcs11;C:\Program Files\OpenSSL-Win64\include;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Projects\SoftHSMv2\bulid;C:\Projects\SoftHSMv2\src\lib\crypto;C:\Projects\SoftHSMv2\src\lib\crypto\..\common;C:\Projects\SoftHSMv2\src\lib\crypto\..\data_mgr;C:\Projects\SoftHSMv2\src\lib\crypto\..\pkcs11;C:\Program Files\OpenSSL-Win64\include;C:\Projects\SoftHSMv2\src\lib\crypto\..\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\Meira_Symm\SoftHSMv2\bulid;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\common;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\data_mgr;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\pkcs11;C:\Program Files\OpenSSL-Win64\include;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -113,7 +113,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Projects\SoftHSMv2\bulid;C:\Projects\SoftHSMv2\src\lib\crypto;C:\Projects\SoftHSMv2\src\lib\crypto\..\common;C:\Projects\SoftHSMv2\src\lib\crypto\..\data_mgr;C:\Projects\SoftHSMv2\src\lib\crypto\..\pkcs11;C:\Program Files\OpenSSL-Win64\include;C:\Projects\SoftHSMv2\src\lib\crypto\..\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\Meira_Symm\SoftHSMv2\bulid;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\common;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\data_mgr;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\pkcs11;C:\Program Files\OpenSSL-Win64\include;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DisableSpecificWarnings>4996;4456</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -132,10 +132,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Projects\SoftHSMv2\bulid;C:\Projects\SoftHSMv2\src\lib\crypto;C:\Projects\SoftHSMv2\src\lib\crypto\..\common;C:\Projects\SoftHSMv2\src\lib\crypto\..\data_mgr;C:\Projects\SoftHSMv2\src\lib\crypto\..\pkcs11;C:\Program Files\OpenSSL-Win64\include;C:\Projects\SoftHSMv2\src\lib\crypto\..\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\Meira_Symm\SoftHSMv2\bulid;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\common;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\data_mgr;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\pkcs11;C:\Program Files\OpenSSL-Win64\include;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Projects\SoftHSMv2\bulid;C:\Projects\SoftHSMv2\src\lib\crypto;C:\Projects\SoftHSMv2\src\lib\crypto\..\common;C:\Projects\SoftHSMv2\src\lib\crypto\..\data_mgr;C:\Projects\SoftHSMv2\src\lib\crypto\..\pkcs11;C:\Program Files\OpenSSL-Win64\include;C:\Projects\SoftHSMv2\src\lib\crypto\..\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\Meira_Symm\SoftHSMv2\bulid;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\common;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\data_mgr;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\pkcs11;C:\Program Files\OpenSSL-Win64\include;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -148,7 +148,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Projects\SoftHSMv2\bulid;C:\Projects\SoftHSMv2\src\lib\crypto;C:\Projects\SoftHSMv2\src\lib\crypto\..\common;C:\Projects\SoftHSMv2\src\lib\crypto\..\data_mgr;C:\Projects\SoftHSMv2\src\lib\crypto\..\pkcs11;C:\Program Files\OpenSSL-Win64\include;C:\Projects\SoftHSMv2\src\lib\crypto\..\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\Meira_Symm\SoftHSMv2\bulid;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\common;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\data_mgr;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\pkcs11;C:\Program Files\OpenSSL-Win64\include;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DisableSpecificWarnings>4996;4456</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -167,10 +167,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Projects\SoftHSMv2\bulid;C:\Projects\SoftHSMv2\src\lib\crypto;C:\Projects\SoftHSMv2\src\lib\crypto\..\common;C:\Projects\SoftHSMv2\src\lib\crypto\..\data_mgr;C:\Projects\SoftHSMv2\src\lib\crypto\..\pkcs11;C:\Program Files\OpenSSL-Win64\include;C:\Projects\SoftHSMv2\src\lib\crypto\..\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\Meira_Symm\SoftHSMv2\bulid;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\common;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\data_mgr;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\pkcs11;C:\Program Files\OpenSSL-Win64\include;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Projects\SoftHSMv2\bulid;C:\Projects\SoftHSMv2\src\lib\crypto;C:\Projects\SoftHSMv2\src\lib\crypto\..\common;C:\Projects\SoftHSMv2\src\lib\crypto\..\data_mgr;C:\Projects\SoftHSMv2\src\lib\crypto\..\pkcs11;C:\Program Files\OpenSSL-Win64\include;C:\Projects\SoftHSMv2\src\lib\crypto\..\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\Meira_Symm\SoftHSMv2\bulid;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\common;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\data_mgr;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\pkcs11;C:\Program Files\OpenSSL-Win64\include;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -183,7 +183,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Projects\SoftHSMv2\bulid;C:\Projects\SoftHSMv2\src\lib\crypto;C:\Projects\SoftHSMv2\src\lib\crypto\..\common;C:\Projects\SoftHSMv2\src\lib\crypto\..\data_mgr;C:\Projects\SoftHSMv2\src\lib\crypto\..\pkcs11;C:\Program Files\OpenSSL-Win64\include;C:\Projects\SoftHSMv2\src\lib\crypto\..\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\Meira_Symm\SoftHSMv2\bulid;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\common;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\data_mgr;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\pkcs11;C:\Program Files\OpenSSL-Win64\include;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4996;4456</DisableSpecificWarnings>
@@ -201,10 +201,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Projects\SoftHSMv2\bulid;C:\Projects\SoftHSMv2\src\lib\crypto;C:\Projects\SoftHSMv2\src\lib\crypto\..\common;C:\Projects\SoftHSMv2\src\lib\crypto\..\data_mgr;C:\Projects\SoftHSMv2\src\lib\crypto\..\pkcs11;C:\Program Files\OpenSSL-Win64\include;C:\Projects\SoftHSMv2\src\lib\crypto\..\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\Meira_Symm\SoftHSMv2\bulid;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\common;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\data_mgr;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\pkcs11;C:\Program Files\OpenSSL-Win64\include;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Projects\SoftHSMv2\bulid;C:\Projects\SoftHSMv2\src\lib\crypto;C:\Projects\SoftHSMv2\src\lib\crypto\..\common;C:\Projects\SoftHSMv2\src\lib\crypto\..\data_mgr;C:\Projects\SoftHSMv2\src\lib\crypto\..\pkcs11;C:\Program Files\OpenSSL-Win64\include;C:\Projects\SoftHSMv2\src\lib\crypto\..\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\Meira_Symm\SoftHSMv2\bulid;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\common;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\data_mgr;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\pkcs11;C:\Program Files\OpenSSL-Win64\include;C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\..\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -216,11 +216,11 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Projects\SoftHSMv2\src\lib\crypto\CMakeLists.txt">
+    <CustomBuild Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Projects/SoftHSMv2/src/lib/crypto/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Projects/Meira_Symm/SoftHSMv2/src/lib/crypto/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Projects/SoftHSMv2 -BC:/Projects/SoftHSMv2/bulid --check-stamp-file C:/Projects/SoftHSMv2/bulid/src/lib/crypto/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Projects/Meira_Symm/SoftHSMv2 -BC:/Projects/Meira_Symm/SoftHSMv2/bulid --check-stamp-file C:/Projects/Meira_Symm/SoftHSMv2/bulid/src/lib/crypto/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -229,11 +229,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Projects\SoftHSMv2\bulid\src\lib\crypto\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Projects\Meira_Symm\SoftHSMv2\bulid\src\lib\crypto\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Projects/SoftHSMv2/src/lib/crypto/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Projects/Meira_Symm/SoftHSMv2/src/lib/crypto/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Projects/SoftHSMv2 -BC:/Projects/SoftHSMv2/bulid --check-stamp-file C:/Projects/SoftHSMv2/bulid/src/lib/crypto/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Projects/Meira_Symm/SoftHSMv2 -BC:/Projects/Meira_Symm/SoftHSMv2/bulid --check-stamp-file C:/Projects/Meira_Symm/SoftHSMv2/bulid/src/lib/crypto/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -242,11 +242,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Projects\SoftHSMv2\bulid\src\lib\crypto\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Projects\Meira_Symm\SoftHSMv2\bulid\src\lib\crypto\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Projects/SoftHSMv2/src/lib/crypto/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Projects/Meira_Symm/SoftHSMv2/src/lib/crypto/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Projects/SoftHSMv2 -BC:/Projects/SoftHSMv2/bulid --check-stamp-file C:/Projects/SoftHSMv2/bulid/src/lib/crypto/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Projects/Meira_Symm/SoftHSMv2 -BC:/Projects/Meira_Symm/SoftHSMv2/bulid --check-stamp-file C:/Projects/Meira_Symm/SoftHSMv2/bulid/src/lib/crypto/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -255,11 +255,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Projects\SoftHSMv2\bulid\src\lib\crypto\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Projects\Meira_Symm\SoftHSMv2\bulid\src\lib\crypto\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Projects/SoftHSMv2/src/lib/crypto/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Projects/Meira_Symm/SoftHSMv2/src/lib/crypto/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Projects/SoftHSMv2 -BC:/Projects/SoftHSMv2/bulid --check-stamp-file C:/Projects/SoftHSMv2/bulid/src/lib/crypto/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Projects/Meira_Symm/SoftHSMv2 -BC:/Projects/Meira_Symm/SoftHSMv2/bulid --check-stamp-file C:/Projects/Meira_Symm/SoftHSMv2/bulid/src/lib/crypto/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -268,89 +268,89 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Projects\SoftHSMv2\bulid\src\lib\crypto\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Projects\Meira_Symm\SoftHSMv2\bulid\src\lib\crypto\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\AESKey.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\AsymmetricAlgorithm.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\AsymmetricKeyPair.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\CryptoFactory.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\DerUtil.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\DESKey.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\DHParameters.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\DHPrivateKey.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\DHPublicKey.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\DSAParameters.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\DSAPrivateKey.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\DSAPublicKey.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\ECParameters.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\ECPrivateKey.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\ECPublicKey.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\EDPrivateKey.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\EDPublicKey.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\GOSTPrivateKey.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\GOSTPublicKey.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\HashAlgorithm.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\MacAlgorithm.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\RSAParameters.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\RSAPrivateKey.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\RSAPublicKey.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\SymmetricAlgorithm.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\SymmetricKey.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLAES.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLCMAC.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLComp.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLCryptoFactory.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLDES.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLDH.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLDHKeyPair.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLDHPrivateKey.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLDHPublicKey.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLDSA.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLDSAKeyPair.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLDSAPrivateKey.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLDSAPublicKey.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLECDH.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLECDSA.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLECKeyPair.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLECPrivateKey.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLECPublicKey.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLEDDSA.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLEDKeyPair.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLEDPrivateKey.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLEDPublicKey.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLEVPCMacAlgorithm.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLEVPHashAlgorithm.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLEVPMacAlgorithm.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLEVPSymmetricAlgorithm.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLGOST.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLGOSTKeyPair.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLGOSTPrivateKey.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLGOSTPublicKey.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLGOSTR3411.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLHMAC.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLMD5.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLRNG.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLRSA.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLRSAKeyPair.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLRSAPrivateKey.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLRSAPublicKey.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLSHA1.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLSHA224.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLSHA256.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLSHA384.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLSHA512.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\OSSLUtil.cpp" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\XORSymmetricAlgorithm.cpp" />
-    <ClInclude Include="C:\Projects\SoftHSMv2\src\lib\crypto\XORSymmetricAlgorithm.h" />
-    <ClInclude Include="C:\Projects\SoftHSMv2\src\lib\crypto\XORCryptoFactory.h" />
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\crypto\XORCryptoFactory.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\AESKey.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\AsymmetricAlgorithm.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\AsymmetricKeyPair.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\CryptoFactory.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\DerUtil.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\DESKey.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\DHParameters.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\DHPrivateKey.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\DHPublicKey.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\DSAParameters.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\DSAPrivateKey.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\DSAPublicKey.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\ECParameters.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\ECPrivateKey.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\ECPublicKey.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\EDPrivateKey.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\EDPublicKey.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\GOSTPrivateKey.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\GOSTPublicKey.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\HashAlgorithm.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\MacAlgorithm.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\RSAParameters.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\RSAPrivateKey.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\RSAPublicKey.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\SymmetricAlgorithm.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\SymmetricKey.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLAES.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLCMAC.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLComp.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLCryptoFactory.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLDES.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLDH.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLDHKeyPair.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLDHPrivateKey.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLDHPublicKey.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLDSA.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLDSAKeyPair.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLDSAPrivateKey.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLDSAPublicKey.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLECDH.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLECDSA.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLECKeyPair.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLECPrivateKey.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLECPublicKey.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLEDDSA.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLEDKeyPair.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLEDPrivateKey.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLEDPublicKey.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLEVPCMacAlgorithm.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLEVPHashAlgorithm.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLEVPMacAlgorithm.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLEVPSymmetricAlgorithm.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLGOST.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLGOSTKeyPair.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLGOSTPrivateKey.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLGOSTPublicKey.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLGOSTR3411.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLHMAC.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLMD5.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLRNG.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLRSA.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLRSAKeyPair.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLRSAPrivateKey.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLRSAPublicKey.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLSHA1.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLSHA224.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLSHA256.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLSHA384.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLSHA512.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\OSSLUtil.cpp" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\XORSymmetricAlgorithm.cpp" />
+    <ClInclude Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\XORSymmetricAlgorithm.h" />
+    <ClInclude Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\XORCryptoFactory.h" />
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\crypto\XORCryptoFactory.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Projects\SoftHSMv2\bulid\ZERO_CHECK.vcxproj">
-      <Project>{0FE485ED-FFB6-3DB8-ACAC-2A2417067F45}</Project>
+    <ProjectReference Include="C:\Projects\Meira_Symm\SoftHSMv2\bulid\ZERO_CHECK.vcxproj">
+      <Project>{9AF04B78-B244-3453-838E-CD1B17FCDF8B}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

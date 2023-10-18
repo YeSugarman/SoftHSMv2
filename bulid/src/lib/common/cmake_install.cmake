@@ -1,4 +1,4 @@
-# Install script for directory: C:/Projects/SoftHSMv2/src/lib/common
+# Install script for directory: C:/Projects/Meira_Symm/SoftHSMv2/src/lib/common
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,7 +35,7 @@ endif()
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   
         if(NOT EXISTS /etc/softhsm2.conf)
-            file(INSTALL C:/Projects/SoftHSMv2/bulid/src/lib/common/etc/softhsm2.conf
+            file(INSTALL C:/Projects/Meira_Symm/SoftHSMv2/bulid/src/lib/common/etc/softhsm2.conf
                  DESTINATION /etc)
         endif()
         
@@ -50,11 +50,11 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/etc" TYPE FILE FILES "C:/Projects/SoftHSMv2/bulid/src/lib/common/etc/softhsm2.conf.sample")
+  file(INSTALL DESTINATION "/etc" TYPE FILE FILES "C:/Projects/Meira_Symm/SoftHSMv2/bulid/src/lib/common/etc/softhsm2.conf.sample")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/man/man5" TYPE FILE FILES "C:/Projects/SoftHSMv2/bulid/src/lib/common/man5/softhsm2.conf.5")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/man/man5" TYPE FILE FILES "C:/Projects/Meira_Symm/SoftHSMv2/bulid/src/lib/common/man5/softhsm2.conf.5")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)

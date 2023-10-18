@@ -1,34 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\common\Configuration.cpp">
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\common\Configuration.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\common\fatal.cpp">
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\common\fatal.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\common\log.cpp">
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\common\log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\common\MutexFactory.cpp">
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\common\MutexFactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\common\osmutex.cpp">
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\common\osmutex.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\common\SimpleConfigLoader.cpp">
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\common\SimpleConfigLoader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\SoftHSMv2\src\lib\win32\syslog.cpp">
+    <ClCompile Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\win32\syslog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Projects\SoftHSMv2\src\lib\common\CMakeLists.txt" />
+    <CustomBuild Include="C:\Projects\Meira_Symm\SoftHSMv2\src\lib\common\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{8A1793D5-C0E1-3EDD-8CEE-7F9AF198B222}</UniqueIdentifier>
+      <UniqueIdentifier>{F0075008-C7F8-351F-8154-78F81C678002}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

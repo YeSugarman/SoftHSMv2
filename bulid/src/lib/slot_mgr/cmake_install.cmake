@@ -1,4 +1,4 @@
-# Install script for directory: C:/Projects/SoftHSMv2/src/lib/slot_mgr
+# Install script for directory: C:/Projects/Meira_Symm/SoftHSMv2/src/lib/slot_mgr
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
