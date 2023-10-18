@@ -1,5 +1,5 @@
 #pragma once
-#include "../../../src/lib/SoftHSM.h"
+#include "SoftHSM.h"
 
 #include <fcntl.h>
 #include <cstdlib>

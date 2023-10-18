@@ -11,6 +11,5 @@
     "\\src\\CLI",
     "\\src\\CLI\\Encrypt_Decrypt"
   ],
-  "SelectedNode": "\\src\\CLI\\Encrypt_Decrypt\\CMakeLists.txt",
   "PreviewInSolutionExplorer": false
 }

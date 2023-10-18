@@ -30,6 +30,9 @@ include_directories(${INCLUDE_DIRS})
 add_executable(${PROJECT_NAME} ${SOURCES} "main.cpp" "Generate_Key.cpp" "Encrypt_Decrypt.cpp" "Initialization_Finalization.cpp" "GlobalInstance.h" "Generate_Key.h" "Initialization_Finalization.h" "Encrypt_Decrypt.h" "GlobalInstance.cpp")
 target_link_libraries(${PROJECT_NAME} softhsm2-static ${CRYPTO_LIBS} ${SQLITE3_LIBS} ${CMAKE_DL_LIBS})
 target_compile_options(${PROJECT_NAME} PRIVATE ${COMPILE_OPTIONS})
+# Include the relative path to your headers
+target_include_directories(${PROJECT_NAME} PRIVATE ${PROJECT_SOURCE_DIR}/src/lib)
+
 
 install(TARGETS ${PROJECT_NAME}
         DESTINATION ${CMAKE_INSTALL_BINDIR}
@@ -38,4 +41,7 @@ install(TARGETS ${PROJECT_NAME}
 install(FILES ${PROJECT_NAME}.1
         DESTINATION ${CMAKE_INSTALL_MANDIR}/man1
         )
+
+
+
 
