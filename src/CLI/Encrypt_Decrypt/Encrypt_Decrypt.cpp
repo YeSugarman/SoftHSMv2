@@ -29,7 +29,7 @@ void encrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, std::string& 
 	rv = hsm->C_GetAttributeValue(session, key, templateValue, sizeof(templateValue) / sizeof(CK_ATTRIBUTE));
 	if (rv != CKR_OK) {
 		std::cerr << "Failed to retrieve CKA_VALUE attribute" << std::endl;
-		exit(1);
+		return;
 	}
 	// The CKA_VALUE attribute is now stored in template[0]
 	// You can access the value using template[0].pValue and template[0].ulValueLen
@@ -136,7 +136,7 @@ void encrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, std::string& 
 //	rv = C_GetAttributeValue(session, key, templateValue, sizeof(templateValue) / sizeof(CK_ATTRIBUTE));
 //	if (rv != CKR_OK) {
 //		std::cerr << "Failed to retrieve CKA_VALUE attribute" << std::endl;
-//		exit(1);
+//		return;
 //	}
 //	// The CKA_VALUE attribute is now stored in template[0]
 //	// You can access the value using template[0].pValue and template[0].ulValueLen
@@ -231,11 +231,11 @@ void encryptionDecryptionShell(int choose, CK_SESSION_HANDLE session, CK_OBJECT_
 	/*else
 		decrypt_data(session, key, opt_input, opt_output);*/
 }
+
 CK_OBJECT_HANDLE findKey(CK_SESSION_HANDLE session)
 {
 	CK_RV rv;
 	int keyId;
-	unsigned char keyIdBytes[sizeof(int)];
 
 	CK_OBJECT_HANDLE keys[1]; // Adjust the array size as needed
 
@@ -244,14 +244,15 @@ CK_OBJECT_HANDLE findKey(CK_SESSION_HANDLE session)
 		std::cout << "enter your id key \n";
 		std::cin >> keyId;
 
-		intToBytes(keyId, keyIdBytes);
+		unsigned char* keyIdBytes = reinterpret_cast<unsigned char*>(&keyId);
+
 		CK_ATTRIBUTE templateKey[] = {
 			{CKA_LABEL, keyIdBytes, sizeof(keyIdBytes)}
 		};
 		rv = hsm->C_FindObjectsInit(session, templateKey, sizeof(templateKey) / sizeof(CK_ATTRIBUTE));
 		if (rv != CKR_OK) {
 			std::cerr << "Failed to initialize object search" << rv << std::endl;
-			exit(1);
+			return NULL;
 		}
 
 		// Find the objects
@@ -259,14 +260,14 @@ CK_OBJECT_HANDLE findKey(CK_SESSION_HANDLE session)
 		rv = hsm->C_FindObjects(session, keys, sizeof(keys) / sizeof(CK_OBJECT_HANDLE), &ulObjectCount);
 		if (rv != CKR_OK) {
 			std::cerr << "Failed to find objects" << rv << std::endl;
-			exit(1);
+			return NULL;
 		}
 
 		// Finalize the object search
 		rv = hsm->C_FindObjectsFinal(session);
 		if (rv != CKR_OK) {
 			std::cerr << "Failed to finalize object search" << rv << std::endl;
-			exit(1);
+			return NULL;
 		}
 	} while (keys[0] == NULL);
 

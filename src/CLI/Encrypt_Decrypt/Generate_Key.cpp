@@ -1,10 +1,9 @@
-#pragma once
 #include "Generate_Key.h"
 
 int gen_key(CK_SLOT_ID slot, CK_SESSION_HANDLE session, CK_OBJECT_HANDLE* hSecretKey)
 {
-	static int count = 0; //give the key id
-	count++;
+	static int keyId = 0; //give the key id
+	keyId++;
 
 	CK_RV rv;
 	int key_length = 0;
@@ -28,22 +27,17 @@ int gen_key(CK_SLOT_ID slot, CK_SESSION_HANDLE session, CK_OBJECT_HANDLE* hSecre
 	uint8_t* arrEncrypted = Encrypt - data - key(MAGIC, ENCRYPT_DATA_KEY, data_lenght, (userId, kekId, key_length, arrRandom), crc);*/
 	uint8_t kekId = 2;
 
-	//cast to byte
-	unsigned char countBytes[sizeof(int)];
-	unsigned char kekIdBytes[sizeof(int)];
-	intToBytes(count, countBytes);
-	intToBytes(kekId, kekIdBytes);
+	unsigned char* countBytes = reinterpret_cast<unsigned char*>(&keyId);
+	unsigned char* kekIdBytes = reinterpret_cast<unsigned char*>(&kekId);
 
 	CK_OBJECT_CLASS secret_key_class = CKO_SECRET_KEY;
 	CK_KEY_TYPE keyType = CKK_AES; // Correctly typed value for CKA_KEY_TYPE
-	CK_BBOOL trueValue = CK_FALSE;
 	CK_ATTRIBUTE templateKey[] = {
 		{CKA_CLASS, &secret_key_class, sizeof(secret_key_class)},
 		{CKA_ID, countBytes, sizeof(countBytes)},
 		{CKA_KEY_TYPE, &keyType, sizeof(keyType)},  // Correctly typed value
 		{CKA_VALUE, arrRandom /*arrEncrypted*/, key_length},
 		{CKA_LABEL, kekIdBytes, sizeof(kekIdBytes)},
-		{CKA_PRIVATE, &trueValue, sizeof(trueValue)} // Mark the key as private
 	};
 
 	// Create the object
@@ -51,13 +45,13 @@ int gen_key(CK_SLOT_ID slot, CK_SESSION_HANDLE session, CK_OBJECT_HANDLE* hSecre
 
 	if (rv != CKR_OK) {
 		std::cerr << "Failed to create the object" << std::endl;
-		exit(1);
+		return NULL;
 	}
 
 	printf("Successfully created the key \n");
 
 	delete[] arrRandom;
 
-	return count;
+	return keyId;
 }
 
