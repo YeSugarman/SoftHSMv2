@@ -19,27 +19,32 @@ void encrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, std::string& 
 {
 	CK_RV rv;
 
-	// Define an attribute template to request the CKA_VALUE attribute
-	CK_ATTRIBUTE templateValue[] = {
-		{CKA_VALUE, NULL, 0}, // Placeholder for the value
-		{CKA_LABEL, NULL, 0}
+	CK_BYTE arrRandom = NULL;
+	unsigned char* countBytes = NULL;
+	unsigned char* kekIdBytes = NULL;
+	CK_OBJECT_CLASS secret_key_class = NULL;
+	CK_BBOOL _true = NULL;
+	CK_KEY_TYPE keyType = NULL;
+
+	CK_ATTRIBUTE templateValue[20] = {
+		{CKA_CLASS, &secret_key_class, sizeof(secret_key_class)},
+		{CKA_KEY_TYPE, &keyType, sizeof(keyType)},
+		{CKA_TOKEN, &_true, sizeof(_true)},
+		{CKA_ID, &arrRandom /*arrEncrypted*/, sizeof(arrRandom)},
+		{CKA_LABEL, kekIdBytes, sizeof(kekIdBytes)},
+		//{CKA_VALUE_LEN, &key_length, sizeof(key_length) }
 	};
 
-	// Retrieve the CKA_VALUE attribute
-	rv = hsm->C_GetAttributeValue(session, key, templateValue, sizeof(templateValue) / sizeof(CK_ATTRIBUTE));
+	rv = hsm->C_GetAttributeValue(session, key, templateValue, 5);
 	if (rv != CKR_OK) {
 		std::cerr << "Failed to retrieve CKA_VALUE attribute" << std::endl;
 		return;
 	}
-	// The CKA_VALUE attribute is now stored in template[0]
-	// You can access the value using template[0].pValue and template[0].ulValueLen
-	uint8_t* encryptedKey = static_cast<CK_BYTE*>(templateValue[0].pValue);
-	uint8_t* kekId = static_cast<CK_BYTE*>(templateValue[1].pValue);
-	CK_ULONG encryptedKeyLength = templateValue[0].ulValueLen;
 
+	////////////////////////////
 	//call MSP
-	//uint8_t* clearKey = Decrypt - data - key(MAGIC, ENCRYPT_DATA_KEY, data_lenght, (userId, kekId, encryptedKeyLength, encryptedKey), crc);
-	uint8_t* clearKey = new uint8_t[32]();
+	uint8_t* clearKey = new uint8_t[32](); /*Decrypt - data - key(MAGIC, ENCRYPT_DATA_KEY, data_lenght, (userId, kekId, encryptedKeyLength, encryptedKey), crc);*/
+	////////////////////////////
 
 	CK_OBJECT_HANDLE clearKeyLocal = reinterpret_cast<CK_OBJECT_HANDLE>(clearKey);
 
@@ -122,6 +127,7 @@ void encrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, std::string& 
 	std::cout << "The encryption process was successful" << std::endl;
 
 }
+
 //void decrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, std::string& input_file, std::string& output_file) {
 //
 //	CK_RV rv;
@@ -247,7 +253,7 @@ CK_OBJECT_HANDLE findKey(CK_SESSION_HANDLE session)
 		unsigned char* keyIdBytes = reinterpret_cast<unsigned char*>(&keyId);
 
 		CK_ATTRIBUTE templateKey[] = {
-			{CKA_LABEL, keyIdBytes, sizeof(keyIdBytes)}
+			{CKA_ID, keyIdBytes, sizeof(keyIdBytes)}
 		};
 		rv = hsm->C_FindObjectsInit(session, templateKey, sizeof(templateKey) / sizeof(CK_ATTRIBUTE));
 		if (rv != CKR_OK) {
@@ -262,6 +268,18 @@ CK_OBJECT_HANDLE findKey(CK_SESSION_HANDLE session)
 			std::cerr << "Failed to find objects" << rv << std::endl;
 			return NULL;
 		}
+
+		CK_ATTRIBUTE templateValue[] = {
+			{CKA_VALUE, NULL, 0}, // Placeholder for the value
+			{CKA_LABEL, NULL, 0}
+		};
+
+		//// Retrieve the CKA_VALUE attribute
+		//rv = hsm->C_GetAttributeValue(session, keys[0], templateValue, sizeof(templateValue) / sizeof(CK_ATTRIBUTE));
+		//if (rv != CKR_OK) {
+		//	std::cerr << "Failed to retrieve CKA_VALUE attribute" << std::endl;
+		//	return NULL;
+		//}
 
 		// Finalize the object search
 		rv = hsm->C_FindObjectsFinal(session);

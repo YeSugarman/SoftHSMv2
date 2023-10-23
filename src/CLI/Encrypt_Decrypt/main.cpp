@@ -8,7 +8,7 @@ int main()
 	Init();
 
 	int login = -1;
-	std::cout << "welcome, to continue press any key, to exit press 0\n";
+	std::cout << "welcome, to continue press any number, to exit press 0\n";
 	std::cin >> login;
 
 	while (login)
@@ -24,6 +24,7 @@ int main()
 		CK_SESSION_HANDLE session = InitSession(slotNumber, password);
 		CK_OBJECT_HANDLE secretKey = NULL;
 		int choose = 0;
+		int keyId = 0;
 
 		while (choose != 4)
 		{
@@ -37,12 +38,12 @@ int main()
 			switch (choose)
 			{
 			case 1:
-				gen_key(slotNumber, session, &secretKey);
-				std::cout << "Id key: " << secretKey << "\n";
+				keyId = gen_key(slotNumber, session, &secretKey);
+				std::cout << "Id key: " << keyId << "\n";
 				break;
 			case 2:
 			case 3:
-				encryptionDecryptionShell(choose, session, findKey(session));
+				encryptionDecryptionShell(choose, session, secretKey/*findKey(session)*/);
 				break;
 			case 4:
 				break;
@@ -54,7 +55,7 @@ int main()
 
 		CloseSession(session);
 
-		std::cout << "to continue press any key, to exit 0\n";
+		std::cout << "to continue press any number, to exit 0\n";
 		std::cin >> login;
 	}
 
