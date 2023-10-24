@@ -6,6 +6,7 @@
 
 int main()
 {
+	/////// try 
 	Init();
 
 	int login = -1;
