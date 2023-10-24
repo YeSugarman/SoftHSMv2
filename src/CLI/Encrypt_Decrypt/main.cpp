@@ -14,7 +14,7 @@ int main()
 
 	while (login)
 	{
-		long slotNumber = 0x48b28fb9;
+		long slotNumber = 169407886;
 		char* password = "123456789";
 		std::cout << "Enter the number of your slot and your password\n";
 		std::cout << " slot";
