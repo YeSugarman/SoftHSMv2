@@ -11,6 +11,6 @@
     "\\src\\CLI",
     "\\src\\CLI\\Encrypt_Decrypt"
   ],
-  "SelectedNode": "\\src\\CLI\\Encrypt_Decrypt\\GlobalInstance.cpp",
+  "SelectedNode": "\\src\\CLI\\Encrypt_Decrypt\\Generate_Key.cpp",
   "PreviewInSolutionExplorer": false
 }

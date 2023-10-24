@@ -3,6 +3,8 @@
 void gen_key(CK_SLOT_ID slot, CK_SESSION_HANDLE session, CK_OBJECT_HANDLE* hSecretKey)
 {
 	CK_RV rv;
+	INXPFunctions::sss_status_t status = INXPFunctions::sss_status_t::kStatus_SSS_Success;
+
 	int key_length = 0;
 	do
 	{
@@ -13,12 +15,11 @@ void gen_key(CK_SLOT_ID slot, CK_SESSION_HANDLE session, CK_OBJECT_HANDLE* hSecr
 	//////////////////////////////////////////////////////////////////////
 	//call NXP
 	uint8_t* arrRandom = new uint8_t[key_length]();
-	//int status = GetRandom(arrRandom, key_length);
-	//if (status != kStatus_SSS_Success)
-	//{
-	//	std::cerr << "GetRandom failed";
-	//	exit(1);
-	//}
+
+	status = NXPProvider->GetRandom(arrRandom, key_length);
+
+	
+	std::cout << arrRandom << "\n";
 
 	//call MSP
 	uint8_t kekId = 2; /*Get - Kek - By - Info(MAGIC, GET_KEK_BT_INFO, data_lenght, (userId, kekInfo from the token), crc);

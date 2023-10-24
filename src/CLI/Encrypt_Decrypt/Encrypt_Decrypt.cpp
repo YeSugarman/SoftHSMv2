@@ -81,7 +81,7 @@ void encrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, std::string& 
 	rv = CKR_CANCEL;
 	if (in_len < sizeof(in_buffer)) {
 		out_len = sizeof(out_buffer);
-		rv = hsm->C_EncryptInit(session, &mech, secretKey);
+		rv = hsm->C_EncryptInit(session, &mech, key/*secretKey*/);
 		if (rv != CKR_OK) {
 			std::cerr << "C_EncryptInit failed" << rv << std::endl;
 			return;
@@ -92,7 +92,7 @@ void encrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, std::string& 
 	}
 
 	if (rv != CKR_OK) {
-		rv = hsm->C_EncryptInit(session, &mech, secretKey);
+		rv = hsm->C_EncryptInit(session, &mech, key/*secretKey*/);
 		if (rv != CKR_OK) {
 			std::cerr << "C_EncryptInit failed" << rv << std::endl;
 			return;

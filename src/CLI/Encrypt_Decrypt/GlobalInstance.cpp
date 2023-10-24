@@ -1,4 +1,8 @@
 #include "GlobalInstance.h"
 
-// Create an instance of SoftHSM
+#ifdef __linux__
+	INXPFunctions* NXPProvider = new NXPFunctions();
+#endif
+	INXPFunctions* NXPProvider = new MockNXPFunctions();
+
 SoftHSM* hsm = SoftHSM::i(); // Get the instance
