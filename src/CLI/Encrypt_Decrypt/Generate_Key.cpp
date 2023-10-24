@@ -1,10 +1,7 @@
 #include "Generate_Key.h"
 
-int gen_key(CK_SLOT_ID slot, CK_SESSION_HANDLE session, CK_OBJECT_HANDLE* hSecretKey)
+void gen_key(CK_SLOT_ID slot, CK_SESSION_HANDLE session, CK_OBJECT_HANDLE* hSecretKey)
 {
-	static int keyId = 0; //give the key id
-	keyId++;
-
 	CK_RV rv;
 	int key_length = 0;
 	do
@@ -28,33 +25,29 @@ int gen_key(CK_SLOT_ID slot, CK_SESSION_HANDLE session, CK_OBJECT_HANDLE* hSecre
 	uint8_t* arrEncrypted = Encrypt - data - key(MAGIC, ENCRYPT_DATA_KEY, data_lenght, (userId, kekId, key_length, arrRandom), crc);*/
 	//////////////////////////////////////////////////////////////////////
 
-	unsigned char* countBytes = reinterpret_cast<unsigned char*>(&keyId);
 	unsigned char* kekIdBytes = reinterpret_cast<unsigned char*>(&kekId);
-	CK_OBJECT_CLASS secret_key_class = CKO_SECRET_KEY;
-	CK_BBOOL _true = TRUE;
-	CK_KEY_TYPE keyType = CKK_AES;
 
-	CK_ATTRIBUTE templateKey[20] = {
-		{CKA_CLASS, &secret_key_class, sizeof(secret_key_class)},
-		{CKA_KEY_TYPE, &keyType, sizeof(keyType)},
-		{CKA_TOKEN, &_true, sizeof(_true)},
-		{CKA_ID, arrRandom /*arrEncrypted*/, key_length},
-		{CKA_LABEL, kekIdBytes, sizeof(kekIdBytes)},
-		//{CKA_VALUE_LEN, &key_length, sizeof(key_length) }
+	for (int i = 0; i < key_length; i++) {
+		arrRandom[i] = static_cast<uint8_t>(10);
+	}
+
+	CK_OBJECT_CLASS class_obj = CKO_DATA;
+	CK_BBOOL true_obj = CK_TRUE;
+	CK_ATTRIBUTE template_obj[20] = {
+	  {CKA_CLASS, &class_obj, sizeof(class_obj)},
+	  {CKA_TOKEN, &true_obj, sizeof(true_obj)},
+	  {CKA_VALUE, arrRandom, key_length},
+	  {CKA_LABEL, kekIdBytes, sizeof(kekIdBytes)}
 	};
-
-	// Create the object
-	rv = hsm->C_CreateObject(session, templateKey, 5, hSecretKey);
-
-	if (rv != CKR_OK) {
-		std::cerr << "Failed to create the object" << std::endl;
-		return NULL;
+	CK_ULONG ulcount = 4;
+	rv = hsm->C_CreateObject(session, template_obj, ulcount, hSecretKey);
+	if (rv != CKR_OK)
+	{
+		std::cout << "ERROR in create object" << std::endl;
 	}
 
 	printf("Successfully created the key \n");
 
 	delete[] arrRandom;
-
-	return keyId;
 }
 

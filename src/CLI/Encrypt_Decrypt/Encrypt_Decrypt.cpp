@@ -20,22 +20,19 @@ void encrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, std::string& 
 	CK_RV rv;
 
 	CK_BYTE arrRandom = NULL;
-	unsigned char* countBytes = NULL;
 	unsigned char* kekIdBytes = NULL;
-	CK_OBJECT_CLASS secret_key_class = NULL;
-	CK_BBOOL _true = NULL;
-	CK_KEY_TYPE keyType = NULL;
+	CK_OBJECT_CLASS class_obj = NULL;
+	CK_BBOOL true_obj = NULL;
 
-	CK_ATTRIBUTE templateValue[20] = {
-		{CKA_CLASS, &secret_key_class, sizeof(secret_key_class)},
-		{CKA_KEY_TYPE, &keyType, sizeof(keyType)},
-		{CKA_TOKEN, &_true, sizeof(_true)},
-		{CKA_ID, &arrRandom /*arrEncrypted*/, sizeof(arrRandom)},
-		{CKA_LABEL, kekIdBytes, sizeof(kekIdBytes)},
-		//{CKA_VALUE_LEN, &key_length, sizeof(key_length) }
+	CK_ATTRIBUTE template_obj[20] = {
+	  {CKA_CLASS, &class_obj, sizeof(class_obj)},
+	  {CKA_TOKEN, &true_obj, sizeof(true_obj)},
+	  {CKA_VALUE, &arrRandom, 32},
+	  {CKA_LABEL, kekIdBytes, sizeof(kekIdBytes)}
 	};
+	CK_ULONG ulcount = 4;
 
-	rv = hsm->C_GetAttributeValue(session, key, templateValue, 5);
+	rv = hsm->C_GetAttributeValue(session, key, template_obj, ulcount);
 	if (rv != CKR_OK) {
 		std::cerr << "Failed to retrieve CKA_VALUE attribute" << std::endl;
 		return;
@@ -46,7 +43,10 @@ void encrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, std::string& 
 	uint8_t* clearKey = new uint8_t[32](); /*Decrypt - data - key(MAGIC, ENCRYPT_DATA_KEY, data_lenght, (userId, kekId, encryptedKeyLength, encryptedKey), crc);*/
 	////////////////////////////
 
-	CK_OBJECT_HANDLE clearKeyLocal = reinterpret_cast<CK_OBJECT_HANDLE>(clearKey);
+
+	CK_OBJECT_CLASS secret_key_class = CKO_SECRET_KEY;
+	CK_KEY_TYPE keyType = CKK_AES;
+	CK_ULONG keyLength = 32;
 
 	unsigned char in_buffer[1024], out_buffer[1024];
 
@@ -81,7 +81,7 @@ void encrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, std::string& 
 	rv = CKR_CANCEL;
 	if (in_len < sizeof(in_buffer)) {
 		out_len = sizeof(out_buffer);
-		rv = hsm->C_EncryptInit(session, &mech, clearKeyLocal);
+		rv = hsm->C_EncryptInit(session, &mech, secretKey);
 		if (rv != CKR_OK) {
 			std::cerr << "C_EncryptInit failed" << rv << std::endl;
 			return;
@@ -92,7 +92,7 @@ void encrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, std::string& 
 	}
 
 	if (rv != CKR_OK) {
-		rv = hsm->C_EncryptInit(session, &mech, clearKeyLocal);
+		rv = hsm->C_EncryptInit(session, &mech, secretKey);
 		if (rv != CKR_OK) {
 			std::cerr << "C_EncryptInit failed" << rv << std::endl;
 			return;
@@ -238,56 +238,68 @@ void encryptionDecryptionShell(int choose, CK_SESSION_HANDLE session, CK_OBJECT_
 		decrypt_data(session, key, opt_input, opt_output);*/
 }
 
+//CK_OBJECT_HANDLE findKey(CK_SESSION_HANDLE session)
+//{
+//	CK_RV rv;
+//	int keyId;
+//
+//	CK_OBJECT_HANDLE keys[1]; // Adjust the array size as needed
+//
+//	do
+//	{
+//		std::cout << "enter your id key \n";
+//		std::cin >> keyId;
+//
+//		unsigned char* keyIdBytes = reinterpret_cast<unsigned char*>(&keyId);
+//
+//		CK_ATTRIBUTE templateKey[] = {
+//			{CKA_ID, keyIdBytes, sizeof(keyIdBytes)}
+//		};
+//		rv = hsm->C_FindObjectsInit(session, templateKey, sizeof(templateKey) / sizeof(CK_ATTRIBUTE));
+//		if (rv != CKR_OK) {
+//			std::cerr << "Failed to initialize object search" << rv << std::endl;
+//			return NULL;
+//		}
+//
+//		// Find the objects
+//		CK_ULONG ulObjectCount;
+//		rv = hsm->C_FindObjects(session, keys, sizeof(keys) / sizeof(CK_OBJECT_HANDLE), &ulObjectCount);
+//		if (rv != CKR_OK) {
+//			std::cerr << "Failed to find objects" << rv << std::endl;
+//			return NULL;
+//		}
+//
+//		CK_ATTRIBUTE templateValue[] = {
+//			{CKA_VALUE, NULL, 0}, // Placeholder for the value
+//			{CKA_LABEL, NULL, 0}
+//		};
+//
+//		//// Retrieve the CKA_VALUE attribute
+//		//rv = hsm->C_GetAttributeValue(session, keys[0], templateValue, sizeof(templateValue) / sizeof(CK_ATTRIBUTE));
+//		//if (rv != CKR_OK) {
+//		//	std::cerr << "Failed to retrieve CKA_VALUE attribute" << std::endl;
+//		//	return NULL;
+//		//}
+//
+//		// Finalize the object search
+//		rv = hsm->C_FindObjectsFinal(session);
+//		if (rv != CKR_OK) {
+//			std::cerr << "Failed to finalize object search" << rv << std::endl;
+//			return NULL;
+//		}
+//	} while (keys[0] == NULL);
+//
+//	return keys[0];
+//}
+
 CK_OBJECT_HANDLE findKey(CK_SESSION_HANDLE session)
 {
 	CK_RV rv;
-	int keyId;
+	CK_OBJECT_HANDLE keyId;
 
-	CK_OBJECT_HANDLE keys[1]; // Adjust the array size as needed
+	std::cout << "enter your id key \n";
+	std::cin >> keyId;
 
-	do
-	{
-		std::cout << "enter your id key \n";
-		std::cin >> keyId;
-
-		unsigned char* keyIdBytes = reinterpret_cast<unsigned char*>(&keyId);
-
-		CK_ATTRIBUTE templateKey[] = {
-			{CKA_ID, keyIdBytes, sizeof(keyIdBytes)}
-		};
-		rv = hsm->C_FindObjectsInit(session, templateKey, sizeof(templateKey) / sizeof(CK_ATTRIBUTE));
-		if (rv != CKR_OK) {
-			std::cerr << "Failed to initialize object search" << rv << std::endl;
-			return NULL;
-		}
-
-		// Find the objects
-		CK_ULONG ulObjectCount;
-		rv = hsm->C_FindObjects(session, keys, sizeof(keys) / sizeof(CK_OBJECT_HANDLE), &ulObjectCount);
-		if (rv != CKR_OK) {
-			std::cerr << "Failed to find objects" << rv << std::endl;
-			return NULL;
-		}
-
-		CK_ATTRIBUTE templateValue[] = {
-			{CKA_VALUE, NULL, 0}, // Placeholder for the value
-			{CKA_LABEL, NULL, 0}
-		};
-
-		//// Retrieve the CKA_VALUE attribute
-		//rv = hsm->C_GetAttributeValue(session, keys[0], templateValue, sizeof(templateValue) / sizeof(CK_ATTRIBUTE));
-		//if (rv != CKR_OK) {
-		//	std::cerr << "Failed to retrieve CKA_VALUE attribute" << std::endl;
-		//	return NULL;
-		//}
-
-		// Finalize the object search
-		rv = hsm->C_FindObjectsFinal(session);
-		if (rv != CKR_OK) {
-			std::cerr << "Failed to finalize object search" << rv << std::endl;
-			return NULL;
-		}
-	} while (keys[0] == NULL);
-
-	return keys[0];
+	return keyId;
 }
+

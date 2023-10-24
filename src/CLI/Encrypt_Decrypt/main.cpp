@@ -38,12 +38,12 @@ int main()
 			switch (choose)
 			{
 			case 1:
-				keyId = gen_key(slotNumber, session, &secretKey);
-				std::cout << "Id key: " << keyId << "\n";
+				gen_key(slotNumber, session, &secretKey);
+				std::cout << "Id key: " << secretKey << "\n";
 				break;
 			case 2:
 			case 3:
-				encryptionDecryptionShell(choose, session, secretKey/*findKey(session)*/);
+				encryptionDecryptionShell(choose, session, /*secretKey*/findKey(session));
 				break;
 			case 4:
 				break;
