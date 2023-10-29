@@ -18,7 +18,7 @@ NXPFunctions::~NXPFunctions()
 INXPFunctions::sss_status_t NXPFunctions::GetRandom(uint8_t* random, uint16_t size)
 {
     typedef INXPFunctions::sss_status_t(*getRandomType)(uint8_t*, uint16_t);
-    // getRandomType getRandom = (getRandomType)dlsym(handle, "get_random");
+
     getRandomType getRandom = (getRandomType)dlsym(handle, "get_randomPht");
     const char* dlsymError = dlerror();
     if (dlsymError) {

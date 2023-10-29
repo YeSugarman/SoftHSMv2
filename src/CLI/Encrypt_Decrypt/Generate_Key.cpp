@@ -8,20 +8,28 @@ CK_ULONG gen_key(int key_length, CK_SLOT_ID slot, CK_SESSION_HANDLE session, CK_
 	CK_RV rv;
 	INXPFunctions::sss_status_t status = INXPFunctions::sss_status_t::kStatus_SSS_Success;
 
-	//////////////////////////////////////////////////////////////////////
 	//call NXP
 	uint8_t* arrRandom = new uint8_t[key_length]();
-
 	status = NXPProvider->GetRandom(arrRandom, key_length);
 
 	//call MSP
-	uint8_t kekId = 2; /*Get - Kek - By - Info(MAGIC, GET_KEK_BT_INFO, data_lenght, (userId, kekInfo from the token), crc);
-	uint8_t* arrEncrypted = Encrypt - data - key(MAGIC, ENCRYPT_DATA_KEY, data_lenght, (userId, kekId, key_length, arrRandom), crc);*/
-	//////////////////////////////////////////////////////////////////////
+	unsigned int rxBuffer[5];
+	rxBuffer[0] = MAGIC;
+	rxBuffer[1] = 105;/*IMSPFunctions::def_Get_Kek_By_Info;*/
+	rxBuffer[2] = 0;
+	rxBuffer[3] = 3;// data length
+	rxBuffer[4] = 'a';// data-userId, kekInfo
+	unsigned int crc = callCrc(rxBuffer,5);
+	//uint8_t* result = MSPProvider->Get_Kek_By_Info(, crc);
+	uint8_t kekId = 2; 
 
-	for (int i = 0; i < key_length; i++) {
-		arrRandom[i] = static_cast<uint8_t>(10);
-	}
+	rxBuffer[0] = MAGIC;
+	rxBuffer[1] = 107;/*IMSPFunctions::def_Encrypt_Data_Key;*/
+	rxBuffer[2] = 0;
+	rxBuffer[3] = 3;// data length
+	rxBuffer[4] = 'a';// userId, kekId, key_length, arrRandom
+	crc = callCrc(rxBuffer,5);
+	//result = MSPProvider->Encrypt_data_key(, crc);
 
 	CK_OBJECT_CLASS class_obj = CKO_DATA;
 	CK_BBOOL true_obj = CK_TRUE;

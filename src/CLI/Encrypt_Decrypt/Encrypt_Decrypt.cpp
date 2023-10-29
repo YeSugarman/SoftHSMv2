@@ -20,11 +20,11 @@ void encrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, std::string& 
 	CK_RV rv;
 
 	CK_ULONG* arrRandom = new CK_ULONG[MAX_LENGTH];
-	CK_ULONG* kekIdBytes = 0;
+	CK_ULONG kekIdBytes = 0;
 
 	CK_ATTRIBUTE template_obj[2] = {
 	  {CKA_VALUE, arrRandom, MAX_LENGTH},
-	  {CKA_LABEL, kekIdBytes, sizeof(kekIdBytes)}
+	  {CKA_LABEL, &kekIdBytes, sizeof(kekIdBytes)}
 	};
 	CK_ULONG ulcount = 2;
 
@@ -34,10 +34,18 @@ void encrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, std::string& 
 		return;
 	}
 
-	////////////////////////////
 	//call MSP
-	uint8_t* clearKey = new uint8_t[32](); /*Decrypt - data - key(MAGIC, ENCRYPT_DATA_KEY, data_lenght, (userId, kekId, encryptedKeyLength, encryptedKey), crc);*/
-	////////////////////////////
+	unsigned int rxBuffer[5];
+	rxBuffer[0] = MAGIC;
+	rxBuffer[1] = 108;/*IMSPFunctions::def_Decrypt_Data_Key;*/
+	rxBuffer[2] = 0;
+	rxBuffer[3] = 3;// data length
+	rxBuffer[4] = 'a';// userId, kekId, encryptedKeyLength, encryptedKey
+	unsigned int crc = callCrc(rxBuffer, 5);
+	//uint8_t* result = MSPProvider->Decrypt_data_key(, crc);
+	
+
+	uint8_t* clearKey = new uint8_t[32]();
 
 	CK_OBJECT_CLASS class_obj = CKO_SECRET_KEY;
 	CK_BBOOL true_obj = CK_TRUE;
@@ -149,11 +157,11 @@ void decrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, std::string& 
 	CK_RV rv;
 
 	CK_ULONG* arrRandom = new CK_ULONG[MAX_LENGTH];
-	CK_ULONG* kekIdBytes = 0;
+	CK_ULONG kekIdBytes = 0;
 
 	CK_ATTRIBUTE template_obj[2] = {
 	  {CKA_VALUE, arrRandom, MAX_LENGTH},
-	  {CKA_LABEL, kekIdBytes, sizeof(kekIdBytes)}
+	  {CKA_LABEL, &kekIdBytes, sizeof(kekIdBytes)}
 	};
 	CK_ULONG ulcount = 2;
 
@@ -163,10 +171,18 @@ void decrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, std::string& 
 		return;
 	}
 
-	////////////////////////////
 	//call MSP
-	uint8_t* clearKey = new uint8_t[32](); /*Decrypt - data - key(MAGIC, ENCRYPT_DATA_KEY, data_lenght, (userId, kekId, encryptedKeyLength, encryptedKey), crc);*/
-	////////////////////////////
+	unsigned int rxBuffer[5];
+	rxBuffer[0] = MAGIC;
+	rxBuffer[1] = 108;/*IMSPFunctions::def_Decrypt_Data_Key;*/
+	rxBuffer[2] = 0;
+	rxBuffer[3] = 3;// data length
+	rxBuffer[4] = 'a';// userId, kekId, encryptedKeyLength, encryptedKey
+	unsigned int crc = callCrc(rxBuffer, 5);
+	//uint8_t* result = MSPProvider->Decrypt_data_key(, crc);
+	
+
+	uint8_t* clearKey = new uint8_t[32]();
 
 	CK_OBJECT_CLASS class_obj = CKO_SECRET_KEY;
 	CK_BBOOL true_obj = CK_TRUE;
