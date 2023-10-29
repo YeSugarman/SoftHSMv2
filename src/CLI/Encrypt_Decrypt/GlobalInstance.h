@@ -17,6 +17,7 @@
 #define FILL_ATTR(attr, typ, val, len) {(attr).type=(typ); (attr).pValue=(val); (attr).ulValueLen=len;}
 #define S_IRUSR 0400
 #define S_IWUSR 0200
+#define MAX_LENGTH 32
 
 
 extern INXPFunctions* NXPProvider;

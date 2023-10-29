@@ -1,16 +1,12 @@
 #include "Generate_Key.h"
 
-void gen_key(CK_SLOT_ID slot, CK_SESSION_HANDLE session, CK_OBJECT_HANDLE* hSecretKey)
+CK_ULONG gen_key(int key_length, CK_SLOT_ID slot, CK_SESSION_HANDLE session, CK_OBJECT_HANDLE* hSecretKey)
 {
+	static CK_ULONG count = 0;
+	count++;
+
 	CK_RV rv;
 	INXPFunctions::sss_status_t status = INXPFunctions::sss_status_t::kStatus_SSS_Success;
-
-	int key_length = 0;
-	do
-	{
-		std::cout << "enter the length of the key: 32/ 16/ 24 \n";
-		std::cin >> key_length;
-	} while (key_length != 32 && key_length != 16 && key_length != 24);
 
 	//////////////////////////////////////////////////////////////////////
 	//call NXP
@@ -18,15 +14,10 @@ void gen_key(CK_SLOT_ID slot, CK_SESSION_HANDLE session, CK_OBJECT_HANDLE* hSecr
 
 	status = NXPProvider->GetRandom(arrRandom, key_length);
 
-	
-	std::cout << arrRandom << "\n";
-
 	//call MSP
 	uint8_t kekId = 2; /*Get - Kek - By - Info(MAGIC, GET_KEK_BT_INFO, data_lenght, (userId, kekInfo from the token), crc);
 	uint8_t* arrEncrypted = Encrypt - data - key(MAGIC, ENCRYPT_DATA_KEY, data_lenght, (userId, kekId, key_length, arrRandom), crc);*/
 	//////////////////////////////////////////////////////////////////////
-
-	unsigned char* kekIdBytes = reinterpret_cast<unsigned char*>(&kekId);
 
 	for (int i = 0; i < key_length; i++) {
 		arrRandom[i] = static_cast<uint8_t>(10);
@@ -34,13 +25,14 @@ void gen_key(CK_SLOT_ID slot, CK_SESSION_HANDLE session, CK_OBJECT_HANDLE* hSecr
 
 	CK_OBJECT_CLASS class_obj = CKO_DATA;
 	CK_BBOOL true_obj = CK_TRUE;
-	CK_ATTRIBUTE template_obj[20] = {
+	CK_ATTRIBUTE template_obj[] = {
 	  {CKA_CLASS, &class_obj, sizeof(class_obj)},
 	  {CKA_TOKEN, &true_obj, sizeof(true_obj)},
 	  {CKA_VALUE, arrRandom, key_length},
-	  {CKA_LABEL, kekIdBytes, sizeof(kekIdBytes)}
+	  {CKA_LABEL, &kekId, sizeof(kekId)},
+	  {CKA_OBJECT_ID,&count,sizeof(count)}
 	};
-	CK_ULONG ulcount = 4;
+	CK_ULONG ulcount = 5;
 	rv = hsm->C_CreateObject(session, template_obj, ulcount, hSecretKey);
 	if (rv != CKR_OK)
 	{
@@ -50,5 +42,7 @@ void gen_key(CK_SLOT_ID slot, CK_SESSION_HANDLE session, CK_OBJECT_HANDLE* hSecr
 	printf("Successfully created the key \n");
 
 	delete[] arrRandom;
+
+	return count;
 }
 
