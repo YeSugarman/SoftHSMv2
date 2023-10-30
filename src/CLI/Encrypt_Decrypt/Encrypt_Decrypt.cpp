@@ -20,11 +20,11 @@ void encrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, std::string& 
 	CK_RV rv;
 
 	CK_ULONG* arrRandom = new CK_ULONG[MAX_LENGTH];
-	CK_ULONG kekIdBytes = 0;
+	CK_ULONG kekId = 0;
 
 	CK_ATTRIBUTE template_obj[2] = {
 	  {CKA_VALUE, arrRandom, MAX_LENGTH},
-	  {CKA_LABEL, &kekIdBytes, sizeof(kekIdBytes)}
+	  {CKA_LABEL, &kekId, sizeof(kekId)}
 	};
 	CK_ULONG ulcount = 2;
 
@@ -35,17 +35,26 @@ void encrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, std::string& 
 	}
 
 	//call MSP
-	unsigned int rxBuffer[5];
-	rxBuffer[0] = MAGIC;
-	rxBuffer[1] = 108;/*IMSPFunctions::def_Decrypt_Data_Key;*/
-	rxBuffer[2] = 0;
-	rxBuffer[3] = 3;// data length
-	rxBuffer[4] = 'a';// userId, kekId, encryptedKeyLength, encryptedKey
-	unsigned int crc = callCrc(rxBuffer, 5);
-	//uint8_t* result = MSPProvider->Decrypt_data_key(, crc);
-	
+	CK_SESSION_INFO sessionInfo;
+	rv = hsm->C_GetSessionInfo(session, &sessionInfo);
+	long slotId;
+	if (rv != CKR_OK) {
+		std::cerr << "C_GetSessionInfo failed";
+		return;
+	}
+	else {
+		slotId = sessionInfo.slotID;
+	}
 
-	uint8_t* clearKey = new uint8_t[32]();
+	uint8_t* result = MSPProvider->Decrypt_data_key(slotId, kekId,template_obj[0].ulValueLen, (uint8_t*)arrRandom);
+	if (result[1] == IMSPFunctions::EXCEPTION)
+	{
+		std::cerr << "Decrypt_data_key failed";
+		return;
+	}
+
+	uint8_t* clearKey = new uint8_t[template_obj[0].ulValueLen];
+	memcpy(clearKey, result + 3, template_obj[0].ulValueLen);
 
 	CK_OBJECT_CLASS class_obj = CKO_SECRET_KEY;
 	CK_BBOOL true_obj = CK_TRUE;
@@ -55,7 +64,7 @@ void encrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, std::string& 
 	  {CKA_CLASS, &class_obj, sizeof(class_obj)},
 	  {CKA_KEY_TYPE, &type, sizeof(type)},
 	  {CKA_TOKEN, &true_obj, sizeof(true_obj)},
-	  {CKA_VALUE, clearKey, MAX_LENGTH}
+	  {CKA_VALUE, clearKey, template_obj[0].ulValueLen}
 	};
 	ulcount = 4;
 	CK_OBJECT_HANDLE hSecretKey;
@@ -63,6 +72,7 @@ void encrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, std::string& 
 	if (rv != CKR_OK)
 	{
 		std::cout << "ERROR in create object" << std::endl;
+		return;
 	}
 
 	unsigned char in_buffer[1024], out_buffer[1024];
@@ -157,11 +167,11 @@ void decrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, std::string& 
 	CK_RV rv;
 
 	CK_ULONG* arrRandom = new CK_ULONG[MAX_LENGTH];
-	CK_ULONG kekIdBytes = 0;
+	CK_ULONG kekId = 0;
 
 	CK_ATTRIBUTE template_obj[2] = {
 	  {CKA_VALUE, arrRandom, MAX_LENGTH},
-	  {CKA_LABEL, &kekIdBytes, sizeof(kekIdBytes)}
+	  {CKA_LABEL, &kekId, sizeof(kekId)}
 	};
 	CK_ULONG ulcount = 2;
 
@@ -172,17 +182,27 @@ void decrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, std::string& 
 	}
 
 	//call MSP
-	unsigned int rxBuffer[5];
-	rxBuffer[0] = MAGIC;
-	rxBuffer[1] = 108;/*IMSPFunctions::def_Decrypt_Data_Key;*/
-	rxBuffer[2] = 0;
-	rxBuffer[3] = 3;// data length
-	rxBuffer[4] = 'a';// userId, kekId, encryptedKeyLength, encryptedKey
-	unsigned int crc = callCrc(rxBuffer, 5);
-	//uint8_t* result = MSPProvider->Decrypt_data_key(, crc);
-	
+	CK_SESSION_INFO sessionInfo;
 
-	uint8_t* clearKey = new uint8_t[32]();
+	rv = hsm->C_GetSessionInfo(session, &sessionInfo);
+	long slotId;
+	if (rv != CKR_OK) {
+		std::cerr << "C_GetSessionInfo failed";
+		return;
+	}
+	else {
+		slotId = sessionInfo.slotID;
+	}
+
+	uint8_t* result = MSPProvider->Decrypt_data_key(slotId, kekId, template_obj[0].ulValueLen, (uint8_t*)arrRandom);
+	if (result[1] == IMSPFunctions::EXCEPTION)
+	{
+		std::cerr << "Decrypt_data_key failed";
+		return;
+	}
+
+	uint8_t* clearKey = new uint8_t[template_obj[0].ulValueLen];
+	memcpy(clearKey, result + 3, template_obj[0].ulValueLen);
 
 	CK_OBJECT_CLASS class_obj = CKO_SECRET_KEY;
 	CK_BBOOL true_obj = CK_TRUE;
@@ -200,6 +220,7 @@ void decrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, std::string& 
 	if (rv != CKR_OK)
 	{
 		std::cout << "ERROR in create object" << std::endl;
+		return;
 	}
 
 	unsigned char in_buffer[1024], out_buffer[1024];

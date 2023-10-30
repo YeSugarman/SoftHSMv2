@@ -13,9 +13,9 @@ public:
 	MSPFunctions();
 	~MSPFunctions();
 
-	virtual uint8_t* Get_Kek_By_Info(int dataLenght, int* data, int crc);
-	virtual uint8_t* Encrypt_data_key(int dataLenght, int* data, int crc);
-	virtual uint8_t* Decrypt_data_key(int dataLenght, int* data, int crc);
+	virtual uint8_t* Get_Kek_By_Info(int dataLength, int* data, int crc);
+	virtual uint8_t* Encrypt_data_key(int dataLength, int* data, int crc);
+	virtual uint8_t* Decrypt_data_key(int dataLength, int* data, int crc);
 
 };
 #endif // __linux__

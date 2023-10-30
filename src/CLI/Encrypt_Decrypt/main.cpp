@@ -23,9 +23,9 @@ int main()
 
 		CK_SESSION_HANDLE session = InitSession(slotNumber, password);
 
-		CK_OBJECT_HANDLE secretKey = NULL;
+
 		int choose = 0;
-		CK_ULONG keyId = 0;
+		int keyId = 0;
 		int key_length = 0;
 
 		while (choose != 4)
@@ -45,7 +45,7 @@ int main()
 					std::cout << "enter the length of the key: 32/ 16/ 24 \n";
 					std::cin >> key_length;
 				} while (key_length != 32 && key_length != 16 && key_length != 24);
-				std::cout << "Id key: " << gen_key(key_length, slotNumber, session, &secretKey) << "\n";
+				std::cout << "Id key: " << gen_key(key_length, slotNumber, session) << "\n";
 				break;
 			case 2:
 			case 3:

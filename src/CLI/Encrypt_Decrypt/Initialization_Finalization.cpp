@@ -19,7 +19,7 @@ CK_SESSION_HANDLE InitSession(long slotNumber, char* password)
 {
 	CK_RV rv;
 
-	// You need to open a session first before generating the key pair
+	// You need to open a session first before generating the key 
 	CK_SESSION_HANDLE session;
 	rv = hsm->C_OpenSession(slotNumber, CKF_SERIAL_SESSION | CKF_RW_SESSION, nullptr, nullptr, &session);
 	if (rv != CKR_OK) {
@@ -28,7 +28,7 @@ CK_SESSION_HANDLE InitSession(long slotNumber, char* password)
 		exit(1);
 	}
 
-	rv = hsm->C_Login(session, CKU_USER, (CK_UTF8CHAR*)password, 9);
+	rv = hsm->C_Login(session, CKU_USER, (CK_UTF8CHAR_PTR)password, 9);
 	if (rv != CKR_OK) {
 		std::cerr << "Error logging in to the token" << std::endl;
 		hsm->C_CloseSession(session); // Close the session

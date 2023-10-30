@@ -1,5 +1,6 @@
 #pragma once
 #include <cstdint>
+#include <string>
 #define MAGIC 35
 
 class IMSPFunctions
@@ -31,11 +32,11 @@ public:
         SUCCESS = 36
     }STATUS;
 
-    virtual uint8_t* Get_Kek_By_Info(int dataLenght, int* data, int crc) = 0;
-    virtual uint8_t* Encrypt_data_key(int dataLenght, int* data, int crc) = 0;
-    virtual uint8_t* Decrypt_data_key(int dataLenght, int* data, int crc) = 0;
+    virtual uint8_t* Get_Kek_By_Info(long userId, std::string kekInfo) = 0;
+    virtual uint8_t* Encrypt_data_key(long userId, uint8_t kekId, uint8_t key_length, uint8_t* arrRandom) = 0;
+    virtual uint8_t* Decrypt_data_key(long userId, uint8_t kekId, uint8_t encryptedKeyLength, uint8_t* encryptedKey) = 0;
 
-	//virtual uint8_t* read(int magic, int command, int dataLenght, int* data, int crc) = 0;
-	//virtual void write(int* magic, int* status, int* dataLenght, int* result, int* crc) = 0;
+	//virtual uint8_t* read(int magic, int command, int dataLength, int* data, int crc) = 0;
+	//virtual void write(int* magic, int* status, int* dataLength, int* result, int* crc) = 0;
 
 };
