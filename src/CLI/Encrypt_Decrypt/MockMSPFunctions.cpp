@@ -8,7 +8,7 @@ MockMSPFunctions::~MockMSPFunctions()
 {
 }
 
-uint8_t* MockMSPFunctions::Get_Kek_By_Info(long userId, std::string kekInfo)
+uint8_t* MockMSPFunctions::Get_Kek_By_Info(long userId, int info_len, std::string kekInfo)
 {
 	uint8_t* writeArr = new uint8_t[5];
 	writeArr[0] = MAGIC;
