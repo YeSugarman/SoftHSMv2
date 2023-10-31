@@ -1,54 +1,77 @@
 #include "Generate_Key.h"
 
-void gen_key(CK_SLOT_ID slot, CK_SESSION_HANDLE session, CK_OBJECT_HANDLE* hSecretKey)
+int gen_key(int key_length, CK_SLOT_ID slot, CK_SESSION_HANDLE session)
 {
 	CK_RV rv;
-	INXPFunctions::sss_status_t status = INXPFunctions::sss_status_t::kStatus_SSS_Success;
 
-	int key_length = 0;
-	do
-	{
-		std::cout << "enter the length of the key: 32/ 16/ 24 \n";
-		std::cin >> key_length;
-	} while (key_length != 32 && key_length != 16 && key_length != 24);
+	CK_OBJECT_HANDLE secretKey = NULL;
 
-	//////////////////////////////////////////////////////////////////////
+	static int count = 0;
+	count++;
+
 	//call NXP
 	uint8_t* arrRandom = new uint8_t[key_length]();
-
-	status = NXPProvider->GetRandom(arrRandom, key_length);
-
-	
-	std::cout << arrRandom << "\n";
+	INXPFunctions::sss_status_t status = NXPProvider->GetRandom(arrRandom, key_length);
+	if (status == INXPFunctions::sss_status_t::kStatus_SSS_Fail)
+	{
+		std::cerr << "GetRandom failed";
+		return -1;
+	}
 
 	//call MSP
-	uint8_t kekId = 2; /*Get - Kek - By - Info(MAGIC, GET_KEK_BT_INFO, data_lenght, (userId, kekInfo from the token), crc);
-	uint8_t* arrEncrypted = Encrypt - data - key(MAGIC, ENCRYPT_DATA_KEY, data_lenght, (userId, kekId, key_length, arrRandom), crc);*/
-	//////////////////////////////////////////////////////////////////////
-
-	unsigned char* kekIdBytes = reinterpret_cast<unsigned char*>(&kekId);
-
-	for (int i = 0; i < key_length; i++) {
-		arrRandom[i] = static_cast<uint8_t>(10);
+	CK_SESSION_INFO sessionInfo;
+	rv = hsm->C_GetSessionInfo(session, &sessionInfo);
+	long slotId;
+	if (rv != CKR_OK) {
+		std::cerr << "C_GetSessionInfo failed";
+		return -1;
 	}
+	else {
+		slotId = sessionInfo.slotID;
+	}
+	std::string kekInfo = "aaa";// we need to get it from the token
+
+	uint8_t* result = MSPProvider->Get_Kek_By_Info(slotId,kekInfo);
+	if (result[1] == IMSPFunctions::EXCEPTION)
+	{
+		std::cerr << "Get_Kek_By_Info failed";
+		return -1;
+	}
+	uint8_t kekId = result[3];
+
+	result = MSPProvider->Encrypt_data_key(slotId,kekId,key_length,arrRandom);
+	if (result[1] == IMSPFunctions::EXCEPTION)
+	{
+		std::cerr << "Encrypt_data_key failed";
+		return -1;
+	}
+
+	uint8_t* encryptedKey = new uint8_t[key_length];
+	memcpy(encryptedKey, result + 3, key_length);
 
 	CK_OBJECT_CLASS class_obj = CKO_DATA;
 	CK_BBOOL true_obj = CK_TRUE;
-	CK_ATTRIBUTE template_obj[20] = {
+	CK_ATTRIBUTE template_obj[] = {
 	  {CKA_CLASS, &class_obj, sizeof(class_obj)},
 	  {CKA_TOKEN, &true_obj, sizeof(true_obj)},
-	  {CKA_VALUE, arrRandom, key_length},
-	  {CKA_LABEL, kekIdBytes, sizeof(kekIdBytes)}
+	  {CKA_VALUE, encryptedKey, key_length},
+	  {CKA_LABEL, &kekId, sizeof(kekId)},
+	  {CKA_OBJECT_ID,&count,sizeof(count)}
 	};
-	CK_ULONG ulcount = 4;
-	rv = hsm->C_CreateObject(session, template_obj, ulcount, hSecretKey);
+	CK_ULONG ulcount = 5;
+	rv = hsm->C_CreateObject(session, template_obj, ulcount, &secretKey);
 	if (rv != CKR_OK)
 	{
 		std::cout << "ERROR in create object" << std::endl;
+		return -1;
 	}
 
-	printf("Successfully created the key \n");
+	std::cout << "Successfully created the key \n";
 
 	delete[] arrRandom;
+	delete[] encryptedKey;
+	
+
+	return count;
 }
 

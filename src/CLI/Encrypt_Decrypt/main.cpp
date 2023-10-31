@@ -3,10 +3,8 @@
 #include "Encrypt_Decrypt.h"
 #include "Initialization_Finalization.h"
 
-
 int main()
 {
-	/////// try 
 	Init();
 
 	int login = -1;
@@ -24,9 +22,11 @@ int main()
 		//std::cin >> password;
 
 		CK_SESSION_HANDLE session = InitSession(slotNumber, password);
-		CK_OBJECT_HANDLE secretKey = NULL;
+
+
 		int choose = 0;
 		int keyId = 0;
+		int key_length = 0;
 
 		while (choose != 4)
 		{
@@ -40,12 +40,18 @@ int main()
 			switch (choose)
 			{
 			case 1:
-				gen_key(slotNumber, session, &secretKey);
-				std::cout << "Id key: " << secretKey << "\n";
+				do
+				{
+					std::cout << "enter the length of the key: 32/ 16/ 24 \n";
+					std::cin >> key_length;
+				} while (key_length != 32 && key_length != 16 && key_length != 24);
+				std::cout << "Id key: " << gen_key(key_length, slotNumber, session) << "\n";
 				break;
 			case 2:
 			case 3:
-				encryptionDecryptionShell(choose, session, /*secretKey*/findKey(session));
+				std::cout << "enter your id key \n";
+				std::cin >> keyId;
+				encryptionDecryptionShell(choose, session, findKey(session, keyId));
 				break;
 			case 4:
 				break;

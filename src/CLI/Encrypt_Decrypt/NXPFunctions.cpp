@@ -18,8 +18,10 @@ NXPFunctions::~NXPFunctions()
 INXPFunctions::sss_status_t NXPFunctions::GetRandom(uint8_t* random, uint16_t size)
 {
     typedef INXPFunctions::sss_status_t(*getRandomType)(uint8_t*, uint16_t);
+
     getRandomType getRandom = (getRandomType)dlsym(handle, "_Z10get_randomPht");
     //getRandomType getRandom = (getRandomType)dlsym(handle, "get_random");
+
     const char* dlsymError = dlerror();
     if (dlsymError) {
         std::cerr << "Error to read the function: " << dlsymError << std::endl;
