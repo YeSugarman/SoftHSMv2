@@ -2,7 +2,8 @@
 
 #ifdef __linux__
 	INXPFunctions* NXPProvider = new NXPFunctions();
-#endif
+#else
 	INXPFunctions* NXPProvider = new MockNXPFunctions();
+#endif
 
 SoftHSM* hsm = SoftHSM::i(); // Get the instance

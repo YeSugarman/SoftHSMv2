@@ -59,8 +59,8 @@ void encrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, std::string& 
 	mech.pParameter = iv;
 	mech.ulParameterLen = iv_size;
 
-	input_file = "C:\\input.txt";
-	output_file = "C:\\output.txt";
+	input_file = "/home/pi/project/input.txt";
+	output_file = "/home/pi/project/output.txt";
 
 	std::ifstream in_stream(input_file, std::ios::binary);
 	if (!in_stream) {
