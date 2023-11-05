@@ -15,7 +15,7 @@ uint8_t* MockMSPFunctions::Get_Kek_By_Info(long userId, int info_len, std::strin
 	writeArr[1] = IMSPFunctions::SUCCESS;
 	writeArr[2] = 1;//data Length
 	writeArr[3] = 2;//data- kekId
-	writeArr[4] = 0xffff;//crc
+	writeArr[4] = 0xffff & 0xFF;//crc
 	return writeArr;
 }
 
@@ -26,7 +26,7 @@ uint8_t* MockMSPFunctions::Encrypt_data_key(long userId, uint8_t kekId, uint8_t 
 	writeArr[1] = IMSPFunctions::SUCCESS;
 	writeArr[2] = key_length;//data Length
 	memcpy(writeArr + 3, arrRandom, key_length);//data- encryptedKey
-	writeArr[key_length + 3] = 0xffff;//crc
+	writeArr[key_length + 3] = 0xffff & 0xFF;//crc
 	return writeArr;
 }
 
@@ -37,7 +37,7 @@ uint8_t* MockMSPFunctions::Decrypt_data_key(long userId, uint8_t kekId, uint8_t 
 	writeArr[1] = IMSPFunctions::SUCCESS;
 	writeArr[2] = encryptedKeyLength;//data Length
 	memcpy(writeArr + 3, encryptedKey, encryptedKeyLength);//data- clear key
-	writeArr[encryptedKeyLength+3] = 0xffff;//crc
+	writeArr[encryptedKeyLength+3] = 0xffff & 0xFF;//crc
 	return writeArr;
 }
 

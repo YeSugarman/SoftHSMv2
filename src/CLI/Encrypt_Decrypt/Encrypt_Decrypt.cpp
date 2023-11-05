@@ -234,8 +234,8 @@ void decrypt_data(CK_SESSION_HANDLE session, CK_OBJECT_HANDLE key, std::string& 
 	mech.ulParameterLen = iv_size;
 	CK_ULONG in_len, out_len;
 
-	input_file = "C:\\output.txt";
-	output_file = "C:\\result.txt";
+	input_file = "/home/pi/project/output.txt";
+	output_file = "/home/pi/project/result.txt";
 
 	std::ifstream file_input(input_file, std::ios::binary);
 	if (!file_input) {

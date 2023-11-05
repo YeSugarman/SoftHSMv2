@@ -9,6 +9,8 @@
 class MSPFunctions :
 	public IMSPFunctions
 {
+private:
+  void* handle;
 public:
 	MSPFunctions();
 	~MSPFunctions();

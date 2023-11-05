@@ -1,6 +1,8 @@
 #pragma once
 #include <cstdint>
 #include <string>
+#include <iostream>
+#include <cstring>
 #define MAGIC 35
 
 class IMSPFunctions

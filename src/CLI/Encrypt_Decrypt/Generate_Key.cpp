@@ -31,7 +31,7 @@ int gen_key(int key_length, CK_SLOT_ID slot, CK_SESSION_HANDLE session)
 	}
 	std::string kekInfo = "aaa";// we need to get it from the token
 
-	uint8_t* result = MSPProvider->Get_Kek_By_Info(slotId,kekInfo);
+	uint8_t* result = MSPProvider->Get_Kek_By_Info(slotId,kekInfo.size(),kekInfo);
 	if (result[1] == IMSPFunctions::EXCEPTION)
 	{
 		std::cerr << "Get_Kek_By_Info failed";

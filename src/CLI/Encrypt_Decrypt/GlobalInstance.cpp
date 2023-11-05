@@ -24,7 +24,7 @@ unsigned int callCrc(unsigned int* rxBuffer, int length)
 	}
 	return SW_Results;
 }
->>>>>>> c5083fa4e666b16f0c362eda038eedd82583962f
+
 
 unsigned int CCITT_Update(unsigned int init, unsigned int input)
 {
